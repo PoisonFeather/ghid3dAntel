@@ -17,6 +17,41 @@ specificatii:
   - Filament: 1,75 mm
 ---
 
+## Quick guide — pași rapizi
+
+Pașii exacți pentru operațiile care se repetă. Dacă rezultatul nu este bun, urmează secțiunea detaliată a operației.
+
+### Bed leveling
+
+1. Curăță `build plate`-ul cu apă caldă și detergent, clătește-l și usucă-l. Nu atinge suprafața cu degetele.
+2. Așază placa la loc, cu marginea din spate în canalele de ghidaj. Verifică să nu fie ridicată pe colțuri.
+3. Rulează nivelarea automată: din meniul `Calibration` al printerului alege `Bed Leveling`, sau bifează `Bed Leveling` când trimiți printul din `Bambu Studio`.
+4. În timpul măsurării, nu atinge printerul și nu apăsa pe pat.
+5. Printează un test de prim layer. Dacă linia este uniformă pe toată suprafața, nivelarea este bună.
+6. Doar dacă primul layer rămâne neuniform după nivelarea automată: scoate placa și reglează câte puțin cele trei șuruburi de sub `heatbed`, cu o cheie Allen. Remontează placa și rulează din nou `Bed Leveling`.
+
+### Încărcarea filamentului
+
+1. Încălzește `nozzle`-ul la temperatura materialului, din meniul `Filament`.
+2. Taie capătul filamentului la 45° și îndreaptă-l.
+3. Introdu filamentul în tubul PTFE din spate până ajunge la `extruder`.
+4. Pe ecran, apasă `Load` și așteaptă să iasă material din `nozzle`.
+5. Când curgerea este uniformă, apasă `Done`. Dacă nu iese material, apasă `Retry` și verifică traseul.
+
+### Primul print
+
+1. Verifică placa curată și filamentul încărcat.
+2. Alege modelul din memoria internă sau de pe cardul micro SD, ori deschide-l în `Bambu Studio`.
+3. Verifică `Printer`, `Filament` și `Process`. Pentru majoritatea pieselor, `0.20mm` este înălțimea de layer recomandată.
+4. Apasă `Slice`, apoi `Print`.
+5. Urmărește primul layer. Dacă materialul nu aderă, oprește printul și reia de la curățarea plăcii.
+
+### După print
+
+1. Lasă piesa să se răcească, apoi îndoaie ușor placa pentru a o desprinde.
+2. Curăță placa și îndepărtează resturile din zona de purge.
+3. Verifică nivelul filamentului și starea tubului PTFE înainte de următorul print.
+
 ## Introducere
 
 ### Cum funcționează seria P1?

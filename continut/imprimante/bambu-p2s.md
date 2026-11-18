@@ -18,6 +18,47 @@ specificatii:
   - Rețea: Wi-Fi dual-band
 ---
 
+## Quick guide — pași rapizi
+
+Pașii exacți pentru operațiile frecvente. Nivelarea manuală se face doar dacă nivelarea automată nu reușește să compenseze patul.
+
+### Bed leveling automat
+
+1. Curăță `build plate`-ul și așază-l la loc, cu marginea din spate în canalele de aliniere.
+2. Din ecran, intră în `Settings` → `Calibration` și alege `Auto Bed Leveling`.
+3. Apasă `Start` și lasă ciclul să se termine fără să atingi printerul.
+4. Printează un test de prim layer. Dacă suprafața este uniformă, nu mai este nevoie de altă reglare.
+
+### Bed leveling manual (doar dacă este necesar)
+
+1. Scoate complet `build plate`-ul.
+2. Cu o cheie Allen H2.0, strânge complet cele trei șuruburi de nivelare de sub `heatbed`. Șurubul din spate-dreapta este fix și nu se reglează.
+3. Copiază fișierul oficial [P2S Manual Leveling G-code](https://public-cdn.bblmw.com/wiki/new/p2s/maintenance/manual-bed-tramming/p2s_manual_bed_screws_adjust_assist.gcode) pe un stick USB și rulează-l de pe ecran.
+4. Capul de printare se oprește aproximativ 30 de secunde la fiecare punct. Introdu o foaie A4 între `nozzle` și pat și reglează șurubul până simți rezistență ușoară când tragi foaia.
+5. Strângerea în sens orar mărește distanța dintre pat și `nozzle`; slăbirea o micșorează.
+6. Repetă toate cele trei cicluri ale fișierului, apoi remontează placa.
+7. Rulează din nou `Auto Bed Leveling`, ca să sincronizezi reglajele manuale cu sistemul automat.
+
+### Încărcarea filamentului
+
+1. Din meniul `Filament`, alege materialul și profilul potrivit.
+2. Pentru `AMS`: introdu rola, împinge filamentul până îl prinde unitatea și apasă `Load`.
+3. Pentru suportul extern: încălzește `nozzle`-ul, taie filamentul la 45°, introdu-l până la `extruder` și apasă `Load`.
+4. Așteaptă să iasă material uniform din `nozzle` înainte de a porni printul.
+
+### Primul print
+
+1. Verifică placa, filamentul și presetările de printer, filament și proces.
+2. Trimite modelul din `Bambu Studio`, `Bambu Handy` sau direct de pe ecran.
+3. Pentru un material nou, lasă bifate `Bed Leveling` și `Flow Dynamics Calibration`.
+4. Urmărește primul layer și oprește printul dacă materialul nu aderă uniform.
+
+### După print
+
+1. Lasă piesa să se răcească și desprinde-o prin îndoirea plăcii.
+2. Curăță placa și verifică zona de purge și `nozzle`-ul.
+3. Golește resturile și verifică filtrul de aer la intervalele din secțiunea de întreținere.
+
 ## Pe scurt
 
 P2S este o imprimantă FDM închisă, cu volum de 256 mm pe fiecare axă și o cameră care ține căldura pentru materiale de inginerie. Se instalează după ghidul rapid, se calibrează singură la prima pornire și se controlează dintr-un ecran tactil de 5 inch, din `Bambu Handy` sau din `Bambu Studio`.

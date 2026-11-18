@@ -17,6 +17,38 @@ specificatii:
   - Placă: PEI flexibilă
 ---
 
+## Quick guide — pași rapizi
+
+Pașii exacți pentru operațiile frecvente. Pentru asamblare și reglaje mecanice, vezi secțiunile detaliate.
+
+### Bed leveling
+
+1. Curăță `build plate`-ul de praf și grăsime.
+2. Încălzește `heatbed`-ul la temperatura de print și lasă-l să se stabilizeze.
+3. Din ecran, deschide `Leveling` și rulează `Auto Leveling` pe cele 64 de puncte. Nu atinge printerul în timpul ciclului.
+4. Reglează `Z-offset`-ul cu o foaie A4 sau cu un test de prim layer, în pași de 0,02–0,05 mm.
+5. Salvează valoarea după fiecare ajustare. Linia trebuie să fie ușor turtită, fără să fie translucidă.
+
+### Încărcarea filamentului
+
+1. Încălzește `nozzle`-ul la temperatura materialului.
+2. Taie filamentul la 45° și îndreaptă capătul.
+3. Introdu filamentul prin `extruder` și ghidează-l prin tubul de Teflon până la capul de printare.
+4. Folosește comanda de extrudare din ecran până când materialul iese uniform.
+
+### Primul print
+
+1. Deschide modelul în slicer și alege profilul Ender-5 Max.
+2. Verifică `layer height`, `infill`, suporturile și temperaturile.
+3. Fă `Slice` și exportă `G-code`-ul pe stick USB sau trimite-l prin rețea.
+4. Pornește printul și urmărește primul layer.
+
+### După print
+
+1. Lasă piesa să se răcească înainte de a o desprinde.
+2. Curăță placa și verifică `nozzle`-ul.
+3. Îndepărtează resturile din zona de extrudare și verifică traseul filamentului.
+
 ## Pe scurt
 
 Mulțumim că ai ales Creality. Înainte să începi, citește acest manual și urmează cu atenție instrucțiunile. Creality oferă suport pentru orice problemă legată de produs; datele de contact sunt la finalul manualului. Manualul și videoclipurile se află pe stick-ul USB livrat cu printerul, iar pe [site-ul oficial](https://www.creality.com) găsești informații despre software, hardware, garanție și service.

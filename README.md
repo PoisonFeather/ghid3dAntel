@@ -6,6 +6,7 @@ Site public: **https://poisonfeather.github.io/ghid3dAntel/**
 
 - **27 de probleme** explicate pe înțeles, cu aceleași fotografii ca în ghidul original.
 - **5 imprimante** din firmă, fiecare cu ghid de utilizare în română: Bambu Lab P1S/P1P, Bambu Lab P2S, Creality Ender-3 V3 KE, Creality Ender-5 Max și Mingda AD-F4.
+- **Quick guide** în fiecare pagină de imprimantă: bed leveling, încărcarea filamentului, primul print și mentenanță, cu pași exacți pentru modelul respectiv.
 - **2 ghiduri de slicer**: Bambu Studio și Orca Slicer, pas cu pas, cu capturi de ecran.
 - Explicațiile sunt în română; **termenii tehnici și numele setărilor au rămas în engleză** (`bed leveling`, `first layer`, `Extrusion Multiplier` etc.), exact cum apar în programe.
 - Fiecare pagină are un rezumat al **setărilor cheie**, un cuprins, legături către problemele înrudite și un link către pagina originală în engleză.

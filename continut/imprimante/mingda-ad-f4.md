@@ -18,6 +18,41 @@ specificatii:
   - Firmware: Klipper
 ---
 
+## Quick guide — pași rapizi
+
+Pașii exacți pentru operațiile care se repetă. Calibrarea completă este descrisă în secțiunea `Calibrare`.
+
+### Bed leveling
+
+1. Încălzește patul la 60 °C din `Preheat` și așteaptă 20 de minute pentru stabilizare termică.
+2. Apasă `Calibrate` → `Z Calibrate` → `Start`. Printerul se oprește în poziția din față.
+3. Pune o foaie A4 între `nozzle` și platformă. Reglează cu `+` și `−` până când foaia este zgâriată ușor.
+4. Salvează valoarea. Printerul se repornește automat.
+5. Apasă `Leveling` și așteaptă aproximativ 15 minute. Nu atinge printerul în timpul măsurării.
+6. Rulează `Leveling` din nou la fiecare 20–25 de printuri sau dacă primul layer devine neuniform.
+
+### Încărcarea filamentului
+
+1. Din `Preheat`, încălzește `nozzle`-ul la temperatura materialului.
+2. Pune rola pe suport și taie capătul filamentului la 45°.
+3. Din `Extrude`, selectează canalul dorit, `T0`–`T3`, și apasă `Load`.
+4. Împinge ușor filamentul până îl prinde mecanismul. Așteaptă să iasă material uniform și verifică ledul canalului.
+5. Repetă pentru fiecare culoare pe care vrei să o folosești.
+
+### Primul print
+
+1. Deschide modelul în Mingda OrcaSlicer sau AdWordCraft.
+2. Verifică profilul materialului, înălțimea layerului și canalele de culoare.
+3. Fă slicing și exportă fișierul pe stick USB.
+4. Introdu stick-ul în printer, apasă `Print` și alege fișierul.
+5. Urmărește primul layer; dacă apare neuniform, oprește și rulează din nou `Z Calibrate` și `Leveling`.
+
+### După print
+
+1. Lasă piesa să se răcească și scoate-o de pe platformă.
+2. Curăță `nozzle`-ul cu peria recomandată, cât timp este încă cald.
+3. Verifică platforma și șterge resturile de filament.
+
 ## Pe scurt
 
 AD-F4 este un printer FDM de format mare, construit pentru litere de reclame și piese cu mai multe culori. Volumul de printare este de 1200 × 800 × 100 mm, iar `toolhead`-ul are patru intrări și o singură ieșire: patru `filament`e diferite ajung pe rând în același `nozzle`, fără schimbare manuală a rolei.

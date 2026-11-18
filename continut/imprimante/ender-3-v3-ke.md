@@ -17,6 +17,38 @@ specificatii:
   - Placă: PEI flexibilă
 ---
 
+## Quick guide — pași rapizi
+
+Pașii exacți pentru operațiile care se repetă. Pentru reglaje fine, vezi secțiunile detaliate de mai jos.
+
+### Bed leveling
+
+1. Curăță `build plate`-ul de praf, grăsime și resturi de `filament`.
+2. Încălzește `heatbed`-ul la temperatura de print, de exemplu 60 °C pentru PLA, și lasă-l să se stabilizeze.
+3. Din ecran, deschide `Leveling` și rulează `Auto Leveling`. Nu atinge printerul în timpul măsurării.
+4. După nivelare, reglează `Z-offset`-ul cu pași de 0,01 mm. Folosește o foaie A4 sau, mai bine, un test de prim layer.
+5. Salvează valoarea. Dacă linia este translucidă și prea turtită, `nozzle`-ul este prea aproape; dacă nu se lipește, este prea departe.
+
+### Încărcarea filamentului
+
+1. Încălzește `nozzle`-ul la temperatura materialului.
+2. Taie capătul filamentului la 45° și îndreaptă-l.
+3. Introdu filamentul prin detector și prin tubul PTFE până îl prinde `extruder`-ul.
+4. Din meniul `Extrude`, alimentează până când materialul iese uniform din `nozzle`.
+
+### Primul print
+
+1. Deschide modelul în slicerul folosit în firmă și alege profilul Ender-3 V3 KE.
+2. Verifică `layer height`, `infill` și suporturile, apoi fă `Slice`.
+3. Exportă `G-code`-ul pe stick USB sau trimite-l prin LAN.
+4. Preîncălzește printerul, pornește fișierul și urmărește primul layer.
+
+### După print
+
+1. Lasă piesa să se răcească și scoate placa flexibilă.
+2. Curăță placa și verifică vârful `nozzle`-ului.
+3. Îndepărtează resturile de filament din jurul `extruder`-ului.
+
 ## Pe scurt
 
 ![Coperta manualului Ender-3 V3 KE](printers/ender3-01.jpg)

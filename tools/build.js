@@ -203,6 +203,17 @@ function renderMarkdown(md) {
       continue;
     }
 
+    if (/^\d+\.\s+/.test(line)) {
+      flush();
+      const items = [];
+      while (i < lines.length && /^\d+\.\s+/.test(lines[i])) {
+        items.push(lines[i].replace(/^\d+\.\s+/, ""));
+        i++;
+      }
+      html.push("<ol>" + items.map((t) => "<li>" + inline(t) + "</li>").join("") + "</ol>");
+      continue;
+    }
+
     para.push(line.trim());
     i++;
   }
