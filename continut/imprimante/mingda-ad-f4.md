@@ -24,12 +24,21 @@ Pașii exacți pentru operațiile care se repetă. Calibrarea completă este des
 
 ### Bed leveling
 
-1. Încălzește patul la 60 °C din `Preheat` și așteaptă 20 de minute pentru stabilizare termică.
-2. Apasă `Calibrate` → `Z Calibrate` → `Start`. Printerul se oprește în poziția din față.
-3. Pune o foaie A4 între `nozzle` și platformă. Reglează cu `+` și `−` până când foaia este zgâriată ușor.
-4. Salvează valoarea. Printerul se repornește automat.
-5. Apasă `Leveling` și așteaptă aproximativ 15 minute. Nu atinge printerul în timpul măsurării.
-6. Rulează `Leveling` din nou la fiecare 20–25 de printuri sau dacă primul layer devine neuniform.
+1. Apasă `Preheat` (iconița cu termometru) și setează `Heater bed` la 60 °C. Așteaptă 20 de minute, cât timp sticla se dilată.
+2. Apasă `Calibrate` (iconița cu două săgeți circulare) → `Z Calibrate` → `Start`.
+3. Printerul se deplasează singur în față. Pune o foaie A4 între `nozzle` și platformă.
+4. Apasă scurt `+` sau `−` până când foaia este zgâriată ușor, dar se poate trage. Verifică după fiecare ajustare.
+5. Apasă butonul de salvare. Printerul se repornește automat.
+6. Apasă `Calibrate` → `Leveling`, apoi butonul `Calibrate` din dreapta sus. Așteaptă aproximativ 15 minute.
+7. Rulează `Leveling` din nou la fiecare 20–25 de printuri sau dacă primul layer devine neuniform.
+
+### Mișcare manuală pe Z
+
+1. Apasă `Move` (iconița cu crucea de săgeți).
+2. Selectează axa `Z`.
+3. Alege distanța: `10mm`, `25mm`, `50mm` sau `100mm`.
+4. Folosește săgețile sus/jos pentru a ridica sau coborî `nozzle`-ul.
+5. Pentru apropierea de pat folosește `10mm`; pentru reglajul fin de prim layer folosește `Z Calibrate`, nu deplasarea manuală.
 
 ### Încărcarea filamentului
 

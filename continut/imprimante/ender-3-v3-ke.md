@@ -25,9 +25,20 @@ Pașii exacți pentru operațiile care se repetă. Pentru reglaje fine, vezi sec
 
 1. Curăță `build plate`-ul de praf, grăsime și resturi de `filament`.
 2. Încălzește `heatbed`-ul la temperatura de print, de exemplu 60 °C pentru PLA, și lasă-l să se stabilizeze.
-3. Din ecran, deschide `Leveling` și rulează `Auto Leveling`. Nu atinge printerul în timpul măsurării.
-4. După nivelare, reglează `Z-offset`-ul cu pași de 0,01 mm. Folosește o foaie A4 sau, mai bine, un test de prim layer.
-5. Salvează valoarea. Dacă linia este translucidă și prea turtită, `nozzle`-ul este prea aproape; dacă nu se lipește, este prea departe.
+3. Apasă iconița cu roată dințată (`Settings`) din bara de jos a ecranului.
+4. Intră în tabul `System` și apasă `Equipment Self Test`.
+5. Bifează `Automatic Z offset` și `Auto Leveling`, apoi apasă `Start`.
+6. Lasă ciclul să se termine fără să atingi printerul. Rezultatele apar pe ecran sub formă de grilă.
+7. Verifică primul layer. Pentru ajustare fină, apasă iconița cu listă (`Prepare`) din bara de jos, intră în tabul `Adjust` și folosește `Z offset` cu `−` și `+`, în pași de `0.01mm`.
+8. Dacă linia este translucidă și prea turtită, `nozzle`-ul este prea aproape; dacă nu se lipește, este prea departe.
+
+### Mișcare manuală pe Z
+
+1. Apasă iconița cu listă (`Prepare`) din bara de jos.
+2. Rămâi în tabul `Movement/Temp`.
+3. Alege pasul `1mm`, `10mm` sau `30mm`.
+4. Folosește săgețile verticale pentru axa Z: sus ridică `nozzle`-ul, jos îl coboară.
+5. Pentru reglaj fin lângă pat, folosește `1mm`, nu `10mm` sau `30mm`.
 
 ### Încărcarea filamentului
 
@@ -183,11 +194,14 @@ Secțiunea de fișiere arată modelele din memoria locală, de pe USB și din is
 
 Ender-3 V3 KE nu are roți de reglaj. Nivelarea se face cu senzorul CR-Touch, care măsoară patul în mai multe puncte, iar firmware-ul compensează diferențele de înălțime pe primul layer.
 
-- rulează `auto leveling` după asamblare, după mutarea imprimantei și după schimbarea `nozzle`-ului sau a `build plate`-ului;
+- apasă iconița cu roată dințată (`Settings`) → tabul `System` → `Equipment Self Test`;
+- bifează `Automatic Z offset` și `Auto Leveling`, apoi apasă `Start`;
+- rulează testul după asamblare, după mutarea imprimantei și după schimbarea `nozzle`-ului sau a `build plate`-ului;
 - curăță placa de praf, grăsime și resturi de `filament` înainte de măsurare; un fir lipit sub `nozzle` falsifică toate valorile;
 - nu apăsa pe pat în timpul măsurării;
-- valorile din grilă sunt abateri în milimetri: cele negative înseamnă zone mai joase, cele pozitive zone mai înalte, iar diferențele mici se compensează automat;
-- ajustează fin `Z-offset`-ul din meniul de pregătire, cu pași de 0,01 mm.
+- valorile din grilă sunt abateri în milimetri: cele negative înseamnă zone mai joase, cele pozitive zone mai înalte, iar diferențele mici se compensează automat.
+
+Pentru ajustare fină, apasă iconița cu listă (`Prepare`) → tabul `Adjust` → `Z offset` și folosește `−` / `+` în pași de `0.01mm`.
 
 Semnul că `Z-offset`-ul este greșit apare pe primul layer. Dacă `nozzle`-ul este prea aproape, `filament`-ul se turtește excesiv și lasă urme aspre; dacă este prea departe, firele nu se lipesc și rămân goluri. Reglează pe un test de prim layer.
 

@@ -222,7 +222,8 @@ img { max-width: 100%; display: block; }
 .card h2 a { color: var(--ink); }
 .card h2 a:hover { text-decoration: none; color: var(--accent); }
 .card p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--muted); }
-.card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); }
+.card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); display: block; }
+a.card-foot:hover { color: var(--accent-dark); text-decoration: none; }
 .empty { display: none; padding: 48px 0 96px; color: var(--muted); }
 .empty.is-visible { display: block; }
 
@@ -522,7 +523,8 @@ img { max-width: 100%; display: block; }
 .guide-card h2 a { color: var(--ink); }
 .guide-card h2 a:hover { color: var(--accent); text-decoration: none; }
 .guide-card p { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.55; }
-.guide-card .card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); }
+.guide-card .card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); display: block; }
+a.card-foot:hover { color: var(--accent-dark); text-decoration: none; }
 .case-hero.guide-hero figure img { aspect-ratio: 16 / 10; }
 
 /* ---------- Printers ---------- */
@@ -593,7 +595,8 @@ img { max-width: 100%; display: block; }
 .printer-card h2 a { color: var(--ink); }
 .printer-card h2 a:hover { color: var(--accent); text-decoration: none; }
 .printer-card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
-.printer-card .card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); }
+.printer-card .card-foot { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; color: var(--accent); display: block; }
+a.card-foot:hover { color: var(--accent-dark); text-decoration: none; }
 
 .printer-strip { margin: 8px 0 72px; padding-top: 22px; border-top: 1px solid var(--line); }
 .printer-strip-cards { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }

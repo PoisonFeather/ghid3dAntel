@@ -25,10 +25,20 @@ Pașii exacți pentru operațiile care se repetă. Dacă rezultatul nu este bun,
 
 1. Curăță `build plate`-ul cu apă caldă și detergent, clătește-l și usucă-l. Nu atinge suprafața cu degetele.
 2. Așază placa la loc, cu marginea din spate în canalele de ghidaj. Verifică să nu fie ridicată pe colțuri.
-3. Rulează nivelarea automată: din meniul `Calibration` al printerului alege `Bed Leveling`, sau bifează `Bed Leveling` când trimiți printul din `Bambu Studio`.
-4. În timpul măsurării, nu atinge printerul și nu apăsa pe pat.
-5. Printează un test de prim layer. Dacă linia este uniformă pe toată suprafața, nivelarea este bună.
-6. Doar dacă primul layer rămâne neuniform după nivelarea automată: scoate placa și reglează câte puțin cele trei șuruburi de sub `heatbed`, cu o cheie Allen. Remontează placa și rulează din nou `Bed Leveling`.
+3. Cea mai sigură cale este din `Bambu Studio`: fă `Slice`, apasă `Print` și bifează `Bed leveling` în fereastra de trimitere.
+4. Alternativ, din ecranul printerului intră în `Settings` → `Calibration` și rulează `Bed Leveling`.
+5. În timpul măsurării, nu atinge printerul și nu apăsa pe pat.
+6. Printează un test de prim layer. Dacă linia este uniformă pe toată suprafața, nivelarea este bună.
+7. P1 nu are un `Z-offset` manual în interfața standard. Dacă primul layer rămâne neuniform după nivelarea automată, verifică din nou placa și rulează `Bed Leveling`.
+8. Doar dacă problema persistă: scoate placa și reglează câte puțin cele trei șuruburi de sub `heatbed`, cu o cheie Allen. Remontează placa și rulează din nou `Bed Leveling`.
+
+### Mișcare manuală pe Z
+
+1. Deschide `Bambu Studio` și mergi la tabul `Device`.
+2. În panoul `Control`, selectează axa `Z`.
+3. Alege pasul `1`, `10` sau `100mm`.
+4. Folosește săgețile sus/jos: sus ridică `nozzle`-ul, jos îl coboară.
+5. Pentru apropierea de pat folosește `1mm` sau `10mm`, niciodată `100mm`.
 
 ### Încărcarea filamentului
 

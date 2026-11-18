@@ -25,9 +25,21 @@ Pașii exacți pentru operațiile frecvente. Pentru asamblare și reglaje mecani
 
 1. Curăță `build plate`-ul de praf și grăsime.
 2. Încălzește `heatbed`-ul la temperatura de print și lasă-l să se stabilizeze.
-3. Din ecran, deschide `Leveling` și rulează `Auto Leveling` pe cele 64 de puncte. Nu atinge printerul în timpul ciclului.
-4. Reglează `Z-offset`-ul cu o foaie A4 sau cu un test de prim layer, în pași de 0,02–0,05 mm.
-5. Salvează valoarea după fiecare ajustare. Linia trebuie să fie ușor turtită, fără să fie translucidă.
+3. Apasă iconița cu roată dințată (`Settings`) din bara de jos.
+4. Intră în `Expert Mode` și apasă `Hot Bed Tilt Calibration`, apoi `Start`.
+5. Așteaptă aproximativ 5 minute. Când patul coboară la punctul minim, motorul poate face un clic; este normal.
+6. La final apasă `OK`. Printerul intră automat în autotest și rulează `Hot Bed Heating` + `Auto Leveling`, aproximativ 10 minute. Apasă `OK` când termină.
+7. Înainte de print, pe ecranul fișierului bifează `Calibration`. Așa printerul reface nivelarea la începutul printului.
+8. Pentru `Z-offset`: pornește primul layer, apasă iconița `Settings` (roată dințată) din ecranul de print, apoi intră în `Expert Mode` → `Z-axis offset` și ajustează în pași de `0.025mm` (sau cel mai mic pas disponibil). Sus depărtează `nozzle`-ul de pat, jos îl apropie.
+9. Salvează valoarea cu opțiunea „always take effect”, ca reglajul să rămână și după repornire.
+
+### Mișcare manuală pe Z
+
+1. Apasă iconița cu listă (`Prepare`) din bara de jos.
+2. Intră în tabul `Movement/Temp`.
+3. Alege `1mm` sau `10mm`.
+4. Folosește săgețile pentru axa Z: sus ridică `nozzle`-ul, jos îl coboară.
+5. Pentru apropierea de pat folosește `1mm`; `10mm` este pentru deplasări mari.
 
 ### Încărcarea filamentului
 
@@ -180,11 +192,13 @@ Interfața se poate schimba prin actualizări de firmware. Dacă un meniu arată
 
 ## Nivelarea patului
 
-Ender-5 Max face `auto leveling` pe 64 de puncte. Înainte de nivelare, curăță `build plate`-ul de praf și grăsime și încălzește `heatbed`-ul la temperatura la care vei printa: nivelarea făcută la rece nu se potrivește cu patul dilatat la cald.
+Ender-5 Max are 64 de puncte de măsurare și un sistem care compensează înclinarea patului. Calibrarea completă se face din `Settings` → `Expert Mode` → `Hot Bed Tilt Calibration` → `Start`. Durează aproximativ 5 minute; când patul coboară la punctul minim, motorul poate face un clic, iar asta este normal.
 
-Pornește `auto leveling` din meniul ecranului și lasă ciclul să se termine fără să atingi printerul. După nivelare, reglează `Z-offset`-ul: coboară `nozzle`-ul la primul layer și verifică distanța cu o foaie de hârtie sau, mai bine, cu un test de prim layer. `Filament`-ul trebuie să fie ușor turtit pe pat, nu lipit prea tare și nici depus în aer.
+La final apasă `OK`. Printerul rulează automat `Hot Bed Heating` + `Auto Leveling`, aproximativ 10 minute, apoi apasă din nou `OK`. Înainte de fiecare print, bifează `Calibration` pe ecranul fișierului, ca nivelarea să se refacă la început.
 
-Salvează valoarea `Z-offset` după fiecare ajustare. Dacă prima linie este prea subțire și translucidă, `nozzle`-ul este prea aproape; dacă nu se lipește, este prea departe. Fă modificări mici, de 0,02–0,05 mm.
+`Z-offset`-ul se reglează în timpul primului layer: apasă iconița `Settings` (roată dințată) din ecranul de print, apoi intră în `Expert Mode` → `Z-axis offset` și ajustează în pași de `0.025mm` (sau cel mai mic pas disponibil). Sus depărtează `nozzle`-ul de pat, jos îl apropie. Salvează cu opțiunea „always take effect”, ca valoarea să rămână și după repornire.
+
+Dacă prima linie este prea subțire și translucidă, `nozzle`-ul este prea aproape; dacă nu se lipește, este prea departe.
 
 ## Încărcarea filamentului
 

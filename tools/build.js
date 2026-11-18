@@ -501,7 +501,7 @@ const guideCards = guides
         <span class="card-cat">Slicer</span>
         <h2><a href="ghiduri/${g.slug}.html">${escapeHtml(g.data.titlu)}</a></h2>
         <p>${escapeHtml(g.data.descriere || "")}</p>
-        <div class="card-foot">Deschide ghidul →</div>
+        <a class="card-foot" href="ghiduri/${g.slug}.html">Deschide ghidul →</a>
       </div>
     </article>`
   )
@@ -650,7 +650,7 @@ const printerCards = printers
         <span class="card-cat">${escapeHtml(p.data.brand || "")}</span>
         <h2><a href="imprimante/${p.slug}.html">${escapeHtml(p.data.titlu)}</a></h2>
         <p>${escapeHtml(p.data.descriere || "")}</p>
-        <div class="card-foot">Deschide ghidul →</div>
+        <a class="card-foot" href="imprimante/${p.slug}.html">Deschide ghidul →</a>
       </div>
     </article>`
   )
@@ -690,7 +690,7 @@ const cardsHtml = cases
         <span class="card-cat">${escapeHtml(c.data.categorie)}</span>
         <h2><a href="cazuri/${c.slug}.html">${escapeHtml(c.data.titlu)}</a></h2>
         <p>${escapeHtml(c.data.descriere || "")}</p>
-        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+        <a class="card-foot" href="cazuri/${c.slug}.html">Vezi cauzele și soluțiile →</a>
       </div>
     </article>`;
   })

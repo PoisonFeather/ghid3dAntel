@@ -25,9 +25,10 @@ Pașii exacți pentru operațiile frecvente. Nivelarea manuală se face doar dac
 ### Bed leveling automat
 
 1. Curăță `build plate`-ul și așază-l la loc, cu marginea din spate în canalele de aliniere.
-2. Din ecran, intră în `Settings` → `Calibration` și alege `Auto Bed Leveling`.
+2. Din ecran, apasă iconița cu roată dințată (`Settings`) → `Calibration` și alege `Auto Bed Leveling`.
 3. Apasă `Start` și lasă ciclul să se termine fără să atingi printerul.
 4. Printează un test de prim layer. Dacă suprafața este uniformă, nu mai este nevoie de altă reglare.
+5. P2S nu are `Z-offset` manual în meniul standard. Dacă primul layer rămâne neuniform, fă nivelarea manuală de mai jos, apoi rulează din nou `Auto Bed Leveling`.
 
 ### Bed leveling manual (doar dacă este necesar)
 
@@ -38,6 +39,14 @@ Pașii exacți pentru operațiile frecvente. Nivelarea manuală se face doar dac
 5. Strângerea în sens orar mărește distanța dintre pat și `nozzle`; slăbirea o micșorează.
 6. Repetă toate cele trei cicluri ale fișierului, apoi remontează placa.
 7. Rulează din nou `Auto Bed Leveling`, ca să sincronizezi reglajele manuale cu sistemul automat.
+
+### Mișcare manuală pe Z
+
+1. Deschide `Bambu Studio` și mergi la tabul `Device`.
+2. În panoul `Control`, selectează axa `Z`.
+3. Alege pasul `1`, `10` sau `100mm`.
+4. Folosește săgețile sus/jos: sus ridică `nozzle`-ul, jos îl coboară.
+5. Pentru apropierea de pat folosește `1mm` sau `10mm`, nu `100mm`.
 
 ### Încărcarea filamentului
 
