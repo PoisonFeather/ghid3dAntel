@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Se oprește din extrudat la mijlocul printului — Ghid calitate la printare 3D</title>
+<meta name="description" content="Printul începe bine, dar la un moment dat printerul nu mai scoate material.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/stops-extruding-mid-print/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Se oprește din extrudat la mijlocul printului</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Extrudare</span>
+        <h1>Se oprește din extrudat la mijlocul printului</h1>
+        <p class="lede">Printul începe bine, dar la un moment dat printerul nu mai scoate material.</p>
+        <p class="en-title">În engleză: <strong>Stops Extruding Mid Print</strong></p>
+      </div>
+      <figure><img src="../assets/img/stops-extruding-mid-print-1024x1024-1.jpg" alt="Se oprește din extrudat la mijlocul printului"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#s-a-terminat-filamentul">S-a terminat filamentul</a></li><li class="lvl-3"><a href="#filamentul-a-fost-ros-de-roata-de-antrenare">Filamentul a fost ros de roata de antrenare</a></li><li class="lvl-3"><a href="#extruderul-este-infundat">Extruderul este înfundat</a></li><li class="lvl-3"><a href="#driver-ul-motorului-extruderului-s-a-supraincalzit">Driver-ul motorului extruderului s-a supraîncălzit</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Filament spool</li><li>Extruder temperature</li><li>Default Printing Speed (Speeds)</li><li>Motor driver cooling</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Dacă printerul extruza corect la început, dar s-a oprit brusc mai târziu, cauzele sunt de obicei puține. Le verificăm pe rând.</p>
+<p>Dacă problema apare chiar la începutul printului, vezi secțiunea <a href="not-extruding-at-start-of-print.html" target="_blank" rel="noopener">Nu extrudază la începutul printului</a>.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="s-a-terminat-filamentul">S-a terminat filamentul</h3>
+<p>Este evident, dar verifică primul lucru: mai există filament care intră în nozzle? Dacă rola s-a terminat, încarcă o rolă nouă înainte de a continua.</p>
+<h3 id="filamentul-a-fost-ros-de-roata-de-antrenare">Filamentul a fost ros de roata de antrenare</h3>
+<p>În timpul printului, motorul extruderului se rotește constant pentru a împinge filamentul în nozzle. Dacă printezi prea repede sau încerci să extrudezi prea mult material, roata poate roade filamentul până nu mai rămâne nimic de apucat.</p>
+<p>Semnul: motorul extruderului se învârte, dar filamentul nu avansează. Soluțiile complete sunt în secțiunea <a href="grinding-filament.html" target="_blank" rel="noopener">Filament ros (grinding)</a>.</p>
+<h3 id="extruderul-este-infundat">Extruderul este înfundat</h3>
+<p>Dacă primele două cauze nu se aplică, extruderul este probabil înfundat. Când se întâmplă la mijlocul printului, verifică dacă filamentul este curat și dacă rola nu are praf.</p>
+<p>Praful depus pe filament se acumulează în nozzle și poate produce un <code class="tight">clog</code>. Alte cauze și pașii de desfundare sunt descriși în secțiunea <a href="clogged-extruder.html" target="_blank" rel="noopener">Extruder înfundat</a>.</p>
+<h3 id="driver-ul-motorului-extruderului-s-a-supraincalzit">Driver-ul motorului extruderului s-a supraîncălzit</h3>
+<p>Motorul extruderului muncește intens: se rotește înainte și înapoi, împingând și trăgând plastic. Această mișcare rapidă consumă curent mare.</p>
+<p>Dacă electronica printerului nu este răcită suficient, driver-ul motorului se poate supraîncălzi. Majoritatea driverelor au protecție termică și se opresc când temperatura este prea mare.</p>
+<p>Simptomul este specific: axele X și Y continuă să miște capul de printare, dar motorul extruderului nu se mai mișcă deloc.</p>
+<p>Soluția este să oprești printerul și să lași electronica să se răcească. Dacă problema reapare, adaugă un ventilator suplimentar pentru electronică.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu confunda această situație cu un <code class="tight">clog</code>. Dacă motorul extruderului nu se mișcă deloc, dar axele merg, problema este electrică, nu de flux de material.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/stops-extruding-mid-print/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="clogged-extruder.html"><div class="dir">← Problema anterioară</div><div class="name">Extruder înfundat</div></a>
+      <a class="next" href="weak-infill.html"><div class="dir">Problema următoare →</div><div class="name">Infill slab</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="under-extrusion.html"><img src="../assets/img/under-extruding.jpg" alt="Sub-extrudare (under-extrusion)" loading="lazy"></a>
+          <div><h3><a href="under-extrusion.html">Sub-extrudare (under-extrusion)</a></h3><p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p></div>
+        </article><article class="related-card">
+          <a href="over-extrusion.html"><img src="../assets/img/over-extruding-1024x1024-1.jpg" alt="Supra-extrudare (over-extrusion)" loading="lazy"></a>
+          <div><h3><a href="over-extrusion.html">Supra-extrudare (over-extrusion)</a></h3><p>Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

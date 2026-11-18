@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goluri între infill și contur — Ghid calitate la printare 3D</title>
+<meta name="description" content="Rămân goluri între conturul piesei și umplutura din interior.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-between-infill-and-outline/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Goluri între infill și contur</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Goluri între infill și contur</h1>
+        <p class="lede">Rămân goluri între conturul piesei și umplutura din interior.</p>
+        <p class="en-title">În engleză: <strong>Gaps Between Infill and Outline</strong></p>
+      </div>
+      <figure><img src="../assets/img/gap-between-infill-and-outline-1024x1024-1.jpg" alt="Goluri între infill și contur"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#outline-overlap-prea-mic">Outline overlap prea mic</a></li><li class="lvl-3"><a href="#printare-prea-rapida">Printare prea rapidă</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Outline Overlap (Infill)</li><li>Default Printing Speed (Speeds)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Fiecare layer este format din <code>perimeters</code> (contur) și <code>infill</code> (umplutură). Conturul urmărește forma piesei și creează exteriorul precis. <code class="tight">Infill</code>-ul umple interiorul, de obicei cu un model rapid dus-întors.</p>
+<p>Pentru că sunt generate cu tipare diferite, cele două zone trebuie să se unească bine. Dacă rămân goluri între marginea <code class="tight">infill</code>-ului și contur, legătura este slabă.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="outline-overlap-prea-mic">Outline overlap prea mic</h3>
+<p>Setarea care controlează legătura dintre contur și <code>infill</code> se numește <code class="tight">Outline Overlap</code>. Ea stabilește cât de mult intră <code class="tight">infill</code>-ul peste contur.</p>
+<p>O găsești în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Infill</code>. Valoarea este procent din lățimea de extrudare, ca să se adapteze la diferite dimensiuni de nozzle.</p>
+<p>La <code class="tight">20% outline overlap</code>, <code class="tight">infill</code>-ul se suprapune cu 20% peste cel mai interior <code class="tight">perimeter</code>. Dacă aveai <code class="tight">20%</code>, încearcă <code>30%</code> și vezi dacă golurile dispar.</p>
+<h3 id="printare-prea-rapida">Printare prea rapidă</h3>
+<p><code class="tight">Infill</code>-ul este de obicei printat mai repede decât conturul. Dacă merge prea repede, nu are timp să se lege de <code class="tight">perimeters</code>.</p>
+<p>Dacă ai crescut <code>Outline Overlap</code> și golurile persistă, reduce viteza. Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> și ajustează <code class="tight">Default Printing Speed</code>.</p>
+<p>Exemplu: de la <code>3600 mm/min</code> (60 mm/s) la jumătate. Dacă golurile dispar, crește treptat viteza până găsești limita printerului.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Un <code>outline overlap</code> prea mare poate umfla pereții și poate crea exces de material. Crește cu 5–10% pe rând, nu direct la 50%.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-between-infill-and-outline/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="blobs-and-zits.html"><div class="dir">← Problema anterioară</div><div class="name">Pete și umflături (blobs and zits)</div></a>
+      <a class="next" href="curling-or-rough-corners.html"><div class="dir">Problema următoare →</div><div class="name">Colțuri ridicate sau neuniforme (curling)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

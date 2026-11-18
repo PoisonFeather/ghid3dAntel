@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suprafață slabă deasupra suporturilor — Ghid calitate la printare 3D</title>
+<meta name="description" content="Partea de sub piesă, acolo unde a fost suportul, iese aspră și neuniformă.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/poor-surface-above-supports/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Suprafață slabă deasupra suporturilor</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Suprafață slabă deasupra suporturilor</h1>
+        <p class="lede">Partea de sub piesă, acolo unde a fost suportul, iese aspră și neuniformă.</p>
+        <p class="en-title">În engleză: <strong>Poor Surface Above Supports</strong></p>
+      </div>
+      <figure><img src="../assets/img/poor-surface-above-supports-1024x1024-1.jpg" alt="Suprafață slabă deasupra suporturilor"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#layer-height-prea-mare">Layer height prea mare</a></li><li class="lvl-3"><a href="#support-infill-percentage">Support Infill Percentage</a></li><li class="lvl-3"><a href="#upper-vertical-separation-layers">Upper Vertical Separation Layers</a></li><li class="lvl-3"><a href="#horizontal-offset">Horizontal Offset</a></li><li class="lvl-3"><a href="#al-doilea-extruder">Al doilea extruder</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Layer height (Layer)</li><li>Support Infill Percentage</li><li>Dense Support Structures</li><li>Upper Vertical Separation Layers</li><li>Horizontal Offset</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Simplify3D poate genera structuri de suport pentru porțiuni în consolă sau zone fără nimic dedesubt. Suporturile sunt detașabile și se îndepărtează după print.</p>
+<p>În funcție de setări, suprafața de sub piesă, exact deasupra suportului, poate ieși aspră. Câteva setări fac diferența.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="layer-height-prea-mare">Layer height prea mare</h3>
+<p>Performanța pe <code>overhang</code> se îmbunătățește mult cu <code>layer height</code> mai mic.</p>
+<p>Exemplu: la <code>0.2mm</code> ai nevoie de suport pentru orice <code>overhang</code> peste 45°. La <code class="tight">0.1mm</code>, printerul poate printa bine și la 60°, pentru că face pași mai mici.</p>
+<p>Avantajul este dublu: mai puțin suport necesar și o suprafață mai netedă dedesubt. Este una dintre primele setări de ajustat.</p>
+<h3 id="support-infill-percentage">Support Infill Percentage</h3>
+<p>Densitatea suporturilor se reglează separat. Valoarea uzuală este <code class="tight">20–40%</code>.</p>
+<p>Dacă layerele de jos ale piesei se lasă prea mult, crește procentul. Mulți utilizatori preferă <code class="tight">Dense Support Structures</code>, care permit densitate mică în majoritatea suportului și densitate mare doar aproape de vârf.</p>
+<h3 id="upper-vertical-separation-layers">Upper Vertical Separation Layers</h3>
+<p>Suporturile detașabile cer un echilibru:</p>
+<ul><li>prea mult suport → se lipește de piesă și se scoate greu;</li><li>prea puțin suport → piesa nu are fundație și printul eșuează.</li></ul>
+<p><code>Upper Vertical Separation Layers</code> stabilește câte layere goale rămân între suport și piesă. La același material pentru piesă și suport, folosește cel puțin <code>1–2</code> layere de separare.</p>
+<h3 id="horizontal-offset">Horizontal Offset</h3>
+<p><code>Horizontal Offset</code> controlează distanța laterală dintre piesă și suport. Dacă separarea verticală protejează partea de sus, offset-ul protejează pereții laterali.</p>
+<p>Valoarea uzuală este <code class="tight">0.2–0.4mm</code>. Testează pentru extruderul și filamentul tău.</p>
+<h3 id="al-doilea-extruder">Al doilea extruder</h3>
+<p>Dacă printerul are două sau mai multe extrudere, poți folosi un material diferit pentru suport. De exemplu, piesă din PLA și suport din PVA solubil în apă.</p>
+<p>Materialele diferite nu se lipesc la fel de bine, iar suportul se îndepărtează mai curat. În acest caz poți reduce <code>Upper Vertical Separation Layers</code> la <code>0</code> și <code>Horizontal Offset</code> la aproximativ <code class="tight">0.1mm</code>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu reduce separarea la zero dacă folosești același material pentru piesă și suport. Suportul se va suda de piesă și riscă să rupă suprafața la îndepărtare.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/poor-surface-above-supports/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="warping.html"><div class="dir">← Problema anterioară</div><div class="name">Deformare la răcire (warping)</div></a>
+      <a class="next" href="dimensional-accuracy.html"><div class="dir">Problema următoare →</div><div class="name">Precizie dimensională</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-separation-and-splitting.html"><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă" loading="lazy"></a>
+          <div><h3><a href="layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h3><p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p></div>
+        </article><article class="related-card">
+          <a href="weak-infill.html"><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab" loading="lazy"></a>
+          <div><h3><a href="weak-infill.html">Infill slab</a></h3><p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

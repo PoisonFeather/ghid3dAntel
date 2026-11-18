@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layere care se desprind și crapă — Ghid calitate la printare 3D</title>
+<meta name="description" content="Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/layer-separation-and-splitting/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Layere care se desprind și crapă</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Layere care se desprind și crapă</h1>
+        <p class="lede">Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p>
+        <p class="en-title">În engleză: <strong>Layer Separation and Splitting</strong></p>
+      </div>
+      <figure><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#layer-height-prea-mare">Layer height prea mare</a></li><li class="lvl-3"><a href="#temperatura-de-printare-prea-mica">Temperatura de printare prea mică</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Layer height (Layer)</li><li>Extruder temperature (Temperature)</li><li>Nozzle diameter</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Printarea 3D construiește obiectul layer cu layer. Fiecare layer se printează peste cel anterior. Pentru ca piesa finală să fie rezistentă, fiecare layer trebuie să se lege bine de cel de dedesubt.</p>
+<p>Dacă legătura este slabă, piesa se poate crăpa sau desprinde între layere. De obicei nu este o problemă de aderență la pat, ci de aderență între straturi.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="layer-height-prea-mare">Layer height prea mare</h3>
+<p>Majoritatea nozzle-urilor au diametrul între <code>0.3</code> și <code class="tight">0.5mm</code>. Plasticul este presat prin acest orificiu mic, iar rezultatul este o extrudare foarte subțire.</p>
+<p>Pentru ca două layere să se lege, layerul nou trebuie presat pe cel de dedesubt. Regula practică: <code>layer height</code> trebuie să fie cu aproximativ <strong>20% mai mic</strong> decât diametrul nozzle-ului.</p>
+<ul><li>la nozzle de <code class="tight">0.4mm</code>, nu depăși mult <code class="tight">0.32mm layer height</code>;</li><li>la nozzle de <code class="tight">0.3mm</code>, limita practică este în jur de <code class="tight">0.24mm</code>.</li></ul>
+<p>Dacă piesa se desprinde între layere, verifică mai întâi <code>layer height</code> în <code>Edit Process Settings</code> &gt; tabul <code>Layer</code> și încearcă o valoare mai mică.</p>
+<h3 id="temperatura-de-printare-prea-mica">Temperatura de printare prea mică</h3>
+<p>Plasticul cald se leagă mult mai bine decât cel rece. Dacă <code>layer height</code> este corect, dar layerele tot nu aderă, temperatura poate fi prea mică.</p>
+<p>Exemplu: ABS printat la 190 °C se va rupe ușor între layere. ABS are nevoie de obicei de <code>220–235 °C</code> pentru o legătură puternică.</p>
+<p>Verifică temperatura recomandată pentru filamentul folosit. Încearcă o creștere de <code>10 °C</code> din <code>Edit Process Settings</code> &gt; tabul <code>Temperature</code> (dublu-click pe valoare) și vezi dacă aderența se îmbunătățește.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Crește temperatura cu pași mici și urmărește rezultatul. Peste valoarea recomandată de producător apar <code>stringing</code> și deformări, deci nu compensa o problemă de răcire doar din temperatură.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/layer-separation-and-splitting/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="layer-shifting.html"><div class="dir">← Problema anterioară</div><div class="name">Layere deplasate (layer shifting)</div></a>
+      <a class="next" href="grinding-filament.html"><div class="dir">Problema următoare →</div><div class="name">Filament ros (grinding)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="weak-infill.html"><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab" loading="lazy"></a>
+          <div><h3><a href="weak-infill.html">Infill slab</a></h3><p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article><article class="related-card">
+          <a href="small-features-not-printed.html"><img src="../assets/img/small-features-not-printed2-1024x1024-1.jpg" alt="Detalii mici care nu se printează" loading="lazy"></a>
+          <div><h3><a href="small-features-not-printed.html">Detalii mici care nu se printează</a></h3><p>Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

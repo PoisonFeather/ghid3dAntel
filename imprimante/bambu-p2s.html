@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambu Lab P2S — Ghid de utilizare</title>
+<meta name="description" content="Ghid practic pentru Bambu Lab P2S: instalare, primul print, Bambu Handy și Studio, calibrare și întreținere.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html" aria-current="page">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://bambulab.com/en/support/documentation/1030589268269850624" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../imprimante.html">Imprimante</a><span>/</span>Bambu Lab P2S</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Bambu Lab</span>
+        <h1>Bambu Lab P2S</h1>
+        <p class="lede">Ghid practic pentru Bambu Lab P2S: instalare, primul print, Bambu Handy și Studio, calibrare și întreținere.</p>
+        <p class="en-title">În engleză: <strong>Bambu Lab P2S 3D Printing User Manual</strong></p>
+      </div>
+      <figure><img src="../assets/img/printers/bambu-p2s-hero.jpg" alt="Bambu Lab P2S"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#siguranta">Siguranță</a></li><li class="lvl-3"><a href="#alimentare-si-temperaturi">Alimentare și temperaturi</a></li><li class="lvl-3"><a href="#filament-si-ams">Filament și AMS</a></li><li class="lvl-3"><a href="#in-timpul-lucrului">În timpul lucrului</a></li><li class="lvl-2"><a href="#vedere-generala-si-specificatii">Vedere generală și specificații</a></li><li class="lvl-3"><a href="#partile-care-conteaza">Părțile care contează</a></li><li class="lvl-2"><a href="#primul-print">Primul print</a></li><li class="lvl-3"><a href="#amplasare-si-despachetare">Amplasare și despachetare</a></li><li class="lvl-3"><a href="#pornirea">Pornirea</a></li><li class="lvl-3"><a href="#primul-model">Primul model</a></li><li class="lvl-3"><a href="#scoaterea-piesei">Scoaterea piesei</a></li><li class="lvl-2"><a href="#incarcarea-filamentului">Încărcarea filamentului</a></li><li class="lvl-3"><a href="#din-ams">Din AMS</a></li><li class="lvl-3"><a href="#din-suportul-extern">Din suportul extern</a></li><li class="lvl-3"><a href="#descarcarea">Descărcarea</a></li><li class="lvl-3"><a href="#deseuri">Deșeuri</a></li><li class="lvl-2"><a href="#bambu-handy-si-bambu-studio">Bambu Handy și Bambu Studio</a></li><li class="lvl-3"><a href="#bambu-handy">Bambu Handy</a></li><li class="lvl-3"><a href="#bambu-studio">Bambu Studio</a></li><li class="lvl-3"><a href="#pregatirea-si-trimiterea-printului">Pregătirea și trimiterea printului</a></li><li class="lvl-2"><a href="#controale-de-pe-ecran">Controale de pe ecran</a></li><li class="lvl-3"><a href="#meniul-principal">Meniul principal</a></li><li class="lvl-3"><a href="#viteza">Viteza</a></li><li class="lvl-3"><a href="#miscarea-pe-axe">Mișcarea pe axe</a></li><li class="lvl-3"><a href="#nozzle-si-extruder">Nozzle și extruder</a></li><li class="lvl-3"><a href="#lumina-sunet-camera">Lumină, sunet, cameră</a></li><li class="lvl-3"><a href="#detectie-automata">Detecție automată</a></li><li class="lvl-3"><a href="#retea-usb-si-firmware">Rețea, USB și firmware</a></li><li class="lvl-2"><a href="#calibrare">Calibrare</a></li><li class="lvl-3"><a href="#auto-bed-leveling">Auto bed leveling</a></li><li class="lvl-3"><a href="#flow-dynamics">Flow dynamics</a></li><li class="lvl-3"><a href="#print-calibration">Print calibration</a></li><li class="lvl-2"><a href="#intretinere">Întreținere</a></li><li class="lvl-3"><a href="#program">Program</a></li><li class="lvl-3"><a href="#build-plate-si-heatbed">Build plate și heatbed</a></li><li class="lvl-3"><a href="#axe-si-suruburi">Axe și șuruburi</a></li><li class="lvl-3"><a href="#filtru-camera-si-consumabile">Filtru, cameră și consumabile</a></li><li class="lvl-2"><a href="#depanare-rapida">Depanare rapidă</a></li><li class="lvl-3"><a href="#infundarea-cum-o-recunosti">Infundarea: cum o recunoști</a></li><li class="lvl-3"><a href="#infundare-in-hotend">Infundare în hotend</a></li><li class="lvl-3"><a href="#cold-pull">Cold pull</a></li><li class="lvl-3"><a href="#cheia-allen">Cheia Allen</a></li><li class="lvl-3"><a href="#curele-slabite">Curele slăbite</a></li><li class="lvl-3"><a href="#probleme-de-calitate">Probleme de calitate</a></li><li class="lvl-3"><a href="#hms">HMS</a></li><li class="lvl-2"><a href="#unde-gasesti-mai-mult">Unde găsești mai mult</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-specs"><h2>Specificații cheie</h2><ul><li>Volum de printare: 256 × 256 × 256 mm</li><li>Dimensiuni: 392 × 406 × 478 mm; 14,9 kg</li><li>Viteză maximă: 600 mm/s; accelerație 20.000 mm/s²</li><li>Nozzle: 0,4 mm (opțional 0,2 / 0,6 / 0,8 mm), max. 300 °C</li><li>Pat încălzit: max. 110 °C</li><li>Placă: oțel flexibil, Textured PEI</li><li>Cameră: 1080p, 30 fps</li><li>Rețea: Wi-Fi dual-band</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>P2S este o imprimantă FDM închisă, cu volum de 256 mm pe fiecare axă și o cameră care ține căldura pentru materiale de inginerie. Se instalează după ghidul rapid, se calibrează singură la prima pornire și se controlează dintr-un ecran tactil de 5 inch, din <code>Bambu Handy</code> sau din <code class="tight">Bambu Studio</code>.</p>
+<p>Ghidul de față sintetizează manualul oficial pentru operatori: instalare, încărcarea filamentului, lansarea unui print și verificările de rutină. Nu înlocuiește manualul acolo unde sunt necesare demontări fine, dar acoperă utilizarea curentă.</p>
+<p>Trei lucruri fac cea mai mare diferență în practică: <code class="tight">build plate</code>-ul curat, calibrarea făcută după ce imprimanta a rămas la locul ei definitiv și filamentul uscat. Restul este mentenanță de rutină, făcută la timp.</p>
+<h2 id="siguranta">Siguranță</h2>
+<h3 id="alimentare-si-temperaturi">Alimentare și temperaturi</h3>
+<ul><li>Verifică tensiunea de alimentare pe eticheta de lângă priza imprimantei.</li><li>Imprimanta lucrează la temperaturi și viteze mari. Nu lăsa copiii sau persoane neinstruite să o opereze.</li><li>Nu atinge <code class="tight">toolhead</code>-ul, <code class="tight">heatbed</code>-ul sau părțile în mișcare în timpul printului. Riscul este de arsură și de strivire.</li><li>Scoate cablul de alimentare înainte de orice intervenție, mentenanță sau modificare, dacă manualul nu prevede altfel.</li><li>Lasă imprimanta să se răcească complet înainte de intervenții. Dacă trebuie să lucrezi la cald, poartă mănuși termorezistente.</li></ul>
+<h3 id="filament-si-ams">Filament și AMS</h3>
+<ul><li>Se recomandă filamentul Bambu Lab, testat pe acest model.</li><li>Nu încărca TPU prin buffer-ul de filament al imprimantei, cu excepția TPU-ului destinat <code class="tight">AMS</code>.</li><li>În <code>AMS</code> 2 Pro nu se încarcă materiale flexibile de 95A sau mai moi și nici PVA ori BVOH expuse la umezeală. Ambele se înfundă și blochează alimentarea.</li><li>Rolele acceptate au 50–68 mm lățime și 197–202 mm diametru; sunt recomandate cele de plastic.</li><li>Uscarea în <code>AMS</code> 2 Pro se face prin circulație externă de aer. Nu bloca priza de aer și nici orificiul de evacuare, altfel rezultatul scade.</li><li>O singură unitate <code>AMS</code> 2 Pro se conectează cu cablul Bambu Bus cu 6 pini. Pentru uscarea simultană în mai multe unități sunt necesare adaptoare oficiale.</li></ul>
+<h3 id="in-timpul-lucrului">În timpul lucrului</h3>
+<ul><li>Ține spațiul de lucru curat și pune imprimanta pe o suprafață dreaptă și stabilă.</li><li>Mentenanța regulată nu este opțională. Un mecanism lăsat fără curățare și lubrifiere produce defecte de print și poate deveni periculos.</li><li>Nu acoperi orificiile de ventilație și nu monta capace sau tuburi în spatele imprimantei, în dreptul canalului de evacuare a deșeurilor.</li></ul>
+<h2 id="vedere-generala-si-specificatii">Vedere generală și specificații</h2>
+<ul><li>Volum de printare: 256 × 256 × 256 mm.</li><li>Dimensiuni: 392 × 406 × 478 mm, greutate 14,9 kg.</li><li>Viteză maximă 600 mm/s, accelerație maximă 20.000 mm/s², debit maxim al <code class="tight">hotend</code>-ului 40 mm³/s.</li><li><code>Nozzle</code> de 0,4 mm din oțel călit, inclus. Sunt disponibile și 0,2 / 0,6 / 0,8 mm. Temperatura maximă este 300 °C.</li><li><code>Heatbed</code> până la 110 °C. Cu sistemul adaptiv de aer, temperatura pasivă din cameră poate ajunge la 50 °C.</li><li><code>Build plate</code> din oțel flexibil, cu suprafață Textured PEI.</li><li>Cameră de 1920 × 1080 la 30 fps, folosită pentru monitorizare, <code>timelapse</code> și detecție automată.</li><li>Ecran tactil color de 5 inch, 854 × 480.</li><li>Wi-Fi dual-band.</li></ul>
+<p>Materiale acceptate: PLA, PETG, ABS, ASA, TPU, PET, PA, PC, PVA, PLA-CF, PETG-CF, ABS-GF, ASA-CF, PA6-CF, PA6-GF, PAHT-CF, PPA-CF și PET-CF.</p>
+<h3 id="partile-care-conteaza">Părțile care contează</h3>
+<ul><li>În față: port USB, ecran tactil, cameră, ușă, <code class="tight">heatbed</code>.</li><li>În spate: întinzătoarele curelelor, baza suportului de rolă, buffer-ul de filament la Combo, priza, intrarea de filament, ventilația și canalul de evacuare.</li><li>Pe <code class="tight">toolhead</code>: intrarea de filament, pârghia cuțitului, angrenajele, <code class="tight">hotend</code>-ul, capacul frontal și ventilatorul de răcire.</li><li>În cameră: ștergătorul de <code class="tight">nozzle</code>, filtrul cu carbon activ și unitatea de comutare a fluxului de aer.</li></ul>
+<h2 id="primul-print">Primul print</h2>
+<h3 id="amplasare-si-despachetare">Amplasare și despachetare</h3>
+<p>Așază imprimanta pe o suprafață dreaptă și rigidă, într-un spațiu curat. Urmează ghidul de despachetare: cutie, spumă, pungă și elemente de fixare, fără să rămână ambalaj pe imprimantă sau în ea.</p>
+<p>În ambalaj trebuie să fie cutia de accesorii, cablul, tuburile PTFE, suportul de rolă și ghidul rapid. <code class="tight">Build plate</code>-ul Textured PEI trebuie să fie deja montat pe <code class="tight">heatbed</code>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu atinge suprafața <code class="tight">build plate</code>-ului cu mâinile. Grăsimile reduc aderența și pot duce la piese desprinse sau la <code class="tight">spaghetti</code>. Dacă suprafața are urme de ulei sau praf, spală-o cu apă caldă și detergent și usucă-o complet înainte de montaj.</p></div>
+<p>Montează suportul extern de rolă și, la versiunea Combo, unitatea <code>AMS</code> 2 Pro. Spatele are trei poziții de montaj; cele preinstalate diferă între standalone și Combo.</p>
+<h3 id="pornirea">Pornirea</h3>
+<ul><li>Conectează cablul, pornește întrerupătorul din spate și verifică ledul indicator.</li><li>Ecranul trebuie să pornească și să afișeze interfața de configurare inițială.</li></ul>
+<p>La prima pornire imprimanta intră singură în procesul de inițializare:</p>
+<ul><li>Alegi limba, regiunea și rețeaua Wi-Fi. Conexiunea poate fi sărită dacă nu este necesară.</li><li>Opțional, legi imprimanta la cont scanând cu <code>Bambu Handy</code> codul QR de pe ecran.</li><li>Imprimanta rulează automat o serie de verificări și calibrări: anularea zgomotului motoarelor, compensarea vibrațiilor și <code class="tight">auto bed leveling</code>.</li><li>După calibrare, <code class="tight">heatbed</code>-ul urcă. Scoate spuma rămasă sub el.</li><li>La finalul calibrării poți începe primul print.</li></ul>
+<div class="nota"><span class="nota-title">De reținut</span><p>Calibrarea și printurile se fac numai după ce imprimanta este așezată definitiv. Mutarea ei după calibrare afectează precizia măsurătorilor.</p></div>
+<h3 id="primul-model">Primul model</h3>
+<p>Imprimanta are fișiere pregătite pentru modele simple, cum ar fi mânerul de scraper, deci poți porni direct de pe ecran. Un stick USB, opțional, permite importul fișierelor tăiate și stocarea înregistrărilor.</p>
+<ul><li>Pe ecran, deschide lista de fișiere și alege modelul.</li><li>În opțiunile avansate poți seta manual <code class="tight">bed leveling</code>-ul și calibrarea fluxului; modul automat este recomandat.</li><li>Cu filamentul încărcat, alege slotul din <code>AMS</code> sau de pe rolă și apasă print.</li></ul>
+<h3 id="scoaterea-piesei">Scoaterea piesei</h3>
+<p>Așteaptă ca <code class="tight">heatbed</code>-ul și piesa să ajungă la temperatura camerei. Altfel riști să deformezi piesa, să deteriorezi placa sau să te arzi.</p>
+<p>Prinde marginea <code class="tight">build plate</code>-ului și ridică-l. Dacă piesa stă lipită, îndoaie ușor placa sau folosește scraperul. Îndepărtează linia de primare și remontează placa aliniată la opritoarele <code class="tight">heatbed</code>-ului. Suporturile se scot imediat, cu mâna sau cu clește cu vârf ascuțit.</p>
+<h2 id="incarcarea-filamentului">Încărcarea filamentului</h2>
+<h3 id="din-ams">Din AMS</h3>
+<ul><li>Pune rola într-un slot <code>AMS</code> 2 Pro, împinge ușor clapeta de alimentare și introdu filamentul. Unitatea îl detectează și îl încarcă singură.</li><li>Verifică dacă rola se rotește liber, închide capacul și blochează clema.</li><li>Pe ecran, alege slotul încărcat și apasă <code class="tight">Load</code>.</li><li>Filamentul Bambu este recunoscut automat prin RFID. La filamentul altor producători selectezi pictograma corespunzătoare și intri în <code>Edit</code> pentru a seta tipul și culoarea.</li></ul>
+<h3 id="din-suportul-extern">Din suportul extern</h3>
+<ul><li>Pune rola pe suport cu partea care corespunde direcției de înfășurare.</li><li>Pe ecran, deschide filamentele, alege rolă externă (<code class="tight">Ext</code>), setează tipul și culoarea și confirmă.</li><li>Introdu filamentul în tubul PTFE și împinge până se oprește. Linia de pe ecran, dintre <code>toolhead</code> și rolă, capătă culoarea filamentului: extruderul a detectat capătul.</li><li>Apasă <code>Load</code> și așteaptă încălzirea <code class="tight">nozzle</code>-ului.</li><li>Urmează instrucțiunile de pe ecran și confirmă dacă filamentul iese uniform.</li></ul>
+<p>Împinge filamentul încă o dată în timpul încărcării, ca să fie sigur că rămâne în extruder. Dacă nu iese nimic, alege reîncercarea și continuă să împingi până pornește extrudarea.</p>
+<h3 id="descarcarea">Descărcarea</h3>
+<p>După un print terminat, filamentul se retrage automat în <code>AMS</code> 2 Pro. Dacă vrei să-l scoți după o oprire sau anulare, mergi la pagina de filamente, alege slotul și apasă <code class="tight">Unload</code>.</p>
+<p>La rolă externă, apasă <code class="tight">Unload</code>, înfășoară filamentul când iese și fixează capătul în gaura rolei. Confirmă apoi pe ecran că problema este rezolvată. Înainte de a trece de la rolă externă la <code class="tight">AMS</code>, filamentul trebuie descărcat complet, iar vârful scos din buffer sau introdus în rolă, altfel apar erori de încărcare.</p>
+<h3 id="deseuri">Deșeuri</h3>
+<p>Excesul de la curățarea <code class="tight">nozzle</code>-ului și de la schimbările de culoare iese prin canalul din spate. Ține un recipient sub el și golește-l regulat. Verifică înainte de fiecare print că zona este liberă și aruncă deșeurile conform regulilor locale.</p>
+<h2 id="bambu-handy-si-bambu-studio">Bambu Handy și Bambu Studio</h2>
+<h3 id="bambu-handy">Bambu Handy</h3>
+<p><code>Bambu Handy</code> este aplicația mobilă cu care cauți și printezi modele, monitorizezi de la distanță și refolosești proiecte.</p>
+<ul><li>Descarcă aplicația de pe bambulab.download sau din magazinul de aplicații.</li><li>Telefonul și imprimanta trebuie să fie în aceeași rețea la legare, iar regiunea să corespundă cu cea a contului.</li><li>Creează contul cu telefon sau e-mail, deschide pe ecran pagina de autentificare și scanează codul QR.</li><li>În pagina de dispozitive, adaugă imprimanta, acceptă termenii și dă-i un nume.</li></ul>
+<p>Un print pornește din pagina de modele: alegi modelul, selectezi imprimanta și profilul, verifici <code class="tight">build plate</code>-ul și filamentul, apoi trimiți. În pagina dispozitivului vezi camera live, progresul cu layerul curent, timpul rămas, pauza și oprirea. De acolo poți sări peste o piesă eșuată și regla viteza, temperatura <code class="tight">heatbed</code>-ului sau lumina.</p>
+<h3 id="bambu-studio">Bambu Studio</h3>
+<p><code>Bambu Studio</code> este programul de slicing. Are cerințe modeste: Windows 10, macOS 10.15, Ubuntu 20.02 sau Fedora 36, procesor de 2 GHz, minimum 4 GB RAM, 2 GB spațiu liber și suport OpenGL 2.0.</p>
+<ul><li>La instalare alegi regiunea, apoi modelul de imprimantă și dimensiunea <code class="tight">nozzle</code>-ului.</li><li>Alegi presetul de filament, care aduce temperatura și ceilalți parametri.</li><li>Bifezi pluginul de rețea Bambu, necesar pentru print prin rețea sau internet și pentru sincronizarea contului.</li></ul>
+<p>Modelele se importă prin <code>File</code> &gt; <code class="tight">Import</code>, din bara de sus sau prin tragere pe placă. Formatele acceptate sunt <code class="tight">.3mf</code>, <code class="tight">.stl</code>, <code class="tight">.stp</code>, <code class="tight">.step</code>, <code>.amf</code> și <code class="tight">.obj</code>. Modelele de pe MakerWorld vin cu profiluri gata pregătite.</p>
+<h3 id="pregatirea-si-trimiterea-printului">Pregătirea și trimiterea printului</h3>
+<ul><li>Verifică modelul de imprimantă și tipul de <code class="tight">build plate</code>.</li><li>Folosește <code>Sync info</code> pentru a prelua datele despre <code>nozzle</code> și <code class="tight">AMS</code>, apoi sincronizează filamentele proiectului.</li><li>Alege presetul de proces. Pentru majoritatea modelelor cu <code>nozzle</code> de 0,4 mm, un layer de 0,2 mm echilibrează calitatea și durata.</li><li>Taie modelul cu <code>Slice plate</code> și verifică folosirea filamentului și timpul estimat.</li><li>Trimite printul, alege filamentul din <code>AMS</code> sau de pe rolă și confirmă.</li></ul>
+<p>În fereastra de trimitere poți activa <code class="tight">Timelapse</code>, <code>Auto Bed Leveling</code> și <code class="tight">Flow Dynamics Calibration</code>. Aceleași opțiuni apar pe ecran, la setările avansate.</p>
+<h2 id="controale-de-pe-ecran">Controale de pe ecran</h2>
+<h3 id="meniul-principal">Meniul principal</h3>
+<p>Bara din stânga ecranului are cinci secțiuni: pagina principală, control, filamente, setări și mesaje.</p>
+<ul><li>Pagina principală: fișierele din memoria internă și de pe USB, acces rapid la <code class="tight">nozzle</code>, <code class="tight">AMS</code>, rețea și <code class="tight">HMS</code>.</li><li>Control: gestionarea aerului și a ventilatoarelor, modul de viteză, mișcarea pe X, Y și Z, temperatura și tipul <code class="tight">nozzle</code>-ului, extruzie manuală, temperatura camerei și a <code class="tight">heatbed</code>-ului, lumina.</li><li>Filamente: editarea, încărcarea și descărcarea rolelor, recitirea RFID, umiditatea din <code class="tight">AMS</code>, uscarea, rolă externă, reumplerea automată.</li><li>Setări: cont, rețea, USB, <code class="tight">firmware</code>, <code class="tight">calibration</code>, mentenanță.</li><li>Mesaje: alertele <code class="tight">HMS</code>.</li></ul>
+<h3 id="viteza">Viteza</h3>
+<p>Sunt patru moduri, aplicabile în timpul printului:</p>
+<ul><li><code class="tight">Ludicrous</code>: 166% din viteza și accelerația normală.</li><li><code class="tight">Motion</code>: 124%.</li><li><code class="tight">Standard</code>: 100%.</li><li><code class="tight">Silent</code>: 50%.</li></ul>
+<p>Creșterea vitezei scurtează printul, dar poate înrăutăți suprafața. Reducerea vitezei îmbunătățește finisajul și reduce zgomotul, dar printul durează mai mult.</p>
+<h3 id="miscarea-pe-axe">Mișcarea pe axe</h3>
+<p>Când imprimanta este liberă, poți muta <code class="tight">toolhead</code>-ul și <code class="tight">heatbed</code>-ul din meniul de mișcare, de exemplu pentru curățare. Inelul interior mută <code class="tight">toolhead</code>-ul cu 1 mm, cel exterior cu 10 mm. <code class="tight">Heatbed</code>-ul urcă sau coboară cu pași de 1 sau 10.</p>
+<h3 id="nozzle-si-extruder">Nozzle și extruder</h3>
+<p>Pagina <code>Nozzle &amp; Extruder</code> arată culoarea filamentului încărcat, permite extruzia și retragerea a câte 1 cm, setarea temperaturii și actualizarea informațiilor despre <code class="tight">hotend</code>. După schimbarea <code class="tight">hotend</code>-ului trebuie să actualizezi manual tipul, materialul și diametrul, altfel imprimanta lucrează cu parametri greșiți.</p>
+<h3 id="lumina-sunet-camera">Lumină, sunet, cameră</h3>
+<p>Lumina din cameră are două moduri: manual, în care se aprinde inclusiv pentru detecția AI și poate fi comutată din meniu, și economic, în care se stinge când imprimanta este inactivă. Sunetul de notificare se activează pentru pornire, început și sfârșit de print.</p>
+<p>Camera înregistrează la 1920 × 1080 și permite monitorizare, fotografii, <code>timelapse</code> și detecție. Înregistrarea și <code class="tight">timelapse</code>-ul cer un stick USB montat înainte de print și se activează din opțiunile avansate ale paginii de print, din fereastra de trimitere din <code>Bambu Studio</code> sau din pagina de pregătire din <code class="tight">Bambu Handy</code>. Modul fluid mută <code class="tight">toolhead</code>-ul într-o poziție sigură înainte de fiecare cadru și generează un <code class="tight">prime tower</code>.</p>
+<h3 id="detectie-automata">Detecție automată</h3>
+<p>Funcțiile de detecție se activează din setările de print, iar sensibilitatea se reglează separat:</p>
+<ul><li>Detectarea de <code class="tight">spaghetti</code>, pentru filament încurcat sau aglomerat sub <code class="tight">nozzle</code>.</li><li>Detectarea acumulării de deșeuri în canalul de evacuare, care poate duce la ciocniri.</li><li>Detectarea aglomerărilor pe <code class="tight">nozzle</code>, de obicei în mai puțin de două minute, cu pauză automată.</li><li>Verificarea prezenței și a tipului de <code class="tight">build plate</code>. Dacă placa nu corespunde setărilor, printul se oprește.</li></ul>
+<p>Detecția cere lumină bună, deci lumina camerei rămâne aprinsă în timpul printului. Cu filament negru sau închis la culoare, sensibilitatea scade și apar alarme false. La materialele închise sau de temperatură mare, verificarea prin sondare crește acuratețea: <code class="tight">toolhead</code>-ul coboară la layerul 4, 11 și 20 și oprește printul dacă atinge <code class="tight">heatbed</code>-ul. Se generează atunci automat un <code>prime tower</code> de 20 de layere.</p>
+<h3 id="retea-usb-si-firmware">Rețea, USB și firmware</h3>
+<p>Imprimanta merge în Wi-Fi sau în modul <code>LAN</code> only, care limitează accesul la rețeaua locală: fără acces de la distanță, fără <code>Bambu Handy</code> și fără istoric de print. Apoi se poate porni modul dezvoltator, pentru software terț, cu riscurile aferente.</p>
+<p>Stick-ul USB trebuie să fie USB 2.0 sau mai nou, cu scriere de peste 10 MB/s, formatat FAT32 sau exFAT. Imprimanta acceptă un singur stick, fără hub. Formatezi din meniul de stocare și scoți stick-ul prin <code class="tight">Eject</code>, ca să nu se corupă datele. Fișierele video pot ocupa până la 65% din capacitate, maximum 500 de fișiere.</p>
+<p><code class="tight">Firmware</code>-ul se actualizează online, din notificarea de pe ecran sau manual din meniu. Resetarea la setările din fabrică șterge toate datele utilizatorului și nu poate fi anulată.</p>
+<h2 id="calibrare">Calibrare</h2>
+<h3 id="auto-bed-leveling">Auto bed leveling</h3>
+<p>Calibrarea atinge <code class="tight">build plate</code>-ul cu <code class="tight">nozzle</code>-ul și măsoară planeitatea <code class="tight">heatbed</code>-ului, pentru o înălțime de extruzie uniformă. Are trei stări: automat, pornit și oprit. În modul automat face o verificare de circa 10 secunde și sare peste nivelare dacă rezultatul este identic cu ultimul.</p>
+<h3 id="flow-dynamics">Flow dynamics</h3>
+<p>Calibrarea <code>flow dynamics</code> rezolvă sub- și supraextruzia cauzate de întârzierea de presiune din <code class="tight">nozzle</code>. Stabilește coeficientul optim de curgere, ca extruzia să rămână stabilă la viteză mare. În modul automat imprimanta sare peste proces dacă filamentul a fost calibrat recent.</p>
+<p>Calibrarea manuală se face în <code class="tight">Bambu Studio</code>, la <code>calibration</code> &gt; <code class="tight">Flow Dynamics</code>.</p>
+<h3 id="print-calibration">Print calibration</h3>
+<p>O calibrare completă se face după transport, mutare și mentenanța la axe, curele sau <code class="tight">toolhead</code>. Pe ecran, mergi la <code>Calibration</code> &gt; <code>Print Calibration</code> și alege sarcina. Aceleași calibrări pornesc din <code>Bambu Studio</code> și <code class="tight">Bambu Handy</code>.</p>
+<p>Dacă ai reglat curelele, rulează la final calibrarea de compensare a vibrațiilor.</p>
+<h2 id="intretinere">Întreținere</h2>
+<h3 id="program">Program</h3>
+<p>Imprimanta își evaluează singură gradul de murdărie după tipul sarcinilor și durata de lucru și afișează memento-uri de mentenanță. Funcția cere <code>firmware</code> actualizat.</p>
+<ul><li><code class="tight">Build plate</code>: curățare săptămânală.</li><li>Cameră, axele X și Y: curățare lunară.</li><li>Extruder: curățare și lubrifiere lunară.</li><li><code class="tight">Hotend</code>: <code>cold pull</code> lunar.</li><li>Axa Z: curățare și lubrifiere la trei luni.</li><li>Filtru de aer: curățare la trei luni, cu înlocuirea cărbunelui activ când este murdar sau saturat.</li></ul>
+<p>Dacă printezi continuu materiale de temperatură mare sau de inginerie ori imprimanta merge în medie peste 8 ore pe zi, scurtează intervalele: ce se face trimestrial se face lunar, iar ce se face lunar se face săptămânal.</p>
+<h3 id="build-plate-si-heatbed">Build plate și heatbed</h3>
+<p><code class="tight">Build plate</code>-ul se spală cu apă caldă și detergent de vase, apoi se usucă complet înainte de montaj. Nu îl atinge cu degetele pe suprafața de print.</p>
+<p><code class="tight">Heatbed</code>-ul se curăță cu <code class="tight">build plate</code>-ul demontat: ridici patul, îndepărtezi resturile de filament de sub el, pulverizezi alcool pe fundul camerei și ștergi cu o lavetă. Apoi cobori patul, ștergi suprafața cu alcool și lași să se evapore înainte de a pune placa la loc. Verifică întotdeauna că sub placă nu a rămas nimic.</p>
+<h3 id="axe-si-suruburi">Axe și șuruburi</h3>
+<ul><li>Axa X: șterge barele liniare și curelele cu o lavetă cu alcool, mută manual <code class="tight">toolhead</code>-ul pentru zonele ascunse, apoi pune ulei picătură cu picătură pe bare și mișcă <code class="tight">toolhead</code>-ul de 3–5 ori.</li><li>Axa Y: același procedeu, pe barele din ambele părți.</li><li>Axa Z: trei seturi, în față stânga, în față dreapta și în spate la centru. Cele din față au șurub și bară; cel din spate doar șurub. Ridică <code class="tight">heatbed</code>-ul din meniu pentru porțiunile de jos.</li></ul>
+<div class="nota"><span class="nota-title">De reținut</span><p>Barele liniare și șuruburile folosesc lubrifianți diferiți. Uleiul merge pe bare și pe rulmenții de la baza șuruburilor, vaselina pe corpul șuruburilor. Nu le inversa.</p></div>
+<p>După lubrifiere, pornește imprimanta și mișcă <code class="tight">heatbed</code>-ul sus și jos de 3–5 ori, ca să se distribuie uniform.</p>
+<h3 id="filtru-camera-si-consumabile">Filtru, cameră și consumabile</h3>
+<p>Filtrul de aer se scoate din clemele laterale, se curăță cu o perie și se șterge cu alcool. Carcasa se poate clăti cu apă dacă este foarte murdară, dar trebuie să fie perfect uscată la montaj. Cărbunele activ se înlocuiește când este murdar sau saturat.</p>
+<p>Camera se șterge cu un bețișor cu alcool. Pelicula de particule volatile produce imagini neclare și scade sensibilitatea detecției.</p>
+<p>Consumabilele se înlocuiesc la uzură: șosetul de silicon al <code class="tight">hotend</code>-ului, <code class="tight">hotend</code>-ul când este înfundat și nu mai poate fi curățat, cuțitul de tăiere când taie prost, tamponul de ștergere a <code class="tight">nozzle</code>-ului când este deteriorat. La schimbarea <code class="tight">hotend</code>-ului, deblochezi clemele întâi la dreapta, apoi la stânga, iar la montaj invers. Dacă noul <code>hotend</code> are alt material sau diametru, actualizează setarea în <code class="tight">Nozzle &amp; Extruder</code>.</p>
+<h2 id="depanare-rapida">Depanare rapidă</h2>
+<h3 id="infundarea-cum-o-recunosti">Infundarea: cum o recunoști</h3>
+<p>Mesajele de suprasarcină ale extruderului sau de <code class="tight">air print</code>, lipsa filamentului la <code>nozzle</code> ori o linie prea subțire indică o infundare în extruder sau în <code class="tight">hotend</code>.</p>
+<p>Primul test este descărcarea. Oprești printul, alegi filamentul în pagina de filamente și apeși <code class="tight">Unload</code>. Dacă descărcarea merge anormal, extruderul este înfundat, uneori împreună cu <code class="tight">hotend</code>-ul. Dacă merge normal, treci mai departe.</p>
+<p>Al doilea test este extruzia manuală. Scoți capacul de silicon și <code class="tight">hotend</code>-ul, apeși inelul negru al intrării de filament și tragi tubul PTFE. Din meniul <code class="tight">Nozzle &amp; Extruder</code>, împingi manual filamentul. Dacă iese, infundarea este în <code class="tight">hotend</code>; dacă nu, este în extruder sau în ambele. Curățarea extruderului cere demontare; pentru <code class="tight">hotend</code>, pașii sunt mai jos.</p>
+<h3 id="infundare-in-hotend">Infundare în hotend</h3>
+<ul><li>Setează temperatura cu puțin peste valoarea recomandată pentru material, de exemplu 220 °C pentru PLA, și așteaptă încălzirea.</li><li>Apasă butonul de extruzie și verifică dacă iese material. La TPU, apasă de maximum trei ori, fără apăsări rapide.</li><li>Dacă nu iese nimic sau iese subțire și fragil, folosește acul de deblocare din trusa de unelte.</li><li>Dacă nici așa nu merge, fă un <code class="tight">cold pull</code>.</li></ul>
+<p>Acul nu se folosește la <code class="tight">nozzle</code>-uri sub 0,4 mm. Poartă mănuși termorezistente și ține capul departe de cameră: materialul topit poate sări.</p>
+<h3 id="cold-pull">Cold pull</h3>
+<p><code>Cold pull</code> este metoda standard de curățare a <code class="tight">nozzle</code>-ului: filamentul este încălzit, răcit parțial și tras afară împreună cu reziduuri. Se repetă de mai multe ori.</p>
+<p>Secțiunea se află la <code class="tight">Nozzle Cold Pull Maintenance</code>, în meniul de unelte. Alegi <code class="tight">hotend</code>-ul și filamentul, scoți tubul PTFE, introduci filamentul folosit anterior și lași imprimanta să încălzească, să evacueze reziduurile și să răcească. Apoi tragi manual filamentul și remontezi tubul.</p>
+<h3 id="cheia-allen">Cheia Allen</h3>
+<p>Dacă a rămas un dop de filament umflat care nu iese nici prin extruzie, nici prin tragere, se folosește o cheie Allen H1.5 încălzită. Încălzești capătul cheii cu o brichetă obișnuită circa 10 secunde, o introduci rapid până trece de radiator, aștepți aproximativ 30 de secunde, încălzești vârful <code class="tight">nozzle</code>-ului circa 20 de secunde și tragi încet cheia împreună cu filamentul.</p>
+<p>Nu supraîncălzi <code class="tight">nozzle</code>-ul și nu folosi arzătoare cu butan. Ține vârful îndreptat în altă direcție decât spre tine și poartă mănuși.</p>
+<h3 id="curele-slabite">Curele slăbite</h3>
+<p>Curelele se pot lăsa după utilizare îndelungată. Semnele sunt cercurile care ies ovale și mesajele <code class="tight">HMS</code>. Imprimanta trebuie să fie oprită în timpul intervenției.</p>
+<ul><li>Curelele X și Y: slăbești cele patru șuruburi cu 1–2 ture, miști <code class="tight">toolhead</code>-ul pe cadru de 3–5 ori, îl așezi la mijlocul spatelui și strângi șuruburile. Nu le strânge excesiv, filetul se poate deteriora.</li><li>Cureaua Z: scoți capacul superior și culci imprimanta. Slăbești șurubul cu 1–2 ture, tragi cureaua prin 3–5 cicluri, apoi îl strângi. Repui imprimanta pe o suprafață dreaptă și montezi capacul.</li></ul>
+<p>Imprimanta este grea. Mut-o în doi oameni. După orice reglaj de curele, rulează calibrarea de compensare a vibrațiilor.</p>
+<h3 id="probleme-de-calitate">Probleme de calitate</h3>
+<p>Pentru fisuri între layere, supraextruzie, firicele, <code class="tight">warping</code>, colțuri ridicate, pereți incompleți sau suprafețe rugoase, vezi secțiunea Probleme din ghidul nostru de calitate. Înainte de a schimba parametri, verifică <code class="tight">build plate</code>-ul curat, filamentul uscat și calibrarea la zi.</p>
+<h3 id="hms">HMS</h3>
+<p><code>HMS</code> este sistemul de diagnostic al imprimantei. Alertele pentru defecte hardware, eșecuri de print sau mentenanță apar pe ecran și în aplicații. Scanezi codul QR sau cauți codul pe wiki-ul Bambu Lab și primești cauzele și pașii de remediere.</p>
+<h2 id="unde-gasesti-mai-mult">Unde găsești mai mult</h2>
+<ul><li>Manualul oficial și pagina produsului: <a href="https://bambulab.com/en/support/documentation/1030589268269850624" target="_blank" rel="noopener">bambulab.com</a>.</li><li>Wiki-ul Bambu Lab, cu ghiduri de dezasamblare, curățare a extruderului, ventilatoare și piese de schimb: <a href="https://wiki.bambulab.com/p2s" target="_blank" rel="noopener">wiki.bambulab.com/p2s</a>.</li><li>MakerWorld, pentru modele cu profiluri de print gata făcute: <a href="https://makerworld.com" target="_blank" rel="noopener">makerworld.com</a>.</li><li>Ghidul nostru de calitate, pentru defectele de print și setările de slicer.</li></ul>
+        <p><a class="source-link" href="https://bambulab.com/en/support/documentation/1030589268269850624" target="_blank" rel="noopener">Deschide manualul original ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="bambu-p1.html"><div class="dir">← Imprimanta anterioară</div><div class="name">Bambu Lab P1S / P1P</div></a>
+      <a class="next" href="ender-3-v3-ke.html"><div class="dir">Imprimanta următoare →</div><div class="name">Creality Ender-3 V3 KE</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Celelalte imprimante</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="bambu-p1.html"><img src="../assets/img/printers/bambu-p1-hero.jpg" alt="Bambu Lab P1S / P1P" loading="lazy"></a>
+          <div><h3><a href="bambu-p1.html">Bambu Lab P1S / P1P</a></h3><p>Ghid de instalare, primul print și întreținere pentru Bambu Lab P1S și P1P.</p></div>
+        </article><article class="related-card">
+          <a href="ender-3-v3-ke.html"><img src="../assets/img/printers/ender3-hero.jpg" alt="Creality Ender-3 V3 KE" loading="lazy"></a>
+          <div><h3><a href="ender-3-v3-ke.html">Creality Ender-3 V3 KE</a></h3><p>Ghid de asamblare, configurare și primul print pentru Creality Ender-3 V3 KE.</p></div>
+        </article><article class="related-card">
+          <a href="ender-5-max.html"><img src="../assets/img/printers/ender5-hero.jpg" alt="Creality Ender-5 Max" loading="lazy"></a>
+          <div><h3><a href="ender-5-max.html">Creality Ender-5 Max</a></h3><p>Ghid de asamblare, configurare și primul print pentru Creality Ender-5 Max, printer CoreXY cu volum de 400 mm.</p></div>
+        </article><article class="related-card">
+          <a href="mingda-ad-f4.html"><img src="../assets/img/printers/mingda-p05-1.jpg" alt="Mingda AD-F4" loading="lazy"></a>
+          <div><h3><a href="mingda-ad-f4.html">Mingda AD-F4</a></h3><p>Printer FDM de format mare, cu pat de 1200 × 800 mm și alimentare pe patru canale, pentru litere 3D și piese multicolor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

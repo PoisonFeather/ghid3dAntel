@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibrații și ringing — Ghid calitate la printare 3D</title>
+<meta name="description" content="Pe suprafață apar unde fine, mai ales lângă colțuri și schimbări brusce de direcție.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/vibrations-and-ringing/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Vibrații și ringing</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Mecanică</span>
+        <h1>Vibrații și ringing</h1>
+        <p class="lede">Pe suprafață apar unde fine, mai ales lângă colțuri și schimbări brusce de direcție.</p>
+        <p class="en-title">În engleză: <strong>Vibrations and Ringing</strong></p>
+      </div>
+      <figure><img src="../assets/img/vibrations-and-ringing-1024x1024-1.jpg" alt="Vibrații și ringing"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#printare-prea-rapida">Printare prea rapidă</a></li><li class="lvl-3"><a href="#acceleratia-din-firmware">Accelerația din firmware</a></li><li class="lvl-3"><a href="#probleme-mecanice">Probleme mecanice</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Default Printing Speed (Speeds)</li><li>X/Y Axis Movement Speed (Speeds)</li><li>Accelerație în firmware</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p><code class="tight">Ringing</code>-ul este un model de unde care apare pe suprafața piesei din cauza vibrațiilor sau a balansului printerului. Se observă cel mai clar când extruderul schimbă brusc direcția, de exemplu lângă un colț ascuțit.</p>
+<p>La un cub de 20 mm, fiecare trecere pe o altă față cere o schimbare de direcție. Inerția capului de printare produce vibrații, iar acestea rămân vizibile pe piesă.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="printare-prea-rapida">Printare prea rapidă</h3>
+<p>Cea mai frecventă cauză este viteza prea mare. La schimbările brusce de direcție, forța suplimentară produce vibrații care continuă după oprire.</p>
+<p>Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> și ajustează:</p>
+<ul><li><code>Default Printing Speed</code> — mișcările în care se extruzează;</li><li><code>X/Y Axis Movement Speed</code> — deplasările rapide, fără extrudare.</li></ul>
+<p>Uneori trebuie ajustate ambele.</p>
+<h3 id="acceleratia-din-firmware">Accelerația din firmware</h3>
+<p>Firmware-ul printerului aplică de obicei limite de accelerație, ca să evite schimbările brusce de direcție. Printerul crește gradual viteza, apoi decelerează înainte de a schimba direcția.</p>
+<p>Dacă ai experiență cu firmware-ul, poți reduce accelerația pentru tranziții și mai line. Asta poate diminua <code class="tight">ringing</code>-ul și mai mult.</p>
+<h3 id="probleme-mecanice">Probleme mecanice</h3>
+<p>Dacă viteza și accelerația nu rezolvă problema, caută sursa vibrațiilor în mecanică:</p>
+<ul><li>un șurub slăbit;</li><li>un suport sau o bridă ruptă;</li><li>un ax cu joc.</li></ul>
+<p>Urmărește printerul atent în timpul printului și încearcă să localizezi de unde vin vibrațiile. Foarte multe cazuri se rezolvă la sursa mecanică, nu din setări.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p><code class="tight">Ringing</code>-ul apare imediat după colț, nu pe toată piesa. Dacă suprafața este neuniformă peste tot, problema este mai degrabă de extrudare sau de filament.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/vibrations-and-ringing/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="lines-on-the-side-of-print.html"><div class="dir">← Problema anterioară</div><div class="name">Linii pe laterala piesei</div></a>
+      <a class="next" href="gaps-in-thin-walls.html"><div class="dir">Problema următoare →</div><div class="name">Goluri în pereți subțiri</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-shifting.html"><img src="../assets/img/layer-shifting-1024x1024-1.jpg" alt="Layere deplasate (layer shifting)" loading="lazy"></a>
+          <div><h3><a href="layer-shifting.html">Layere deplasate (layer shifting)</a></h3><p>Layerele nu mai sunt aliniate și se deplasează lateral una față de alta.</p></div>
+        </article><article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="not-sticking-to-the-bed.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Nu se lipește de pat" loading="lazy"></a>
+          <div><h3><a href="not-sticking-to-the-bed.html">Nu se lipește de pat</a></h3><p>Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fire și picurare (stringing) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/stringing-or-oozing/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Fire și picurare (stringing)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Fire și picurare (stringing)</h1>
+        <p class="lede">Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p>
+        <p class="en-title">În engleză: <strong>Stringing or Oozing</strong></p>
+      </div>
+      <figure><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#retraction-distance">Retraction distance</a></li><li class="lvl-3"><a href="#retraction-speed">Retraction speed</a></li><li class="lvl-3"><a href="#temperatura-extruderului-este-prea-mare">Temperatura extruderului este prea mare</a></li><li class="lvl-3"><a href="#deplasari-lungi-peste-zone-goale">Deplasări lungi peste zone goale</a></li><li class="lvl-3"><a href="#viteza-de-deplasare-prea-mica">Viteza de deplasare prea mică</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Retraction Distance (Extruder)</li><li>Retraction Speed (Extruder)</li><li>Extruder temperature (Temperature)</li><li>Avoid crossing outline for travel movement (Advanced)</li><li>X/Y Axis Movement Speed (Speeds)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p><code class="tight">Stringing</code>-ul (numit și <code class="tight">oozing</code>, <code>whiskers</code> sau print „păros”) apare când rămân fire subțiri de plastic pe model. Cauza este materialul care picură din nozzle în timp ce extruderul se deplasează în gol spre o altă zonă.</p>
+<p>Soluția principală este <code class="tight">retraction</code>. Când este activă, la finalul unei secțiuni filamentul este tras înapoi în nozzle, ca să nu picure în timpul deplasării. Când începe din nou printarea, filamentul este împins înainte.</p>
+<p>Verifică mai întâi că <code>retraction</code> este activă: <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>, pentru fiecare extruder în parte.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="retraction-distance">Retraction distance</h3>
+<p>Cea mai importantă setare de retracție este distanța. Ea stabilește cât filament este tras înapoi din nozzle. În general, cu cât este retras mai mult material, cu atât nozzle-ul picură mai puțin în timpul deplasării.</p>
+<ul><li>la extruderele <code>direct-drive</code> sunt suficiente de obicei <code class="tight">0.5–2.0mm</code>;</li><li>la extruderele <code>Bowden</code> poate fi nevoie de până la <code class="tight">15mm</code>, din cauza distanței mai mari dintre roata de antrenare și nozzle.</li></ul>
+<p>Dacă apar fire, crește <code>Retraction Distance</code> cu 1 mm și retestează.</p>
+<h3 id="retraction-speed">Retraction speed</h3>
+<p>A doua setare importantă este viteza de retracție.</p>
+<ul><li>dacă retracția este prea lentă, plasticul are timp să picure înainte ca deplasarea să se încheie;</li><li>dacă este prea rapidă, filamentul se poate rupe de plasticul topit din nozzle sau roata dințată poate roade materialul.</li></ul>
+<p>Valorile bune sunt de obicei între <code>1200–6000 mm/min</code> (20–100 mm/s). Profilele preconfigurate din Simplify3D sunt un punct de plecare bun, dar valoarea ideală depinde de material. Testează mai multe viteze și vezi care reduce firele.</p>
+<h3 id="temperatura-extruderului-este-prea-mare">Temperatura extruderului este prea mare</h3>
+<p>După retracție, următoarea cauză frecventă este temperatura. La temperatură prea mare, plasticul devine mai fluid și picură mai ușor. La temperatură prea mică, se extruzează greu.</p>
+<p>Dacă retracția pare corectă și tot apar fire, scade temperatura extruderului cu <code class="tight">5–10 °C</code>. Ajustarea se face din <code>Edit Process Settings</code> &gt; tabul <code class="tight">Temperature</code>, selectând extruderul din stânga și dublu-click pe valoare.</p>
+<h3 id="deplasari-lungi-peste-zone-goale">Deplasări lungi peste zone goale</h3>
+<p><code class="tight">Stringing</code>-ul apare în timpul deplasărilor între două puncte. Cu cât deplasarea este mai lungă, cu atât plasticul are mai mult timp să picure. Deplasările scurte sunt de obicei prea rapide ca să lase urme.</p>
+<p>Simplify3D poate scurta aceste deplasări automat și poate alege o rută care ocolește golurile, astfel încât nozzle-ul să rămână deasupra plasticului solid. Activează opțiunea din tabul <code class="tight">Advanced</code>: <code class="tight">Avoid crossing outline for travel movement</code>.</p>
+<h3 id="viteza-de-deplasare-prea-mica">Viteza de deplasare prea mică</h3>
+<p>Dacă printerul se mișcă încet între zone, nozzle-ul are mai mult timp să picure. Verifică setările din tabul <code class="tight">Speeds</code>.</p>
+<p><code>X/Y Axis Movement Speed</code> este viteza de deplasare laterală. Dacă printerul suportă viteze mai mari, creșterea acestei valori poate reduce firele dintre piese.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu rezolva <code class="tight">stringing</code>-ul doar prin retracție. Verifică și temperatura și calitatea filamentului: un filament umed sau de calitate slabă produce fire chiar și cu setări corecte.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/stringing-or-oozing/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="gaps-in-top-layers.html"><div class="dir">← Problema anterioară</div><div class="name">Goluri în layerele de sus</div></a>
+      <a class="next" href="overheating.html"><div class="dir">Problema următoare →</div><div class="name">Supraîncălzire (overheating)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article><article class="related-card">
+          <a href="blobs-and-zits.html"><img src="../assets/img/blobs-and-zits-1024x1024-1.jpg" alt="Pete și umflături (blobs and zits)" loading="lazy"></a>
+          <div><h3><a href="blobs-and-zits.html">Pete și umflături (blobs and zits)</a></h3><p>Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

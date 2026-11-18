@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambu Lab P1S / P1P — Ghid de utilizare</title>
+<meta name="description" content="Ghid de instalare, primul print și întreținere pentru Bambu Lab P1S și P1P.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html" aria-current="page">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://wiki.bambulab.com/en/p1/manual" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../imprimante.html">Imprimante</a><span>/</span>Bambu Lab P1S / P1P</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Bambu Lab</span>
+        <h1>Bambu Lab P1S / P1P</h1>
+        <p class="lede">Ghid de instalare, primul print și întreținere pentru Bambu Lab P1S și P1P.</p>
+        <p class="en-title">În engleză: <strong>Bambu Lab P1 Series Manual</strong></p>
+      </div>
+      <figure><img src="../assets/img/printers/bambu-p1-hero.jpg" alt="Bambu Lab P1S / P1P"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#introducere">Introducere</a></li><li class="lvl-3"><a href="#cum-functioneaza-seria-p1">Cum funcționează seria P1?</a></li><li class="lvl-3"><a href="#sistemul-de-miscare-corexy">Sistemul de mișcare CoreXY</a></li><li class="lvl-3"><a href="#axa-z">Axa Z</a></li><li class="lvl-3"><a href="#extruder">Extruder</a></li><li class="lvl-3"><a href="#hotend">Hotend</a></li><li class="lvl-3"><a href="#heatbed">Heatbed</a></li><li class="lvl-3"><a href="#build-plate">Build plate</a></li><li class="lvl-3"><a href="#compatibilitate-cu-ams-si-ams-hub">Compatibilitate cu AMS și AMS hub</a></li><li class="lvl-3"><a href="#intinzatoarele-curelei">Întinzătoarele curelei</a></li><li class="lvl-3"><a href="#senzori-si-electronica">Senzori și electronică</a></li><li class="lvl-2"><a href="#dezambalare">Dezambalare</a></li><li class="lvl-3"><a href="#pasul-1-despachetare-si-indepartarea-protectiilor">Pasul 1: Despachetare și îndepărtarea protecțiilor</a></li><li class="lvl-3"><a href="#pasul-2-deschide-cutia-de-accesorii-si-verifica-accesoriile">Pasul 2: Deschide cutia de accesorii și verifică accesoriile</a></li><li class="lvl-3"><a href="#pasul-3-conecteaza-ecranul-lcd">Pasul 3: Conectează ecranul LCD</a></li><li class="lvl-3"><a href="#pasul-4-deblocheaza-heatbed-ul">Pasul 4: Deblochează heatbed-ul</a></li><li class="lvl-3"><a href="#pasul-5-instaleaza-suportul-de-bobina">Pasul 5: Instalează suportul de bobină</a></li><li class="lvl-3"><a href="#pasul-6-conecteaza-cablul-de-alimentare-si-porneste-printerul">Pasul 6: Conectează cablul de alimentare și pornește printerul</a></li><li class="lvl-3"><a href="#pasul-7-indeparteaza-spuma-de-sub-heatbed">Pasul 7: Îndepărtează spuma de sub heatbed</a></li><li class="lvl-3"><a href="#pasul-8-finalizeaza-initializarea-si-incarca-filamentul">Pasul 8: Finalizează inițializarea și încarcă filamentul</a></li><li class="lvl-3"><a href="#pasul-9-pune-o-cutie-sau-un-recipient-pentru-resturile-de-filament">Pasul 9: Pune o cutie sau un recipient pentru resturile de filament</a></li><li class="lvl-2"><a href="#ce-contine-cutia">Ce conține cutia</a></li><li class="lvl-2"><a href="#incarcarea-filamentului">Încărcarea filamentului</a></li><li class="lvl-3"><a href="#pasul-1-introdu-filamentul">Pasul 1: Introdu filamentul</a></li><li class="lvl-3"><a href="#pasul-2-selecteaza-load">Pasul 2: Selectează `Load`</a></li><li class="lvl-3"><a href="#pasul-3-impinge-filamentul-manual">Pasul 3: Împinge filamentul manual</a></li><li class="lvl-3"><a href="#pasul-4-filamentul-este-extrudat-normal-incarcarea-s-a-incheiat">Pasul 4: Filamentul este extrudat normal, încărcarea s-a încheiat</a></li><li class="lvl-3"><a href="#pasul-5-filamentul-nu-este-extrudat-normal-selecteaza-retry">Pasul 5: Filamentul nu este extrudat normal, selectează `Retry`</a></li><li class="lvl-2"><a href="#conectarea-ams">Conectarea AMS</a></li><li class="lvl-3"><a href="#cum-conectezi-ams-la-seria-p1">Cum conectezi AMS la seria P1</a></li><li class="lvl-3"><a href="#pasul-1-conecteaza-tubul-ptfe-si-cablurile-bus">Pasul 1: Conectează tubul PTFE și cablurile bus</a></li><li class="lvl-3"><a href="#pasul-2-verifica-aparitia-iconitei-ams">Pasul 2: Verifică apariția iconiței AMS</a></li><li class="lvl-3"><a href="#pasul-3-verifica-versiunea-de-firmware-si-numarul-sn">Pasul 3: Verifică versiunea de firmware și numărul SN</a></li><li class="lvl-2"><a href="#legarea-bambu-handy-si-bambu-studio">Legarea Bambu Handy și Bambu Studio</a></li><li class="lvl-3"><a href="#verificari-inainte-de-legarea-printerului">Verificări înainte de legarea printerului</a></li><li class="lvl-3"><a href="#pasii-pentru-legarea-printerului">Pașii pentru legarea printerului</a></li><li class="lvl-3"><a href="#pasul-1-selecteaza-account-configuration">Pasul 1: Selectează Account Configuration</a></li><li class="lvl-3"><a href="#pasul-2-scaneaza-codul-qr">Pasul 2: Scanează codul QR</a></li><li class="lvl-3"><a href="#pasul-3-selecteaza-reteaua-wi-fi">Pasul 3: Selectează rețeaua Wi-Fi</a></li><li class="lvl-3"><a href="#pasul-4-verifica-rezultatul-legarii">Pasul 4: Verifică rezultatul legării</a></li><li class="lvl-3"><a href="#pasul-5-monitorizeaza-printerul-din-bambu-handy">Pasul 5: Monitorizează printerul din Bambu Handy</a></li><li class="lvl-2"><a href="#primul-print">Primul print</a></li><li class="lvl-3"><a href="#pasul-1-verifica-filamentul-incarcat">Pasul 1: Verifică filamentul încărcat</a></li><li class="lvl-3"><a href="#pasul-2-deschide-directorul-cardului-micro-sd">Pasul 2: Deschide directorul cardului micro SD</a></li><li class="lvl-3"><a href="#pasul-3-alege-modelul-dorit">Pasul 3: Alege modelul dorit</a></li><li class="lvl-3"><a href="#pasul-4-confirma-si-porneste-printarea">Pasul 4: Confirmă și pornește printarea</a></li><li class="lvl-2"><a href="#printare-din-bambu-studio">Printare din Bambu Studio</a></li><li class="lvl-3"><a href="#pasul-1-autentifica-te-in-bambu-studio">Pasul 1: Autentifică-te în Bambu Studio</a></li><li class="lvl-3"><a href="#pasul-2-taie-modelul-in-straturi-si-trimite-l-la-print">Pasul 2: Taie modelul în straturi și trimite-l la print</a></li><li class="lvl-3"><a href="#pasul-3-monitorizeaza-printarea">Pasul 3: Monitorizează printarea</a></li><li class="lvl-2"><a href="#actualizarea-firmware-ului">Actualizarea firmware-ului</a></li><li class="lvl-3"><a href="#note-de-versiune">Note de versiune</a></li><li class="lvl-3"><a href="#pasii-pentru-actualizarea-firmware-ului">Pașii pentru actualizarea firmware-ului</a></li><li class="lvl-3"><a href="#pasul-1-notificarea-de-actualizare">Pasul 1: Notificarea de actualizare</a></li><li class="lvl-3"><a href="#pasul-2-descarcarea-si-instalarea">Pasul 2: Descărcarea și instalarea</a></li><li class="lvl-3"><a href="#pasul-3-finalizarea-actualizarii">Pasul 3: Finalizarea actualizării</a></li><li class="lvl-3"><a href="#pasii-recomandati-dupa-actualizare">Pașii recomandați după actualizare</a></li><li class="lvl-3"><a href="#esecuri-la-actualizarea-firmware-ului-solutii-posibile">Eșecuri la actualizarea firmware-ului: soluții posibile</a></li><li class="lvl-3"><a href="#verifica-puterea-semnalului-wi-fi">Verifică puterea semnalului Wi-Fi</a></li><li class="lvl-3"><a href="#inlocuieste-cardul-micro-sd">Înlocuiește cardul Micro SD</a></li><li class="lvl-2"><a href="#card-sd-si-retea">Card SD și rețea</a></li><li class="lvl-3"><a href="#modele-aplicabile">Modele aplicabile</a></li><li class="lvl-3"><a href="#metode-si-moduri-de-retea-acceptate-pentru-seria-p1">Metode și moduri de rețea acceptate pentru seria P1</a></li><li class="lvl-3"><a href="#scenarii-de-utilizare">Scenarii de utilizare</a></li><li class="lvl-3"><a href="#procedura">Procedura</a></li><li class="lvl-3"><a href="#pasul-1-pregateste-fisierul-de-configurare">Pasul 1: Pregătește fișierul de configurare</a></li><li class="lvl-4"><a href="#metoda-1-creeaza-fisierul-direct">Metoda 1: Creează fișierul direct</a></li><li class="lvl-4"><a href="#metoda-2-recomandata-descarca-fisierul-de-configurare-si-modifica-informatiile-de-retea">Metoda 2 (recomandată): Descarcă fișierul de configurare și modifică informațiile de rețea</a></li><li class="lvl-3"><a href="#pasul-2-copiaza-fisierul-in-directorul-radacina-si-reporneste-printerul">Pasul 2: Copiază fișierul în directorul rădăcină și repornește printerul</a></li><li class="lvl-3"><a href="#pasul-3-verifica-conexiunea-la-retea">Pasul 3: Verifică conexiunea la rețea</a></li><li class="lvl-2"><a href="#schimbarea-filamentului">Schimbarea filamentului</a></li><li class="lvl-3"><a href="#pasul-1-selecteaza-unload">Pasul 1: Selectează `Unload`</a></li><li class="lvl-3"><a href="#pasul-2-scoate-filamentul">Pasul 2: Scoate filamentul</a></li><li class="lvl-3"><a href="#pasul-3-selecteaza-retry-daca-filamentul-nu-a-fost-scos">Pasul 3: Selectează `Retry` dacă filamentul nu a fost scos</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-specs"><h2>Specificații cheie</h2><ul><li>Volum de printare: 256 × 256 × 256 mm</li><li>Viteză maximă: 500 mm/s</li><li>Accelerație maximă: 20.000 mm/s²</li><li>Nozzle: 0,4 mm, max. 300 °C</li><li>Pat încălzit: max. 100 °C</li><li>Placă: oțel flexibil, PEI texturat</li><li>Filament: 1,75 mm</li></ul></div>
+        <h2 id="introducere">Introducere</h2>
+<h3 id="cum-functioneaza-seria-p1">Cum funcționează seria P1?</h3>
+<p>Bambu Lab P1 preia cinematica și tehnologia de control al mișcării consacrate de seria X1, împreună cu senzorii care îi asigură fiabilitatea. Se poate conecta la sistemul automat de materiale (<code class="tight">AMS</code>) pentru printare multicoloră. Conceput pentru începători, pentru profesioniști și pentru oricine se bucură de partea creativă a lucrului, P1P a fost gândit să fie instalat și pus în funcțiune în câteva minute. În plus, permite upgrade-uri și personalizări hardware, grație caracteristicilor prietenoase cu modificările, astfel încât fiecare utilizator să își poată face printerul unic.</p>
+<p>De cele mai multe ori, obiectele de printat sunt fișiere cu extensia <code class="tight">.stl</code>, care conțin modelul 3D. Acestea trebuie procesate înainte de printare cu un program numit <code class="tight">slicer</code>.</p>
+<p>În cazul nostru, cu <code class="tight">Bambu Studio</code>, <code class="tight">slicer</code>-ul preia fișierul <code>.stl</code> și îl taie în straturi, care sunt apoi printate de P1P. Toate aceste straturi sunt convertite în cod, un limbaj care îi spune mașinii cum să își miște axele pentru a printa modelul.</p>
+<p>Pe lângă mișcare, <code class="tight">slicer</code>-ul poate include în fișierul creat o serie de alte setări, cum ar fi temperaturile filamentului, vitezele de printare și generarea de suporturi pentru anumite regiuni ale piesei.</p>
+<h3 id="sistemul-de-miscare-corexy">Sistemul de mișcare CoreXY</h3>
+<p>Bambu Lab P1P folosește un sistem de mișcare CoreXY controlat de doi motoare pas cu pas. Motoarele X și Y lucrează împreună pentru a deplasa capul de printare.</p>
+<figure><img src="../assets/img/printers/p1-01.jpg" alt="Sistemul de mișcare CoreXY al printerului P1" loading="lazy"><figcaption>Sistemul de mișcare CoreXY al printerului P1</figcaption></figure>
+<p>P1P și P1S folosesc același sistem de mișcare.</p>
+<p>Fiecare motor pas cu pas are o curea independentă conectată la capul de printare, astfel încât o pereche de curele îi controlează poziția. Un sistem CoreXY permite printerului P1P să printeze mult mai rapid decât un printer cartezian tradițional, pentru că masa mobilă este mai mică, iar acest lucru este esențial la viteze mari.</p>
+<p>Mai multe informații despre sistemul de mișcare CoreXY găsești la <a href="https://corexy.com/theory.html" target="_blank" rel="noopener">corexy.com/theory.html</a>.</p>
+<h3 id="axa-z">Axa Z</h3>
+<p>Axa Z este formată din trei șuruburi elicoidale conectate la un singur motor pas cu pas printr-o curea.</p>
+<p>Alte printere 3D folosesc trei șuruburi elicoidale cu pat fix pentru a realiza reglarea automată a patului, dar acesta nu este cazul la P1P. Sistemul de nivelare nu este necesar, deoarece <code class="tight">heatbed</code>-ul P1P poate fi reglat, dacă este nevoie, cu ajutorul celor trei butoni de sub pat.</p>
+<p>P1P vine reglat din fabrică și acceptă nivelarea automată a patului.</p>
+<h3 id="extruder">Extruder</h3>
+<figure><img src="../assets/img/printers/p1-02.jpg" alt="Extruderul printerului P1" loading="lazy"><figcaption>Extruderul printerului P1</figcaption></figure>
+<p>Extruderul are rolul de a trage filamentul de pe bobină, de a-l alimenta către <code class="tight">hotend</code>, de a-l topi și de a-l împinge prin <code class="tight">nozzle</code>-ul mic pentru a genera modelul printat. Este și una dintre piesele esențiale ale unui printer 3D, pentru că trebuie să controleze cu precizie cantitatea de filament împinsă prin <code class="tight">hotend</code>.</p>
+<h3 id="hotend">Hotend</h3>
+<figure><img src="../assets/img/printers/p1-03.jpg" alt="Hotend-ul printerului P1" loading="lazy"><figcaption>Hotend-ul printerului P1</figcaption></figure>
+<p><code class="tight">Hotend</code>-ul este piesa printerului responsabilă cu topirea filamentului depus în straturi subțiri pentru a crea modelul. Pentru diferite tipuri de filament se folosesc temperaturi diferite. De exemplu, filamentul PLA se printează la temperaturi mai mici, în jur de 210–220 °C, în timp ce alte filamente, cum ar fi PETG și ABS, cer temperaturi mai mari, în jur de 250–260 °C.</p>
+<p>Bambu Lab P1P vine cu un <code>hotend</code> cu design all-in-one. Asta înseamnă că <code class="tight">nozzle</code>-ul este integrat în blocul de încălzire și este conectat la radiator printr-un tub metalic subțire, pentru cele mai bune performanțe.</p>
+<p>Acest design permite <code class="tight">hotend</code>-ului să se încălzească mult mai repede decât un <code>hotend</code> obișnuit, iar construcția all-in-one reduce problemele care pot apărea la schimbarea <code class="tight">nozzle</code>-urilor.</p>
+<h3 id="heatbed">Heatbed</h3>
+<figure><img src="../assets/img/printers/p1-04.jpg" alt="Heatbed-ul printerului P1" loading="lazy"><figcaption>Heatbed-ul printerului P1</figcaption></figure>
+<p>P1P și P1S folosesc același <code class="tight">heatbed</code>.</p>
+<p>De obicei, suprafața de printare trebuie să fie caldă pentru ca straturile depuse să adere, de aceea se folosește un <code class="tight">heatbed</code>.</p>
+<p>La printerul 3D din seria P1, <code class="tight">heatbed</code>-ul poate atinge 100 °C, iar temperatura poate fi controlată în funcție de tipul de filament folosit.</p>
+<p>Dacă suprafața de printare nu ar fi încălzită, filamentul depus s-ar răci prea repede, iar tensiunea dintre straturi ar face piesa să se deformeze.</p>
+<h3 id="build-plate">Build plate</h3>
+<p>Printerul P1 vine cu o placă Bambu Textured PEI. <code class="tight">Build plate</code>-ul se fixează magnetic pe <code class="tight">heatbed</code>, cu ghidaje din plastic în spate, pentru a garanta poziția corectă.</p>
+<p>Bambu Textured PEI Plate este o placă de printare magnetică și flexibilă, cu acoperire PEI pulverizată pe ambele fețe. În timpul printării, placa oferă o aderență excelentă, iar după răcire piesa se desprinde ușor.</p>
+<figure><img src="../assets/img/printers/p1-05.jpg" alt="Placa de printare Bambu Textured PEI" loading="lazy"><figcaption>Placa de printare Bambu Textured PEI</figcaption></figure>
+<h3 id="compatibilitate-cu-ams-si-ams-hub">Compatibilitate cu AMS și AMS hub</h3>
+<p>P1P este compatibil cu <code>AMS</code> și cu <code class="tight">AMS hub</code>, ceea ce permite printarea 3D cu până la 16 culori și cu diverse filamente. Verifică <a href="https://bambulab.com/en/support/faq#specs" target="_blank" rel="noopener">specificațiile tehnice pentru filamentele acceptate</a>. Dacă ai nevoie, poți achiziționa <a href="https://us.store.bambulab.com/products/ams-multicolor-printing" target="_blank" rel="noopener">AMS</a> sau <a href="https://us.store.bambulab.com/products/ams-hub" target="_blank" rel="noopener">AMS hub</a>.</p>
+<h3 id="intinzatoarele-curelei">Întinzătoarele curelei</h3>
+<p>P1P are întinzătoare de curea reglabile în spate, care pot fi ajustate pentru cele mai bune performanțe. Belt Tension Monitor (BTM) monitorizează tensiunea curelelor și te anunță dacă este nevoie de ajustări.</p>
+<figure><img src="../assets/img/printers/p1-06.jpg" alt="Întinzătoarele de curea ale printerului P1" loading="lazy"><figcaption>Întinzătoarele de curea ale printerului P1</figcaption></figure>
+<p>P1P și P1S folosesc același întinzător de curea.</p>
+<h3 id="senzori-si-electronica">Senzori și electronică</h3>
+<ul><li>Vibration Suppression: da</li><li>ABL (Auto Bed Leveling): da</li><li>Auto Z Offset Adjustment: da</li><li>Cameră de monitorizare a incintei: cameră de rezoluție redusă, 1280 × 720, 0,5 fps, cu suport pentru timelapse</li><li>LED: da</li><li>Ecran: 2,7 inch, 192 × 64</li><li>Conectivitate: Wi-Fi, Bluetooth, Bambu-Bus</li><li>Stocare: card Micro SD</li><li>Interfață de control: butoane, aplicație, aplicație PC</li><li>Ieșire USB: 5 V / 1,5 A</li></ul>
+<p>Pentru mai multe informații, consultă <a href="https://bambulab.com/en/p1" target="_blank" rel="noopener">pagina oficială a seriei P1</a>.</p>
+<h2 id="dezambalare">Dezambalare</h2>
+<p>Bambu Lab publică un video complet de asamblare pe canalul său de YouTube. Merită urmărit înainte de a începe, mai ales pentru orientarea corectă a conectorilor.</p>
+<h3 id="pasul-1-despachetare-si-indepartarea-protectiilor">Pasul 1: Despachetare și îndepărtarea protecțiilor</h3>
+<ul><li>Deschide cu grijă cutia de carton.</li><li>Scoate insertul din spumă.</li><li>Trage tot ansamblul afară din cutie, folosind cele două mânere de plastic, și așază-l pe o suprafață plană. Atenție: printerul cântărește aproximativ 12,59 kg.</li><li>Îndepărtează punga de plastic.</li><li>Ia Quick Start Guide din capacul superior lateral și citește-l înainte de a trece la pasul următor.</li><li>Îndepărtează cu grijă toate foliile de plastic de pe panouri.</li><li>Scoate inserturile din spumă și extrage cutia de accesorii.</li><li>Taie cele două cleme de plastic care blochează capul de printare.</li><li>Dezlipește toate benzile de protecție rămase.</li></ul>
+<h3 id="pasul-2-deschide-cutia-de-accesorii-si-verifica-accesoriile">Pasul 2: Deschide cutia de accesorii și verifică accesoriile</h3>
+<p>Pachetul P1S include un ecran, un suport de bobină, filament, un <code>hotend</code> de rezervă, tampoane de ștergere a <code class="tight">nozzle</code>-ului, cablu de alimentare, instrument pentru deblocarea <code class="tight">nozzle</code>-ului, tub PTFE, Bambu Scraper, chei Allen, clemă pentru <code class="tight">hotend</code>, bandă dublu adezivă, un card MicroSD de 32 GB (în interiorul printerului) și placa Textured PEI (preinstalată pe <code class="tight">heatbed</code>-ul printerului). Lista completă a accesoriilor este detaliată în secțiunea următoare.</p>
+<h3 id="pasul-3-conecteaza-ecranul-lcd">Pasul 3: Conectează ecranul LCD</h3>
+<p>Conectează cablul la ecran și asigură-te că respecți orientarea arătată în video. Fixează ecranul în locașul lui, prin apăsare.</p>
+<h3 id="pasul-4-deblocheaza-heatbed-ul">Pasul 4: Deblochează heatbed-ul</h3>
+<p>Desfă cele trei șuruburi de siguranță de la axa Z, marcate cu săgeată roșie.</p>
+<h3 id="pasul-5-instaleaza-suportul-de-bobina">Pasul 5: Instalează suportul de bobină</h3>
+<ul><li>Deșurubează șurubul din orificiul din dreapta.</li><li>Înșurubează suportul de bobină.</li></ul>
+<h3 id="pasul-6-conecteaza-cablul-de-alimentare-si-porneste-printerul">Pasul 6: Conectează cablul de alimentare și pornește printerul</h3>
+<ul><li>Conectează cablul de alimentare și pornește întrerupătorul.</li><li>După pornire, urmează ghidul de pe ecran pentru a finaliza autotestul printerului.</li></ul>
+<h3 id="pasul-7-indeparteaza-spuma-de-sub-heatbed">Pasul 7: Îndepărtează spuma de sub heatbed</h3>
+<p>După ce printerul este pornit, urmează ghidul de pe ecran pentru a completa autotestul. <strong>Nu uita să îndepărtezi spuma de fixare de sub <code>heatbed</code> atunci când autotestul s-a încheiat.</strong></p>
+<p>Dacă ai sărit peste pașii de configurare a rețelei și de legare a aplicației din timpul dezambalării, configurează rețeaua printerului și leagă printerul în <code>Bambu Handy</code> după ce autotestul este complet.</p>
+<p>Dacă întâmpini probleme la legarea aplicației, consultă ghidul de depanare pentru Wi-Fi, Bluetooth și live view din wiki-ul Bambu Lab.</p>
+<h3 id="pasul-8-finalizeaza-initializarea-si-incarca-filamentul">Pasul 8: Finalizează inițializarea și încarcă filamentul</h3>
+<p>Introdu filamentul în tubul PTFE din spate, până ajunge la extruder. Pentru primul print de test recomandăm filamentul Bambu PLA livrat în cutie.</p>
+<h3 id="pasul-9-pune-o-cutie-sau-un-recipient-pentru-resturile-de-filament">Pasul 9: Pune o cutie sau un recipient pentru resturile de filament</h3>
+<p>Cutia mică în care este livrat filamentul este o soluție bună până când găsești ceva mai potrivit. Așază recipientul sub deschiderea dreptunghiulară a canalului de evacuare din spatele printerului, ca în imaginea de mai jos.</p>
+<figure><img src="../assets/img/printers/p1-07.jpg" alt="Amplasarea recipientului pentru resturi sub canalul de evacuare" loading="lazy"><figcaption>Amplasarea recipientului pentru resturi sub canalul de evacuare</figcaption></figure>
+<p>O soluție mai definitivă poate fi printată ulterior; caută „P1S purge container” pe <a href="https://makerworld.com/en/search/models?keyword=P1S+purge+container" target="_blank" rel="noopener">MakerWorld</a>.</p>
+<h2 id="ce-contine-cutia">Ce conține cutia</h2>
+<p><strong>Tipul și cantitatea accesoriilor se pot schimba de la un lot la altul. Te rugăm să te raportezi la articolele pe care le primești efectiv.</strong></p>
+<p>Pachetul P1S include un card Micro SD de 32 GB (preinstalat în printer), ecran, suport de bobină, filament, <code>hotend</code> de rezervă, tampoane de ștergere a <code class="tight">nozzle</code>-ului, cablu de alimentare, instrument pentru deblocarea <code class="tight">nozzle</code>-ului, tub PTFE, set de șuruburi pentru scraper, chei Allen (H1.5 și H2), set de șuruburi pentru suportul de bobină, set de șuruburi pentru extruder, clemă pentru <code class="tight">hotend</code>, placă Textured PEI (preinstalată pe <code class="tight">heatbed</code>), pastă termică, unsoare lubrifiantă, Quick Start Guide, declarația de exonerare și fișa de garanție.</p>
+<p>Produsele pe care le primești pot trece prin modificări de materiale și iterații de versiune. De aceea, te rugăm să te raportezi la produsul efectiv livrat.</p>
+<figure><img src="../assets/img/printers/p1-08.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-09.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-10.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-11.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-12.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-13.jpeg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-14.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-15.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-16.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-17.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-18.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-19.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-20.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-21.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-22.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-23.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-24.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-25.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-26.png" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-27.jpg" alt="Accesorii din cutia P1S" loading="lazy"><figcaption>Accesorii din cutia P1S</figcaption></figure>
+<h2 id="incarcarea-filamentului">Încărcarea filamentului</h2>
+<p>Înainte de a începe un print trebuie să încărcăm filament. Iată pașii pe care trebuie să îi urmezi pentru a încărca filamentul în printerul 3D.</p>
+<h3 id="pasul-1-introdu-filamentul">Pasul 1: Introdu filamentul</h3>
+<p>Introdu filamentul în tubul PTFE din spate, până când ajunge la extruder.</p>
+<h3 id="pasul-2-selecteaza-load">Pasul 2: Selectează <code>Load</code></h3>
+<p>Selectează opțiunea <code>Load</code> pe ecran.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Reține că această funcție încarcă filamentul doar pe bobina externă. Dacă vrei să încarci filament în <code class="tight">AMS</code>, poți porni direct un print din <code>Bambu Studio</code> sau <code>Bambu Handy</code> și vei putea alege ce filamente din <code>AMS</code> să fie folosite. Mai întâi însă trebuie să le încarci în <code class="tight">AMS</code>: 1. Așază filamentul în <code class="tight">AMS</code>. 2. Introdu filamentul în alimentatorul de prim nivel. 3. Pornește un print din <code>Bambu Studio</code> / <code class="tight">Bambu Handy</code>, selectând filamentul încărcat.</p></div>
+<figure><img src="../assets/img/printers/p1-28.jpg" alt="Opțiunea Load pe ecranul printerului" loading="lazy"><figcaption>Opțiunea Load pe ecranul printerului</figcaption></figure>
+<h3 id="pasul-3-impinge-filamentul-manual">Pasul 3: Împinge filamentul manual</h3>
+<p>Așteaptă ca <code class="tight">nozzle</code>-ul să se încălzească la 250 °C, apoi împinge manual filamentul din spate.</p>
+<h3 id="pasul-4-filamentul-este-extrudat-normal-incarcarea-s-a-incheiat">Pasul 4: Filamentul este extrudat normal, încărcarea s-a încheiat</h3>
+<p>Urmărește dacă filamentul este extrudat, pentru a te asigura că extruderul evacuează corect material.</p>
+<figure><img src="../assets/img/printers/p1-29.jpg" alt="Verificarea extrudării filamentului" loading="lazy"><figcaption>Verificarea extrudării filamentului</figcaption></figure>
+<p>Dacă filamentul este extrudat normal, apasă <code>Done</code> pe ecran.</p>
+<figure><img src="../assets/img/printers/p1-30.jpg" alt="Confirmarea încărcării filamentului" loading="lazy"><figcaption>Confirmarea încărcării filamentului</figcaption></figure>
+<p>Dacă folosești <code>Bambu Studio</code> sau <code class="tight">Bambu Handy</code>, după ce observi că filamentul este extrudat trebuie să apeși „Filament Extruded, Continue”.</p>
+<h3 id="pasul-5-filamentul-nu-este-extrudat-normal-selecteaza-retry">Pasul 5: Filamentul nu este extrudat normal, selectează <code>Retry</code></h3>
+<p>Selectează <code>Retry</code> dacă filamentul nu este evacuat și repetă procesul.</p>
+<figure><img src="../assets/img/printers/p1-31.jpg" alt="Opțiunea Retry pentru încărcarea filamentului" loading="lazy"><figcaption>Opțiunea Retry pentru încărcarea filamentului</figcaption></figure>
+<p>Dacă folosești <code>Bambu Studio</code> sau <code class="tight">Bambu Handy</code>, trebuie să apeși „Not Extruded Yet, Retry”.</p>
+<h2 id="conectarea-ams">Conectarea AMS</h2>
+<p>Seria Bambu Lab P1 preia cinematica și tehnologia de control al mișcării de la seria X1, inclusiv compatibilitatea cu <code class="tight">AMS</code>.</p>
+<figure><img src="../assets/img/printers/p1-32.jpg" alt="Printerul P1 cu sistemul AMS" loading="lazy"><figcaption>Printerul P1 cu sistemul AMS</figcaption></figure>
+<p>După conectarea <code>AMS</code> la P1P, controlul și operarea <code>AMS</code> din <code>Bambu Studio</code> și <code>Bambu Handy</code> sunt în esență identice cu cele de pe X1. Această secțiune acoperă doar instrucțiunile de conectare a <code>AMS</code> la P1P; pentru controlul și operarea <code class="tight">AMS</code>, vezi tutorialele video și textele pentru seria X1:</p>
+<ul><li>suport imprimabil pentru <code>AMS</code> pentru P1P;</li><li>conectarea <code>AMS</code> la X1/X1C;</li><li>configurarea <code>AMS</code> și încărcarea filamentului;</li><li>conectarea <code>AMS Hub</code> și a mai multor unități <code class="tight">AMS</code>;</li><li>ghidul de operare pentru printarea multicoloră.</li></ul>
+<p>Înainte de a folosi <code class="tight">AMS</code>, citește introducerea în <code>AMS</code> pentru a te familiariza cu sistemul. De asemenea, citește din timp notele despre <code class="tight">AMS</code>, ca să știi la ce să fii atent.</p>
+<h3 id="cum-conectezi-ams-la-seria-p1">Cum conectezi AMS la seria P1</h3>
+<p>Pentru a conecta sistemul <code>AMS</code> la seria P1, urmează pașii de mai jos.</p>
+<h3 id="pasul-1-conecteaza-tubul-ptfe-si-cablurile-bus">Pasul 1: Conectează tubul PTFE și cablurile bus</h3>
+<p>Conectează tubul PTFE, cablul bus cu 6 pini și cablul bus cu 4 pini, ca în imagine.</p>
+<figure><img src="../assets/img/printers/p1-33.jpg" alt="Conectarea AMS la P1P" loading="lazy"><figcaption>Conectarea AMS la P1P</figcaption></figure>
+<p>Conectarea <code>AMS</code> la P1P.</p>
+<figure><img src="../assets/img/printers/p1-34.jpg" alt="Conectarea AMS la P1S" loading="lazy"><figcaption>Conectarea AMS la P1S</figcaption></figure>
+<p>Conectarea <code>AMS</code> la P1S.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Notă: nu introduce cablul cu 4 pini în direcția greșită. Dacă folosești un cablu cu mufă în formă de L, fii atent la indicațiile scrise pe el. Dacă introduci cablul cu 4 pini invers, placa de bază a printerului și cea a <code>AMS</code> se pot arde.</p></div>
+<figure><img src="../assets/img/printers/p1-35.jpg" alt="Orientarea corectă a cablului cu 4 pini" loading="lazy"><figcaption>Orientarea corectă a cablului cu 4 pini</figcaption></figure>
+<h3 id="pasul-2-verifica-aparitia-iconitei-ams">Pasul 2: Verifică apariția iconiței AMS</h3>
+<p>Dacă iconița <code>AMS</code> apare pe ecranul printerului, conexiunea a fost stabilită.</p>
+<figure><img src="../assets/img/printers/p1-36.jpg" alt="Iconița AMS pe ecranul printerului" loading="lazy"><figcaption>Iconița AMS pe ecranul printerului</figcaption></figure>
+<h3 id="pasul-3-verifica-versiunea-de-firmware-si-numarul-sn">Pasul 3: Verifică versiunea de firmware și numărul SN</h3>
+<p>Dacă conexiunea a reușit, poți găsi versiunea de <code>firmware</code> a <code>AMS</code> și numărul SN în directorul de setări de sistem.</p>
+<h2 id="legarea-bambu-handy-si-bambu-studio">Legarea Bambu Handy și Bambu Studio</h2>
+<p>Pentru a beneficia de software-ul, profilurile și accesoriile comune cu X1, recomandăm să legi printerul din seria P1 la <code>Bambu Handy</code> și <code class="tight">Bambu Studio</code>, ca să poți monitoriza și controla starea printerului și lucrările de printare.</p>
+<p>De asemenea, recomandăm insistent să actualizezi printerul la cel mai recent <code>firmware</code> după ce ai terminat autotestul și configurarea rețelei.</p>
+<p>Dacă întâmpini probleme pe parcursul legării, consultă articolul de depanare pentru Wi-Fi, Bluetooth și live view din wiki-ul Bambu Lab.</p>
+<h3 id="verificari-inainte-de-legarea-printerului">Verificări înainte de legarea printerului</h3>
+<ul><li>Verifică faptul că versiunea <code>Bambu Handy</code> este 1.0.6 sau mai nouă.</li><li>Verifică faptul că Bluetooth este activat în managerul de dispozitive al telefonului.</li><li>Informațiile de localizare nu sunt necesare aplicației, deși unele modele de telefon cer această permisiune implicit pentru ca sistemul să poată folosi serviciul Bluetooth low energy.</li></ul>
+<figure><img src="../assets/img/printers/p1-37.png" alt="Permisiunea de localizare pe telefon" loading="lazy"><figcaption>Permisiunea de localizare pe telefon</figcaption></figure>
+<h3 id="pasii-pentru-legarea-printerului">Pașii pentru legarea printerului</h3>
+<h3 id="pasul-1-selecteaza-account-configuration">Pasul 1: Selectează Account Configuration</h3>
+<p>Selectează <code>Account Configuration</code> din meniul de setări de sistem.</p>
+<h3 id="pasul-2-scaneaza-codul-qr">Pasul 2: Scanează codul QR</h3>
+<p>Scanează codul QR cu cea mai recentă versiune de <code>Bambu Handy</code> pentru a lega printerul.</p>
+<figure><img src="../assets/img/printers/p1-38.jpg" alt="Codul QR de legare afișat pe ecran" loading="lazy"><figcaption>Codul QR de legare afișat pe ecran</figcaption></figure>
+<p><strong>Procesul de legare cere ca Bluetooth-ul să fie pornit.</strong> Poți scana codul QR sau poți alege direct printerul trimis prin Bluetooth.</p>
+<h3 id="pasul-3-selecteaza-reteaua-wi-fi">Pasul 3: Selectează rețeaua Wi-Fi</h3>
+<p>Alege rețeaua ta Wi-Fi din lista disponibilă.</p>
+<h3 id="pasul-4-verifica-rezultatul-legarii">Pasul 4: Verifică rezultatul legării</h3>
+<p>Când legarea a reușit, întoarce-te în meniul anterior, unde poți vedea informațiile despre configurarea rețelei și detaliile contului legat.</p>
+<h3 id="pasul-5-monitorizeaza-printerul-din-bambu-handy">Pasul 5: Monitorizează printerul din Bambu Handy</h3>
+<p>După terminarea legării, poți folosi <code>Bambu Handy</code> pentru a monitoriza și administra starea printerului.</p>
+<p>În plus, te poți autentifica în <code>Bambu Studio</code> și poți trimite lucrări de printare din aplicația de desktop.</p>
+<figure><img src="../assets/img/printers/p1-39.png" alt="Printerul legat, vizibil în Bambu Handy" loading="lazy"><figcaption>Printerul legat, vizibil în Bambu Handy</figcaption></figure>
+<h2 id="primul-print">Primul print</h2>
+<p>Știm că, după dezambalarea printerului P1 și după autotest, abia aștepți să începi un print și să îl vezi la lucru. De aceea am inclus câteva modele deja feliate pe care le poți printa.</p>
+<h3 id="pasul-1-verifica-filamentul-incarcat">Pasul 1: Verifică filamentul încărcat</h3>
+<p>În primul rând, asigură-te că filamentul este încărcat în printer. Pașii detaliați pentru încărcarea filamentului în P1 se găsesc în secțiunea anterioară.</p>
+<figure><img src="../assets/img/printers/p1-40.jpg" alt="Printerul pregătit pentru primul print" loading="lazy"><figcaption>Printerul pregătit pentru primul print</figcaption></figure>
+<h3 id="pasul-2-deschide-directorul-cardului-micro-sd">Pasul 2: Deschide directorul cardului micro SD</h3>
+<p>După ce ai selectat iconița folderului, folosește săgeata dreapta pentru a naviga la directorul de fișiere preîncărcat pe cardul micro SD.</p>
+<figure><img src="../assets/img/printers/p1-41.jpg" alt="Directorul cardului micro SD pe ecran" loading="lazy"><figcaption>Directorul cardului micro SD pe ecran</figcaption></figure>
+<h3 id="pasul-3-alege-modelul-dorit">Pasul 3: Alege modelul dorit</h3>
+<p>După ce ai intrat în directorul cardului micro SD preîncărcat, folosește săgețile sus și jos pentru a parcurge conținutul folderului, apoi apasă butonul OK pentru a selecta modelul pe care vrei să îl printezi.</p>
+<figure><img src="../assets/img/printers/p1-42.jpg" alt="Selectarea modelului din lista de fișiere" loading="lazy"><figcaption>Selectarea modelului din lista de fișiere</figcaption></figure>
+<h3 id="pasul-4-confirma-si-porneste-printarea">Pasul 4: Confirmă și pornește printarea</h3>
+<p>Confirmă încă o dată modelul selectat, apoi apasă butonul OK, iar printarea va începe.</p>
+<figure><img src="../assets/img/printers/p1-43.jpg" alt="Confirmarea modelului selectat" loading="lazy"><figcaption>Confirmarea modelului selectat</figcaption></figure>
+<figure><img src="../assets/img/printers/p1-44.jpg" alt="Printarea primului model" loading="lazy"><figcaption>Printarea primului model</figcaption></figure>
+<h2 id="printare-din-bambu-studio">Printare din Bambu Studio</h2>
+<p>Când printezi cu <code class="tight">Bambu Studio</code>, poți trimite fișierele feliate direct la printer prin Wi-Fi. Iată cum se face:</p>
+<ul><li>Importă modelul 3D pe care vrei să îl feliezi și, după ce ajustezi setările, apasă butonul <code class="tight">Slice</code>.</li><li>După ce modelul a fost feliat, apasă butonul <code class="tight">Print</code>. Se va deschide o fereastră în care poți selecta printerul și în care poți activa sau dezactiva opțiunile de calibrare.</li><li>Când ești gata de print, apasă butonul <code class="tight">Send</code>, iar fișierul va fi trimis la printer. Procesul de printare va începe.</li></ul>
+<p>Poți monitoriza procesul de printare în tabul Printer din <code class="tight">Bambu Studio</code>, unde poți controla și o parte din funcțiile printerului.</p>
+<p>Deși printerul folosit în videoclipul oficial este X1, modul de trimitere a lucrărilor de printare din <code>Bambu Studio</code> este același ca la P1P.</p>
+<h3 id="pasul-1-autentifica-te-in-bambu-studio">Pasul 1: Autentifică-te în Bambu Studio</h3>
+<p>Autentifică-te în <code>Bambu Studio</code> cu contul tău Bambu Lab, același cont folosit pentru magazinul online Bambu. Creează sau deschide un proiect.</p>
+<figure><img src="../assets/img/printers/p1-45.png" alt="Autentificarea în Bambu Studio" loading="lazy"><figcaption>Autentificarea în Bambu Studio</figcaption></figure>
+<h3 id="pasul-2-taie-modelul-in-straturi-si-trimite-l-la-print">Pasul 2: Taie modelul în straturi și trimite-l la print</h3>
+<p>Taie modelul în straturi, selectează printerul și trimite modelul la print. Recomandăm să faci nivelarea patului la fiecare început de print.</p>
+<figure><img src="../assets/img/printers/p1-46.jpg" alt="Fereastra de trimitere la print" loading="lazy"><figcaption>Fereastra de trimitere la print</figcaption></figure>
+<h3 id="pasul-3-monitorizeaza-printarea">Pasul 3: Monitorizează printarea</h3>
+<p>În timpul printării poți monitoriza de la distanță lucrarea sau poți pune pe pauză ori opri printarea din interfața <code class="tight">Device</code>. Imaginea live se vede doar dacă este montată o cameră.</p>
+<figure><img src="../assets/img/printers/p1-47.png" alt="Monitorizarea printării în tabul Device" loading="lazy"><figcaption>Monitorizarea printării în tabul Device</figcaption></figure>
+<h2 id="actualizarea-firmware-ului">Actualizarea firmware-ului</h2>
+<p><code class="tight">Firmware</code>-ul printerului este actualizat periodic, pentru a adăuga funcții noi și corecturi; consultă notele de versiune pentru a afla ce s-a adăugat sau s-a reparat. Printerul verifică automat cloud-ul pentru actualizări disponibile și afișează o notificare când găsește una, astfel încât să poți trece prompt la cea mai recentă versiune.</p>
+<h3 id="note-de-versiune">Note de versiune</h3>
+<p>Notele de versiune pentru <code class="tight">firmware</code>-ul P1P/P1S sunt publicate în <a href="https://wiki.bambulab.com/en/p1/manual/P1P-firmware-release-history" target="_blank" rel="noopener">wiki-ul Bambu Lab</a>.</p>
+<h3 id="pasii-pentru-actualizarea-firmware-ului">Pașii pentru actualizarea firmware-ului</h3>
+<h3 id="pasul-1-notificarea-de-actualizare">Pasul 1: Notificarea de actualizare</h3>
+<p>Când printerul este conectat la Wi-Fi și la un cont de utilizator, iar o nouă versiune de <code>firmware</code> este disponibilă, primești o solicitare de instalare, asemănătoare cu cea din imaginea de mai jos.</p>
+<figure><img src="../assets/img/printers/p1-48.jpg" alt="Notificarea de actualizare a firmware-ului" loading="lazy"><figcaption>Notificarea de actualizare a firmware-ului</figcaption></figure>
+<p>Când apare, apasă butonul OK pentru a începe actualizarea.</p>
+<h3 id="pasul-2-descarcarea-si-instalarea">Pasul 2: Descărcarea și instalarea</h3>
+<p>Procesul de actualizare a <code class="tight">firmware</code>-ului poate dura între 5 și 15 minute, în funcție de viteza rețelei. Așteaptă până când este afișat mesajul de confirmare.</p>
+<figure><img src="../assets/img/printers/p1-49.jpg" alt="Progresul actualizării firmware-ului" loading="lazy"><figcaption>Progresul actualizării firmware-ului</figcaption></figure>
+<h3 id="pasul-3-finalizarea-actualizarii">Pasul 3: Finalizarea actualizării</h3>
+<p>După instalarea <code class="tight">firmware</code>-ului, este afișat mesajul de confirmare de mai jos. Poți apăsa OK pentru a-l închide.</p>
+<figure><img src="../assets/img/printers/p1-50.jpg" alt="Confirmarea actualizării firmware-ului" loading="lazy"><figcaption>Confirmarea actualizării firmware-ului</figcaption></figure>
+<h3 id="pasii-recomandati-dupa-actualizare">Pașii recomandați după actualizare</h3>
+<p>Deși nu sunt obligatorii în orice situație, recomandăm insistent să faci următoarele după actualizarea <code class="tight">firmware</code>-ului:</p>
+<ul><li>Oprește printerul, așteaptă 5 secunde, apoi pornește-l din nou.</li><li>Rulează o calibrare completă din meniul printerului sau din <code class="tight">Bambu Studio</code>. Astfel te asiguri că toate funcțiile printerului sunt recalibrate, dacă ceva nu este în ordine.</li></ul>
+<p>Aceste operații garantează că printerul funcționează conform așteptărilor după actualizarea <code class="tight">firmware</code>-ului.</p>
+<h3 id="esecuri-la-actualizarea-firmware-ului-solutii-posibile">Eșecuri la actualizarea firmware-ului: soluții posibile</h3>
+<p>Dacă întâmpini probleme în timpul actualizării, încearcă pașii următori.</p>
+<h3 id="verifica-puterea-semnalului-wi-fi">Verifică puterea semnalului Wi-Fi</h3>
+<p>Dacă actualizarea eșuează înainte de 50%, de obicei problema ține de rețea. Cea mai simplă soluție este să conectezi telefonul la un hotspot mobil, care asigură cel mai puternic semnal, sau să muți printerul mai aproape de routerul Wi-Fi.</p>
+<h3 id="inlocuieste-cardul-micro-sd">Înlocuiește cardul Micro SD</h3>
+<p><strong>Seria P1 nu are card SD cu schimbare la cald (hot swappable)</strong>, ceea ce înseamnă că un card MicroSD poate fi corupt dacă este scos în timp ce printerul funcționează. În timp, cardul MicroSD se poate și el corupe sau poate ceda.</p>
+<p>Dacă întâmpini probleme la actualizarea <code class="tight">firmware</code>-ului sau dacă printurile se opresc aleatoriu din cauza cardului MicroSD, înlocuirea cardului ar trebui să rezolve problema.</p>
+<h2 id="card-sd-si-retea">Card SD și rețea</h2>
+<h3 id="modele-aplicabile">Modele aplicabile</h3>
+<p>Printerele din seria <strong>P1</strong> (P1P și P1S).</p>
+<h3 id="metode-si-moduri-de-retea-acceptate-pentru-seria-p1">Metode și moduri de rețea acceptate pentru seria P1</h3>
+<ul><li><code class="tight">PIN code</code>: afișează un PIN de 6 cifre pe printer, valabil 230 de secunde, după care se reîmprospătează.</li><li>Wi-Fi prin configurare pe card SD: pentru rețele ascunse sau parole cu caractere neacceptate.</li><li><code>LAN</code> Only Mode: printerul rulează doar în rețeaua locală; funcțiile cloud, <code>Bambu Handy</code> și istoricul de printare sunt dezactivate.</li></ul>
+<h3 id="scenarii-de-utilizare">Scenarii de utilizare</h3>
+<p>1. Nu vrei să folosești aplicația <code>Bambu Handy</code> pentru a configura rețeaua printerelor din seria P1. 3. Vrei să conectezi printerul la o rețea Wi-Fi ascunsă.</p>
+<h3 id="procedura">Procedura</h3>
+<h3 id="pasul-1-pregateste-fisierul-de-configurare">Pasul 1: Pregătește fișierul de configurare</h3>
+<p>Există două metode de a pregăti acest fișier.</p>
+<h4 id="metoda-1-creeaza-fisierul-direct">Metoda 1: Creează fișierul direct</h4>
+<p>Fă click dreapta pentru a crea un document nou și redenumește-l „user_wifi.cfg”. Atât numele fișierului, cât și extensia trebuie să respecte acest format.</p>
+<p>Adaugă în fișierul „user_wifi.cfg” conținutul din exemplul de mai jos:</p>
+<ul><li><strong>ssid:</strong> FruitTest08</li><li><strong>password:</strong> wikitest12</li></ul>
+<p><strong>Înlocuiește „FruitTest08” cu numele real al rețelei tale Wi-Fi (SSID) și „wikitest12” cu parola ta Wi-Fi.</strong></p>
+<h4 id="metoda-2-recomandata-descarca-fisierul-de-configurare-si-modifica-informatiile-de-retea">Metoda 2 (recomandată): Descarcă fișierul de configurare și modifică informațiile de rețea</h4>
+<ul><li>Descarcă fișierul „user_wifi.cfg” din wiki-ul Bambu Lab.</li><li>Înlocuiește „FruitTest08” cu numele real al rețelei tale Wi-Fi (SSID) și „wikitest12” cu parola ta Wi-Fi.</li></ul>
+<figure><img src="../assets/img/printers/p1-51.png" alt="Conținutul fișierului user_wifi.cfg" loading="lazy"><figcaption>Conținutul fișierului user_wifi.cfg</figcaption></figure>
+<h3 id="pasul-2-copiaza-fisierul-in-directorul-radacina-si-reporneste-printerul">Pasul 2: Copiază fișierul în directorul rădăcină și repornește printerul</h3>
+<p>Copiază fișierul în directorul rădăcină al cardului micro SD. După ce introduci cardul micro SD în printer, repornește printerul.</p>
+<p><strong>Notă:</strong></p>
+<p><strong>1. Pentru ca fișierele să aibă efect, trebuie să repornești printerul, deoarece printerul detectează fișierele de configurare de pe cardul SD doar în timpul pornirii.</strong></p>
+<p><strong>2. Dacă printerul este conectat la altă rețea, deconectează mai întâi rețeaua curentă și abia apoi folosește această metodă pentru a te conecta la rețeaua dorită.</strong></p>
+<figure><img src="../assets/img/printers/p1-52.jpg" alt="Cardul SD cu fișierul de configurare" loading="lazy"><figcaption>Cardul SD cu fișierul de configurare</figcaption></figure>
+<h3 id="pasul-3-verifica-conexiunea-la-retea">Pasul 3: Verifică conexiunea la rețea</h3>
+<p>Mergi la interfața de setări de rețea a printerului și verifică dacă conexiunea a reușit. Imaginile de pe ecranele P1 și A1 arată că printerul s-a conectat cu succes la rețeaua numită „FruitTest08”.</p>
+<h2 id="schimbarea-filamentului">Schimbarea filamentului</h2>
+<p>Pentru a schimba filamentul la seria Bambu Lab P1, urmează acești pași.</p>
+<h3 id="pasul-1-selecteaza-unload">Pasul 1: Selectează <code>Unload</code></h3>
+<p>Selectează opțiunea <code>Unload</code> pe ecran. Printerul va începe să încălzească <code class="tight">hotend</code>-ul, apoi va tăia automat filamentul.</p>
+<figure><img src="../assets/img/printers/p1-53.jpg" alt="Opțiunea Unload pe ecranul printerului" loading="lazy"><figcaption>Opțiunea Unload pe ecranul printerului</figcaption></figure>
+<h3 id="pasul-2-scoate-filamentul">Pasul 2: Scoate filamentul</h3>
+<p>Trage manual filamentul afară cât mai repede, urmând indicațiile din aplicație sau din <code class="tight">Bambu Studio</code>.</p>
+<p>Dacă temperatura <code class="tight">nozzle</code>-ului rămâne la 142 °C și nu scade, înseamnă că au rămas resturi de filament în extruder, iar descărcarea nu este completă.</p>
+<h3 id="pasul-3-selecteaza-retry-daca-filamentul-nu-a-fost-scos">Pasul 3: Selectează <code>Retry</code> dacă filamentul nu a fost scos</h3>
+<p>Selectează <code>Retry</code> pentru a repeta procesul, dacă filamentul nu a fost scos.</p>
+<figure><img src="../assets/img/printers/p1-54.jpg" alt="Opțiunea Retry pentru descărcarea filamentului" loading="lazy"><figcaption>Opțiunea Retry pentru descărcarea filamentului</figcaption></figure>
+<p>Gata. Acum poți începe printarea.</p>
+        <p><a class="source-link" href="https://wiki.bambulab.com/en/p1/manual" target="_blank" rel="noopener">Deschide manualul original ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="../imprimante.html"><div class="dir">← Toate imprimantele</div><div class="name">Imprimante</div></a>
+      <a class="next" href="bambu-p2s.html"><div class="dir">Imprimanta următoare →</div><div class="name">Bambu Lab P2S</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Celelalte imprimante</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="bambu-p2s.html"><img src="../assets/img/printers/bambu-p2s-hero.jpg" alt="Bambu Lab P2S" loading="lazy"></a>
+          <div><h3><a href="bambu-p2s.html">Bambu Lab P2S</a></h3><p>Ghid practic pentru Bambu Lab P2S: instalare, primul print, Bambu Handy și Studio, calibrare și întreținere.</p></div>
+        </article><article class="related-card">
+          <a href="ender-3-v3-ke.html"><img src="../assets/img/printers/ender3-hero.jpg" alt="Creality Ender-3 V3 KE" loading="lazy"></a>
+          <div><h3><a href="ender-3-v3-ke.html">Creality Ender-3 V3 KE</a></h3><p>Ghid de asamblare, configurare și primul print pentru Creality Ender-3 V3 KE.</p></div>
+        </article><article class="related-card">
+          <a href="ender-5-max.html"><img src="../assets/img/printers/ender5-hero.jpg" alt="Creality Ender-5 Max" loading="lazy"></a>
+          <div><h3><a href="ender-5-max.html">Creality Ender-5 Max</a></h3><p>Ghid de asamblare, configurare și primul print pentru Creality Ender-5 Max, printer CoreXY cu volum de 400 mm.</p></div>
+        </article><article class="related-card">
+          <a href="mingda-ad-f4.html"><img src="../assets/img/printers/mingda-p05-1.jpg" alt="Mingda AD-F4" loading="lazy"></a>
+          <div><h3><a href="mingda-ad-f4.html">Mingda AD-F4</a></h3><p>Printer FDM de format mare, cu pat de 1200 × 800 mm și alimentare pe patru canale, pentru litere 3D și piese multicolor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

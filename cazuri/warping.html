@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deformare la răcire (warping) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Colțurile sau marginile mari se ridică de pe pat pe măsură ce piesa se răcește.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/warping/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Deformare la răcire (warping)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Deformare</span>
+        <h1>Deformare la răcire (warping)</h1>
+        <p class="lede">Colțurile sau marginile mari se ridică de pe pat pe măsură ce piesa se răcește.</p>
+        <p class="en-title">În engleză: <strong>Warping</strong></p>
+      </div>
+      <figure><img src="../assets/img/warping-1024x1024-1.jpg" alt="Deformare la răcire (warping)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#foloseste-un-pat-incalzit">Folosește un pat încălzit</a></li><li class="lvl-3"><a href="#opreste-racirea-cu-ventilator">Oprește răcirea cu ventilator</a></li><li class="lvl-3"><a href="#foloseste-o-incinta-incalzita">Folosește o incintă încălzită</a></li><li class="lvl-3"><a href="#brim-si-raft">Brim și raft</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Heated bed temperature (Temperature)</li><li>Cooling fan speed (Cooling)</li><li>Heated enclosure</li><li>Use Skirt/Brim / Raft (Additions)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>La piesele mari, primele layere pot adera bine la pat, dar mai târziu piesa începe să se ridice și să se deformeze. Deformarea poate fi atât de puternică încât o parte a modelului se desprinde de pat și printul eșuează.</p>
+<p>Problema este frecventă la piese mari sau lungi, printate din materiale la temperatură mare, cum este ABS. Cauza principală este contracția plasticului la răcire.</p>
+<p>Exemplu: un ABS printat la 230 °C și răcit la temperatura camerei se contractă cu aproape <strong>1,5%</strong>. La o piesă mare, asta poate însemna câțiva milimetri. Pe măsură ce printul avansează, fiecare layer se deformează puțin mai mult, până când piesa se ridică și se desprinde.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="foloseste-un-pat-incalzit">Folosește un pat încălzit</h3>
+<p>Multe printere au pat încălzit, care ține layerele de jos calde pe toată durata printului. Pentru ABS, temperatura uzuală este <code class="tight">100–120 °C</code>, ceea ce reduce mult contracția.</p>
+<p>Setarea se face din <code>Edit Process Settings</code> &gt; tabul <code class="tight">Temperature</code>. Alege <code>Heated Bed</code> din lista din stânga și dublu-click pe valoare pentru a o modifica.</p>
+<h3 id="opreste-racirea-cu-ventilator">Oprește răcirea cu ventilator</h3>
+<p>Răcirea este problematică pentru piesele care tind să se deformeze. La ABS, mulți utilizatori opresc complet ventilatoarele externe de răcire, ca layerele să rămână calde mai mult timp.</p>
+<p>Verifică viteza ventilatorului în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Cooling</code>.</p>
+<h3 id="foloseste-o-incinta-incalzita">Folosește o incintă încălzită</h3>
+<p>Patul încălzit ține calde layerele de jos, dar nu ajută la fel de mult când piesa devine înaltă. Pentru piese înalte, poate fi utilă o incintă care reglează temperatura întregului volum de printare.</p>
+<p>Unele printere au deja o incintă dedicată. Dacă există, ține ușile închise în timpul printului, ca să nu scape căldura.</p>
+<h3 id="brim-si-raft">Brim și raft</h3>
+<p>Dacă ai încercat deja celelalte soluții și piesa tot se ridică, adaugă un <code>brim</code> sau un <code class="tight">raft</code>.</p>
+<p>Ambele țin marginile lipite de pat și se deformează mai puțin, pentru că au doar câteva layere înălțime. Se activează din tabul <code class="tight">Additions</code>, cu opțiunea <code>Use Skirt/Brim</code> sau din setările de <code class="tight">Raft</code>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p><code class="tight">Warping</code>-ul nu se rezolvă prin mai mult lipici. La ABS, combinația corectă este pat cald, răcire redusă și, ideal, incintă închisă.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/warping/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="inconsistent-extrusion.html"><div class="dir">← Problema anterioară</div><div class="name">Extrudare inconsistentă</div></a>
+      <a class="next" href="poor-surface-above-supports.html"><div class="dir">Problema următoare →</div><div class="name">Suprafață slabă deasupra suporturilor</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="curling-or-rough-corners.html"><img src="../assets/img/curling-and-warping-1024x1024-1.jpg" alt="Colțuri ridicate sau neuniforme (curling)" loading="lazy"></a>
+          <div><h3><a href="curling-or-rough-corners.html">Colțuri ridicate sau neuniforme (curling)</a></h3><p>Colțurile piesei se ridică sau se deformează, mai ales la detaliile mici.</p></div>
+        </article><article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="not-sticking-to-the-bed.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Nu se lipește de pat" loading="lazy"></a>
+          <div><h3><a href="not-sticking-to-the-bed.html">Nu se lipește de pat</a></h3><p>Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

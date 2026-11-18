@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zgârieturi pe suprafața de sus — Ghid calitate la printare 3D</title>
+<meta name="description" content="Nozzle-ul lasă urme pe partea superioară a piesei, în timpul deplasărilor.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/scars-on-top-surface/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Zgârieturi pe suprafața de sus</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Zgârieturi pe suprafața de sus</h1>
+        <p class="lede">Nozzle-ul lasă urme pe partea superioară a piesei, în timpul deplasărilor.</p>
+        <p class="en-title">În engleză: <strong>Scars on Top Surface</strong></p>
+      </div>
+      <figure><img src="../assets/img/scars-on-top-surface-1024x1024-1.jpg" alt="Zgârieturi pe suprafața de sus"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#prea-mult-material-over-extrusion">Prea mult material (over-extrusion)</a></li><li class="lvl-3"><a href="#vertical-lift-z-hop">Vertical lift (Z-hop)</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Retraction Vertical Lift (Extruder)</li><li>Retraction enabled</li><li>Only retract when crossing open spaces (Advanced)</li><li>Minimum travel for retraction (Advanced)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Un avantaj al printării 3D este că fiecare layer se construiește separat, iar nozzle-ul se poate deplasa liber deasupra piesei. Dezavantajul apare când nozzle-ul traversează un layer deja printat și lasă o urmă.</p>
+<p>Urmele sunt vizibile mai ales pe <code class="tight">top solid layers</code>, unde nozzle-ul trece peste plastic proaspăt și îl zgârie. De obicei, cauza este fie prea mult material, fie lipsa ridicării pe Z la deplasări.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="prea-mult-material-over-extrusion">Prea mult material (over-extrusion)</h3>
+<p>Dacă extruzezi prea mult, fiecare layer este puțin mai gros decât ar trebui. Când nozzle-ul se deplasează peste el, agață excesul de plastic și lasă o zgârietură.</p>
+<p>Înainte să modifici alte setări, verifică <code>Extrusion Multiplier</code> și <code class="tight">Filament Diameter</code>. Detalii în secțiunea <a href="over-extrusion.html" target="_blank" rel="noopener">Supra-extrudare</a>.</p>
+<h3 id="vertical-lift-z-hop">Vertical lift (Z-hop)</h3>
+<p>Dacă debitul este corect, dar nozzle-ul tot zgârie suprafața, activează ridicarea verticală. Nozzle-ul se ridică la o distanță setată înainte de deplasare și coboară la destinație.</p>
+<p>Setarea se află în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>:</p>
+<p>1. verifică să fie activă <code class="tight">Retraction</code>; 2. setează <code>Retraction Vertical Lift</code> la distanța dorită.</p>
+<p>De exemplu, <code>0.5mm</code> ridică nozzle-ul cu 0,5 mm la fiecare deplasare. Ridicarea are loc doar când se face o retracție.</p>
+<p>Dacă vrei ca retracția să se facă la fiecare deplasare, mergi la tabul <code>Advanced</code> și dezactivează:</p>
+<ul><li><code class="tight">Only retract when crossing open spaces</code>;</li><li><code class="tight">Minimum travel for retraction</code>.</li></ul>
+<div class="nota"><span class="nota-title">De reținut</span><p>Un <code>Retraction Vertical Lift</code> prea mare crește timpul de print și poate produce <code class="tight">stringing</code>. <code>0.2–0.5mm</code> este suficient în majoritatea cazurilor.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/scars-on-top-surface/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="curling-or-rough-corners.html"><div class="dir">← Problema anterioară</div><div class="name">Colțuri ridicate sau neuniforme (curling)</div></a>
+      <a class="next" href="gaps-in-floor-corners.html"><div class="dir">Problema următoare →</div><div class="name">Goluri în colțurile de jos</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Punte slabă (poor bridging) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Zonele printate în aer atârnă, se lasă sau rămân cu goluri între segmente.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/poor-bridging/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Punte slabă (poor bridging)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Punte slabă (poor bridging)</h1>
+        <p class="lede">Zonele printate în aer atârnă, se lasă sau rămân cu goluri între segmente.</p>
+        <p class="en-title">În engleză: <strong>Poor Bridging</strong></p>
+      </div>
+      <figure><img src="../assets/img/poor-bridging-1024x1024-1.jpg" alt="Punte slabă (poor bridging)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#verifica-daca-bridging-settings-sunt-folosite">Verifică dacă bridging settings sunt folosite</a></li><li class="lvl-3"><a href="#verifica-unghiul-infill-ului">Verifică unghiul infill-ului</a></li><li class="lvl-3"><a href="#ajusteaza-setarile-de-performanta">Ajustează setările de performanță</a></li><li class="lvl-3"><a href="#foloseste-suporturi-pentru-punti-lungi">Folosește suporturi pentru punți lungi</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Feature Type preview (bridging = galben)</li><li>Unsupported area threshold (Other)</li><li>Apply bridging settings to perimeters (Other)</li><li>Bridging extrusion multiplier (Other)</li><li>Bridging speed multiplier (Other)</li><li>Bridging fan speed override (Cooling)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p><code>Bridging</code> înseamnă extrudarea plasticului între două puncte, fără suport dedesubt. Puntea se printează în aer, apoi trebuie răcită rapid ca să se întărească.</p>
+<p>Puntile scurte se pot printa fără suport, economisind material și timp. Cele lungi au nevoie de <code class="tight">support</code>.</p>
+<p>Dacă vezi zone care atârnă, se lasă sau au goluri între segmente, setările de <code>bridging</code> trebuie ajustate.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="verifica-daca-bridging-settings-sunt-folosite">Verifică dacă bridging settings sunt folosite</h3>
+<p>În preview, zonele de <code>bridging</code> au o culoare specială. Apasă <code class="tight">Prepare to Print</code>, apoi schimbă modul de colorare din stânga în <code class="tight">Feature Type</code>. Regiunile de <code>bridging</code> apar cu <strong>galben</strong>.</p>
+<p>Derulează la layerul cu pricina și verifică dacă linia este galbenă. Dacă nu este, verifică două setări:</p>
+<p>1. <code>Edit Process Settings</code> &gt; tabul <code>Other</code> &gt; <code>Unsupported area threshold</code> — zonele de bridging mai mici decât acest prag sunt ignorate. Dacă zona ta este mică, scade pragul. 2. <code>Apply bridging settings to perimeters</code> — implicit, <code>perimeters</code> din zona de bridging folosesc setări normale. Activează opțiunea ca să aplice și acolo setările de <code class="tight">bridging</code>.</p>
+<h3 id="verifica-unghiul-infill-ului">Verifică unghiul infill-ului</h3>
+<p>Simplify3D calculează automat cea mai bună direcție pentru <code>infill</code> în zona de bridging. De exemplu, între doi piloni aliniați pe X, <code class="tight">infill</code>-ul va fi tras tot pe direcția X.</p>
+<p>Dacă zona este corect identificată în galben, unghiul se ajustează automat. Dacă vrei să încerci alt unghi, activează <code>Use fixed bridging angle</code> în process settings.</p>
+<h3 id="ajusteaza-setarile-de-performanta">Ajustează setările de performanță</h3>
+<p>Zonele de <code>bridging</code> folosesc setări speciale de extrudare, viteză și răcire.</p>
+<ul><li><code>Bridging extrusion multiplier</code> — setează-l la <code>100%</code> sau mai mult. Valorile mai mici pot lăsa fundul punții neetanș.</li><li><code>Bridging speed multiplier</code> — necesită testare. Unele printere merg mai bine încet, altele rapid.</li><li><code>Bridging fan speed override</code> — din tabul <code class="tight">Cooling</code>. Setează o valoare mare, ca puntea să se răcească rapid.</li></ul>
+<p>Testează combinațiile pe un model dedicat de <code class="tight">bridging test</code>.</p>
+<h3 id="foloseste-suporturi-pentru-punti-lungi">Folosește suporturi pentru punți lungi</h3>
+<p>Dacă rezultatul rămâne nesatisfăcător după ajustări, adaugă <code>support</code> sub zona de bridging. Suporturile oferă o fundație suplimentară și cresc șansele de reușită.</p>
+<p>Poți genera suporturi pentru tot modelul sau folosi structurile de suport personalizabile din Simplify3D.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă puntea este corectă la început și se lasă spre final, problema este răcirea insuficientă. Crește <code>Bridging fan speed override</code> înainte să modifici debitul.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/poor-bridging/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="dimensional-accuracy.html"><div class="dir">← Problema anterioară</div><div class="name">Precizie dimensională</div></a>
+      <span></span>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-separation-and-splitting.html"><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă" loading="lazy"></a>
+          <div><h3><a href="layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h3><p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p></div>
+        </article><article class="related-card">
+          <a href="weak-infill.html"><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab" loading="lazy"></a>
+          <div><h3><a href="weak-infill.html">Infill slab</a></h3><p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

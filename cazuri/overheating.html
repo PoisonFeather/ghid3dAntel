@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supraîncălzire (overheating) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/overheating/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Supraîncălzire (overheating)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Supraîncălzire (overheating)</h1>
+        <p class="lede">Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p>
+        <p class="en-title">În engleză: <strong>Overheating</strong></p>
+      </div>
+      <figure><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#racire-insuficienta">Răcire insuficientă</a></li><li class="lvl-3"><a href="#temperatura-de-printare-prea-mare">Temperatura de printare prea mare</a></li><li class="lvl-3"><a href="#printare-prea-rapida">Printare prea rapidă</a></li><li class="lvl-3"><a href="#cand-nimic-nu-functioneaza-printeaza-mai-multe-piese-deodata">Când nimic nu funcționează: printează mai multe piese deodată</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Cooling fan speed (Cooling)</li><li>Extruder temperature (Temperature)</li><li>Speed Overrides (Speeds)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Plasticul care iese din extruder are între 190 și 310 °C. Cât timp este cald, este maleabil și își poate schimba forma. Pe măsură ce se răcește, devine solid și își păstrează forma.</p>
+<p>Trebuie găsit echilibrul dintre temperatură și răcire: materialul să curgă liber prin nozzle, dar să și solidifice rapid, ca să păstreze dimensiunile exacte. Când echilibrul nu există, exteriorul piesei devine neclar, iar detaliile mici se deformează.</p>
+<p>Exemplul clasic este vârful unei piramide: filamentul nu apucă să se răcească și își pierde forma.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="racire-insuficienta">Răcire insuficientă</h3>
+<p>Cea mai frecventă cauză este răcirea prea lentă. Plasticul fierbinte rămâne moale și se deformează până când se răcește.</p>
+<p>Dacă printerul are ventilator de răcire, crește puterea acestuia din <code>Edit Process Settings</code> &gt; tabul <code class="tight">Cooling</code>. Dublu-click pe <code class="tight">setpoint</code>-ul de viteză al ventilatorului pe care vrei să îl modifici.</p>
+<p>Dacă printerul nu are ventilator integrat, poți monta unul aftermarket sau folosi un ventilator mic, de mână, pentru a răci layerele mai repede.</p>
+<h3 id="temperatura-de-printare-prea-mare">Temperatura de printare prea mare</h3>
+<p>Dacă folosești deja ventilatorul și problema persistă, încearcă o temperatură mai mică. La temperatură mai mică, plasticul solidifică mai repede și își păstrează forma.</p>
+<p>Scade temperatura cu <code>5–10 °C</code> din <code>Edit Process Settings</code> &gt; tabul <code class="tight">Temperature</code>. Ai grijă să nu cobori prea mult: materialul trebuie să rămână suficient de fluid ca să treacă prin orificiul mic al nozzle-ului.</p>
+<h3 id="printare-prea-rapida">Printare prea rapidă</h3>
+<p>Dacă fiecare layer se printează foarte repede, layerul anterior nu are timp să se răcească înainte să vină următorul strat de material cald. Este critic la piesele mici, unde un layer durează doar câteva secunde.</p>
+<p>Chiar și cu ventilator, poate fi nevoie să încetinești printarea pentru layerele mici. Simplify3D are opțiunea exactă pentru asta: <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> &gt; secțiunea <code class="tight">Speed Overrides</code>.</p>
+<p>Acolo poți permite programului să reducă automat viteza pentru layerele care durează mai puțin de un anumit număr de secunde. De exemplu, pentru layere sub 15 secunde, viteza scade automat, ca layerul să aibă timp să se solidifice.</p>
+<h3 id="cand-nimic-nu-functioneaza-printeaza-mai-multe-piese-deodata">Când nimic nu funcționează: printează mai multe piese deodată</h3>
+<p>Dacă ai încercat primele trei soluții și răcirea rămâne insuficientă, mai există o variantă simplă și eficientă.</p>
+<p>Duplică piesa (<code>Edit</code> &gt; <code class="tight">Copy/Paste</code>) sau importă un al doilea obiect și printează-le simultan. Nozzle-ul se mută de la o piesă la alta, iar prima piesă primește timp suplimentar de răcire. Pentru piesele mici și înalte, această metodă funcționează foarte bine.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă supraîncălzirea apare doar la o singură zonă a piesei, verifică dacă fluxul de aer al ventilatorului ajunge efectiv acolo. Unele duct-uri de răcire sunt asimetrice.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/overheating/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="stringing-or-oozing.html"><div class="dir">← Problema anterioară</div><div class="name">Fire și picurare (stringing)</div></a>
+      <a class="next" href="layer-shifting.html"><div class="dir">Problema următoare →</div><div class="name">Layere deplasate (layer shifting)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="blobs-and-zits.html"><img src="../assets/img/blobs-and-zits-1024x1024-1.jpg" alt="Pete și umflături (blobs and zits)" loading="lazy"></a>
+          <div><h3><a href="blobs-and-zits.html">Pete și umflături (blobs and zits)</a></h3><p>Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

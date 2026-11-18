@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colțuri ridicate sau neuniforme (curling) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Colțurile piesei se ridică sau se deformează, mai ales la detaliile mici.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/curling-or-rough-corners/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Colțuri ridicate sau neuniforme (curling)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Deformare</span>
+        <h1>Colțuri ridicate sau neuniforme (curling)</h1>
+        <p class="lede">Colțurile piesei se ridică sau se deformează, mai ales la detaliile mici.</p>
+        <p class="en-title">În engleză: <strong>Curling or Rough Corners</strong></p>
+      </div>
+      <figure><img src="../assets/img/curling-and-warping-1024x1024-1.jpg" alt="Colțuri ridicate sau neuniforme (curling)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#ce-faci">Ce faci</a></li><li class="lvl-3"><a href="#daca-problema-apare-in-timpul-printului">Dacă problema apare în timpul printului</a></li><li class="lvl-3"><a href="#daca-problema-apare-de-la-primele-layere">Dacă problema apare de la primele layere</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Cooling fan speed (Cooling)</li><li>Extruder temperature (Temperature)</li><li>First Layer Speed (Layer)</li><li>Bed temperature (Temperature)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Dacă marginile sau colțurile se ridică mai târziu în print, problema indică de obicei supraîncălzire. Plasticul este depus la temperatură mare și, dacă nu se răcește repede, își poate schimba forma.</p>
+<p>Soluția este răcirea rapidă a fiecărui layer, ca materialul să se solidifice înainte să se deformeze.</p>
+<h2 id="ce-faci">Ce faci</h2>
+<h3 id="daca-problema-apare-in-timpul-printului">Dacă problema apare în timpul printului</h3>
+<p>Urmează pașii din secțiunea <a href="overheating.html" target="_blank" rel="noopener">Supraîncălzire (overheating)</a>:</p>
+<ul><li>crește puterea ventilatorului de răcire din tabul <code class="tight">Cooling</code>;</li><li>scade temperatura extruderului cu <code class="tight">5–10 °C</code>;</li><li>folosește <code>Speed Overrides</code> pentru layerele mici, ca să aibă timp de răcire;</li><li>la nevoie, printează mai multe piese simultan.</li></ul>
+<h3 id="daca-problema-apare-de-la-primele-layere">Dacă problema apare de la primele layere</h3>
+<p>Atunci nu este <code class="tight">overheating</code>, ci o problemă de aderență pe pat. Vezi secțiunea <a href="not-sticking-to-the-bed.html" target="_blank" rel="noopener">Nu se lipește de pat</a>:</p>
+<ul><li>verifică <code class="tight">bed leveling</code>;</li><li>reglează <code class="tight">Z-Axis G-Code Offset</code>;</li><li>reduce <code class="tight">First Layer Speed</code>;</li><li>verifică temperatura patului.</li></ul>
+<div class="nota"><span class="nota-title">De reținut</span><p>Ridicarea colțurilor după câteva ore de print este de obicei o combinație de răcire prea agresivă la materialele care se contractă (ABS) și de aderență insuficientă. La ABS, mai puțină răcire și un pat mai cald funcționează mai bine decât un ventilator puternic.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/curling-or-rough-corners/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="gaps-between-infill-and-outline.html"><div class="dir">← Problema anterioară</div><div class="name">Goluri între infill și contur</div></a>
+      <a class="next" href="scars-on-top-surface.html"><div class="dir">Problema următoare →</div><div class="name">Zgârieturi pe suprafața de sus</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="warping.html"><img src="../assets/img/warping-1024x1024-1.jpg" alt="Deformare la răcire (warping)" loading="lazy"></a>
+          <div><h3><a href="warping.html">Deformare la răcire (warping)</a></h3><p>Colțurile sau marginile mari se ridică de pe pat pe măsură ce piesa se răcește.</p></div>
+        </article><article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="not-sticking-to-the-bed.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Nu se lipește de pat" loading="lazy"></a>
+          <div><h3><a href="not-sticking-to-the-bed.html">Nu se lipește de pat</a></h3><p>Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

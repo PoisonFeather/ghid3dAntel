@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creality Ender-3 V3 KE — Ghid de utilizare</title>
+<meta name="description" content="Ghid de asamblare, configurare și primul print pentru Creality Ender-3 V3 KE.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html" aria-current="page">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://wiki.creality.com/en/ender-series/ender-3-v3-ke/quick-start-guide/user-manual" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../imprimante.html">Imprimante</a><span>/</span>Creality Ender-3 V3 KE</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Creality</span>
+        <h1>Creality Ender-3 V3 KE</h1>
+        <p class="lede">Ghid de asamblare, configurare și primul print pentru Creality Ender-3 V3 KE.</p>
+        <p class="en-title">În engleză: <strong>Ender-3 V3 KE User Manual</strong></p>
+      </div>
+      <figure><img src="../assets/img/printers/ender3-hero.jpg" alt="Creality Ender-3 V3 KE"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#siguranta">Siguranță</a></li><li class="lvl-2"><a href="#ce-contine-cutia">Ce conține cutia</a></li><li class="lvl-2"><a href="#asamblare">Asamblare</a></li><li class="lvl-3"><a href="#cadrul-portalului">Cadrul portalului</a></li><li class="lvl-3"><a href="#ecranul">Ecranul</a></li><li class="lvl-3"><a href="#suportul-de-filament-si-detectorul">Suportul de filament și detectorul</a></li><li class="lvl-3"><a href="#cablarea-echipamentului">Cablarea echipamentului</a></li><li class="lvl-2"><a href="#ghidul-automat-de-pornire">Ghidul automat de pornire</a></li><li class="lvl-3"><a href="#autotestul">Autotestul</a></li><li class="lvl-2"><a href="#interfata-ecranului">Interfața ecranului</a></li><li class="lvl-2"><a href="#nivelarea-patului">Nivelarea patului</a></li><li class="lvl-2"><a href="#incarcarea-filamentului">Încărcarea filamentului</a></li><li class="lvl-3"><a href="#alimentarea-automata">Alimentarea automată</a></li><li class="lvl-3"><a href="#retragerea-automata">Retragerea automată</a></li><li class="lvl-2"><a href="#primul-print">Primul print</a></li><li class="lvl-3"><a href="#printare-prin-lan">Printare prin LAN</a></li><li class="lvl-3"><a href="#printare-de-pe-stick-usb">Printare de pe stick USB</a></li><li class="lvl-2"><a href="#intretinere">Întreținere</a></li><li class="lvl-3"><a href="#note-legale-si-conformitate">Note legale și conformitate</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-specs"><h2>Specificații cheie</h2><ul><li>Volum de printare: 220 × 220 × 250 mm</li><li>Viteză maximă: 500 mm/s</li><li>Nozzle: 0,4 mm, max. 300 °C</li><li>Pat încălzit: max. 100 °C</li><li>Nivelare: automată</li><li>Filament: 1,75 mm</li><li>Placă: PEI flexibilă</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<figure><img src="../assets/img/printers/ender3-01.jpg" alt="Coperta manualului Ender-3 V3 KE" loading="lazy"><figcaption>Coperta manualului Ender-3 V3 KE</figcaption></figure>
+<p>Ender-3 V3 KE este o imprimantă 3D FDM cu cadru deschis, pentru atelier, școală sau birou. Volumul de printare este de 220 × 220 × 250 mm, viteza maximă de 500 mm/s, <code class="tight">nozzle</code>-ul standard de 0,4 mm urcă până la 300 °C, iar <code class="tight">heatbed</code>-ul până la 100 °C. Nivelarea este automată, cu CR-Touch, iar <code class="tight">build plate</code>-ul este o placă PEI flexibilă.</p>
+<p>Citește manualul înainte de prima utilizare: majoritatea problemelor de instalare vin din pași de asamblare sau calibrare săriți.</p>
+<ul><li>instrucțiuni și videoclipuri: pe cardul de memorie livrat și pe <a href="https://www.creality.com" target="_blank" rel="noopener">creality.com</a>;</li><li>tutoriale de operare și service: pe <code class="tight">Creality Cloud</code>, la secțiunea Products;</li><li>firmware: WiFi prin <code class="tight">Creality Cloud</code>, cu <code class="tight">OTA</code>; de echipament, de pe site, Service Center → Firmware/Software Download;</li><li>asistență: +86 755 3396 5666, cs@creality.com.</li></ul>
+<figure><img src="../assets/img/printers/ender3-02.jpg" alt="Componentele principale ale imprimantei" loading="lazy"><figcaption>Componentele principale ale imprimantei</figcaption></figure>
+<ul><li>1–3: platforma de printare (<code class="tight">build plate</code>), ansamblul axei X, ansamblul <code class="tight">extruder</code>;</li><li>4–6: suportul de <code>filament</code> cu detector, întinzătorul axei X, ecranul;</li><li>7–10: porturile USB, priza de alimentare, comutatorul de tensiune;</li><li>11–16: întinzătoarele și motoarele axelor, cuplajul, întrerupătorul de pornire.</li></ul>
+<h2 id="siguranta">Siguranță</h2>
+<p>Imprimanta lucrează cu temperaturi mari și piese în mișcare. Respectă regulile de mai jos:</p>
+<ul><li>nu folosi imprimanta în moduri care nu sunt descrise în manual, pentru a evita accidentele și deteriorarea bunurilor;</li><li>nu o amplasa lângă materiale inflamabile, explozive sau surse puternice de căldură; așaz-o într-un spațiu ventilat, răcoros și cu puțin praf;</li><li>nu o așeza pe o suprafață care vibrează sau este instabilă, vibrațiile strică vizibil calitatea printului;</li><li>folosește <code>filament</code> recomandat de producător, altfel <code class="tight">nozzle</code>-ul se poate înfunda sau imprimanta se poate defecta;</li><li>folosește doar cablul livrat; ștecherul trebuie introdus într-o priză cu trei borne și împământare;</li><li>nu atinge <code class="tight">nozzle</code>-ul sau <code class="tight">heatbed</code>-ul cât timp imprimanta lucrează, există risc de arsuri;</li><li>nu purta mănuși sau accesorii în timpul operării, piesele în mișcare pot provoca tăieturi;</li><li>după print, curăță <code class="tight">filament</code>-ul de pe <code>nozzle</code> cu o unealtă, cât timp acesta este încă fierbinte; nu atinge <code class="tight">nozzle</code>-ul cu mâna;</li><li>curăță regulat corpul cu o cârpă uscată, cu alimentarea oprită, și îndepărtează praful, materialul lipit și corpurile străine de pe șine;</li><li>copiii sub 10 ani nu trebuie să folosească imprimanta fără supravegherea unui adult;</li><li>nu mișca manual și rapid <code class="tight">nozzle</code>-ul sau platforma cât timp imprimanta e pornită; protecția o oprește singură;</li><li>respectă legile din zona în care este folosit echipamentul; folosirea în scopuri ilegale este interzisă.</li></ul>
+<h2 id="ce-contine-cutia">Ce conține cutia</h2>
+<p>Scoate toate componentele și verifică lista înainte de asamblare.</p>
+<figure><img src="../assets/img/printers/ender3-03.jpg" alt="Conținutul cutiei și kitul de accesorii" loading="lazy"><figcaption>Conținutul cutiei și kitul de accesorii</figcaption></figure>
+<ul><li>baza imprimantei, cu electronica și <code class="tight">heatbed</code>-ul;</li><li>cadrul portalului (gantry), ecranul cu cablul aferent;</li><li>suportul de <code>filament</code> și ansamblul de detectare a <code class="tight">filament</code>-ului, plus tubul de <code class="tight">filament</code>;</li><li>șuruburi M3×14 cu șaibă elastică (6 bucăți), M4×10 (3), M5×8 (2), M3×8 (2);</li><li>trusă de unelte, clemă de fixare FFC, cablu de alimentare, clește de tăiere;</li><li><code>filament</code> de probă (20 m), curățător de <code class="tight">nozzle</code>, un <code>nozzle</code> de rezervă, stick USB.</li></ul>
+<p>Accesoriile din imagine sunt orientative.</p>
+<h2 id="asamblare">Asamblare</h2>
+<p>Asamblarea durează circa 30 de minute și cere o suprafață stabilă. Nu porni imprimanta până nu termini cablarea și nu verifici comutatorul de tensiune.</p>
+<h3 id="cadrul-portalului">Cadrul portalului</h3>
+<figure><img src="../assets/img/printers/ender3-04.jpg" alt="Montarea cadrului portal pe bază" loading="lazy"><figcaption>Montarea cadrului portal pe bază</figcaption></figure>
+<p>1. Așază portalul în fanta din bază. Portul detectorului de <code>filament</code> trece prin decupajul carcasei inferioare și se fixează cu șuruburi M3×14. 2. Cuplează conectorul liniei de detectare a <code class="tight">filament</code>-ului. 3. Fixează carcasa inferioară cu șuruburi M3×14. 4. Fixează carcasa și cadrul portalului împreună, cu șuruburi M3×8.</p>
+<p>Ai grijă ca profilul să nu apese pe linia detectorului de <code class="tight">filament</code>: un cablu strivit produce erori de detectare greu de diagnosticat.</p>
+<h3 id="ecranul">Ecranul</h3>
+<figure><img src="../assets/img/printers/ender3-05.jpg" alt="Montarea ecranului pe partea dreaptă" loading="lazy"><figcaption>Montarea ecranului pe partea dreaptă</figcaption></figure>
+<p>Așază ecranul pe partea dreaptă a ansamblului de bază, aliniază găurile și fixează-l cu șuruburi M4×10. Apoi conectează cablul ecranului, cu atenție la orientarea mufei.</p>
+<h3 id="suportul-de-filament-si-detectorul">Suportul de filament și detectorul</h3>
+<figure><img src="../assets/img/printers/ender3-06.jpg" alt="Montarea suportului de filament" loading="lazy"><figcaption>Montarea suportului de filament</figcaption></figure>
+<p>1. Instalează suportul și bara de <code>filament</code> conform schemei. 2. Fixează ansamblul pe cadrul portalului, aliniază găurile și strânge șuruburile M5×8. 3. Conectează întrerupătorul detectorului de <code class="tight">filament</code>.</p>
+<h3 id="cablarea-echipamentului">Cablarea echipamentului</h3>
+<figure><img src="../assets/img/printers/ender3-07.jpg" alt="Cablarea motoarelor și a duzei" loading="lazy"><figcaption>Cablarea motoarelor și a duzei</figcaption></figure>
+<p>1. Introdu firul <code class="tight">nozzle</code>-ului în placa adaptoare, montează clema de fixare FFC și strânge șuruburile M3×8. 2. Urmează etichetele firelor: introdu linia <code class="tight">extruder</code>-ului în clema de fixare, apoi conectează motorul axei X. 3. Conectează motorul axei Z. 4. Pornește imprimanta.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p><strong>Atenție:</strong> verifică poziția comutatorului de tensiune înainte de conectarea la rețea. Pentru 100–120 V selectează 115 V; pentru 200–240 V selectează 230 V (valoarea implicită). O setare greșită poate distruge sursa.</p></div>
+<h2 id="ghidul-automat-de-pornire">Ghidul automat de pornire</h2>
+<p>La prima pornire, imprimanta rulează un ghid pas cu pas pentru limbă, rețea și calibrarea de bază.</p>
+<figure><img src="../assets/img/printers/ender3-08.jpg" alt="Ghidul de pornire: limbă, confidențialitate, rețea" loading="lazy"><figcaption>Ghidul de pornire: limbă, confidențialitate, rețea</figcaption></figure>
+<p>1. Alege limba. 2. Citește politica de confidențialitate, bifează acceptarea și continuă. 3. Configurează rețeaua WiFi; poți sări pasul dacă vei lucra doar de pe stick USB. 4. Setează fusul orar. 5. Leagă imprimanta de <code class="tight">Creality Cloud</code>, scanând codul QR, sau sari peste pas.</p>
+<p>Interfața este orientativă; funcțiile se actualizează.</p>
+<h3 id="autotestul">Autotestul</h3>
+<figure><img src="../assets/img/printers/ender3-09.png" alt="Autotestul, calibrarea automată și nivelarea" loading="lazy"><figcaption>Autotestul, calibrarea automată și nivelarea</figcaption></figure>
+<p>Pune platforma de printare pe <code>heatbed</code> și pornește autotestul. Imprimanta încălzește <code class="tight">nozzle</code>-ul, încălzește <code class="tight">heatbed</code>-ul, curăță <code class="tight">nozzle</code>-ul și face <code class="tight">Z-offset</code>-ul automat. Nu atinge imprimanta în timpul verificării: senzorul măsoară mișcări de fracțiuni de milimetru.</p>
+<p>Urmează <code class="tight">auto leveling</code>, care sondează patul într-o grilă de puncte. La final apare o matrice de valori, de exemplu între −0,09 și +0,04 mm, cu abaterile suprafeței față de planul ideal. Confirmă cu OK când apare mesajul de finalizare.</p>
+<h2 id="interfata-ecranului">Interfața ecranului</h2>
+<figure><img src="../assets/img/printers/ender3-10.jpg" alt="Ecranul principal și meniul Prepare" loading="lazy"><figcaption>Ecranul principal și meniul Prepare</figcaption></figure>
+<p>Ecranul principal afișează temperatura <code class="tight">heatbed</code>-ului și a <code class="tight">nozzle</code>-ului. Atinge o valoare pentru a deschide tastatura numerică și a introduce manual temperatura.</p>
+<p>Bara de jos are cinci secțiuni: acasă, pregătire, fișiere, setări și dispozitiv. Pregătirea este împărțită în trei taburi:</p>
+<ul><li><code>Movement/Temp.</code> — mișcarea axelor, cu pași de 1, 10 sau 30 mm, și controlul temperaturii;</li><li><code>Extrude/Retract</code> — extragerea și retragerea <code class="tight">filament</code>-ului, cu încălzire automată la 240 °C;</li><li><code>Adjust</code> — ventilatorul modelului, <code>Z-offset</code> cu pas de 0,01 mm, viteza și debitul de printare.</li></ul>
+<figure><img src="../assets/img/printers/ender3-11.jpg" alt="Fișierele de print și previzualizarea modelului" loading="lazy"><figcaption>Fișierele de print și previzualizarea modelului</figcaption></figure>
+<p>Secțiunea de fișiere arată modelele din memoria locală, de pe USB și din istoric. Ține apăsat pe un model pentru a-l selecta și copia local; poți copia cel mult trei modele odată. Atinge un fișier pentru detalii: timp estimat, temperaturi, butonul de print și opțiunea de calibrare. Bifează calibrarea la primele printuri.</p>
+<h2 id="nivelarea-patului">Nivelarea patului</h2>
+<p>Ender-3 V3 KE nu are roți de reglaj. Nivelarea se face cu senzorul CR-Touch, care măsoară patul în mai multe puncte, iar firmware-ul compensează diferențele de înălțime pe primul layer.</p>
+<ul><li>rulează <code>auto leveling</code> după asamblare, după mutarea imprimantei și după schimbarea <code class="tight">nozzle</code>-ului sau a <code class="tight">build plate</code>-ului;</li><li>curăță placa de praf, grăsime și resturi de <code>filament</code> înainte de măsurare; un fir lipit sub <code>nozzle</code> falsifică toate valorile;</li><li>nu apăsa pe pat în timpul măsurării;</li><li>valorile din grilă sunt abateri în milimetri: cele negative înseamnă zone mai joase, cele pozitive zone mai înalte, iar diferențele mici se compensează automat;</li><li>ajustează fin <code class="tight">Z-offset</code>-ul din meniul de pregătire, cu pași de 0,01 mm.</li></ul>
+<p>Semnul că <code class="tight">Z-offset</code>-ul este greșit apare pe primul layer. Dacă <code class="tight">nozzle</code>-ul este prea aproape, <code class="tight">filament</code>-ul se turtește excesiv și lasă urme aspre; dacă este prea departe, firele nu se lipesc și rămân goluri. Reglează pe un test de prim layer.</p>
+<h2 id="incarcarea-filamentului">Încărcarea filamentului</h2>
+<p>Imprimanta folosește <code>filament</code> de 1,75 mm; rola de probă de 20 m ajunge pentru primele teste.</p>
+<figure><img src="../assets/img/printers/ender3-12.jpg" alt="Pregătirea filamentului și încărcarea manuală" loading="lazy"><figcaption>Pregătirea filamentului și încărcarea manuală</figcaption></figure>
+<p>1. Încălzește <code class="tight">nozzle</code>-ul la 240 °C, din meniul de temperatură. 2. Taie capătul <code class="tight">filament</code>-ului la 45° și îndreptează-l. 3. Trece <code class="tight">filament</code>-ul prin detectorul de <code class="tight">filament</code>. 4. Apasă ușor clema <code class="tight">extruder</code>-ului și împinge <code class="tight">filament</code>-ul până iese puțin material pe la <code class="tight">nozzle</code>.</p>
+<h3 id="alimentarea-automata">Alimentarea automată</h3>
+<figure><img src="../assets/img/printers/ender3-13.png" alt="Alimentarea automată a filamentului" loading="lazy"><figcaption>Alimentarea automată a filamentului</figcaption></figure>
+<p>În tabul <code class="tight">Extrude/Retract</code>, apasă <code class="tight">Extrude</code>. Imprimanta încălzește <code class="tight">nozzle</code>-ul la 240 °C, extrage <code class="tight">filament</code>-ul și afișează starea fiecărei etape: încălzire, extragere, finalizare. Butoanele rămân inactive până la atingerea temperaturii.</p>
+<h3 id="retragerea-automata">Retragerea automată</h3>
+<figure><img src="../assets/img/printers/ender3-14.png" alt="Retragerea automată a filamentului" loading="lazy"><figcaption>Retragerea automată a filamentului</figcaption></figure>
+<p>Pentru schimbarea <code class="tight">filament</code>-ului, apasă <code class="tight">Retract</code>. Secvența este: încălzire <code class="tight">nozzle</code>, pregătire pentru retragere, retragere, finalizare. Scoate <code class="tight">filament</code>-ul vechi cât timp <code class="tight">nozzle</code>-ul este cald și introdu noul <code>filament</code> imediat, împingându-l puțin înainte. Dacă lași <code class="tight">nozzle</code>-ul să se răcească cu material topit înăuntru, următoarea încărcare va fi dificilă.</p>
+<h2 id="primul-print">Primul print</h2>
+<p>Modelele se pregătesc într-un <code class="tight">slicer</code>. <code>Creality Print</code> se instalează de pe stick-ul USB sau de pe site-ul oficial; <code class="tight">slicer</code>-ul transformă modelul într-un fișier <code class="tight">G-code</code>.</p>
+<h3 id="printare-prin-lan">Printare prin LAN</h3>
+<figure><img src="../assets/img/printers/ender3-15.jpg" alt="Pașii din Creality Print: limbă, imprimantă, nozzle, import" loading="lazy"><figcaption>Pașii din Creality Print: limbă, imprimantă, nozzle, import</figcaption></figure>
+<p>1. Alege limba și serverul. 2. Adaugă imprimanta din lista de modele. 3. Confirmă diametrul <code class="tight">nozzle</code>-ului, de 0,4 mm. 4. Importă fișierul modelului.</p>
+<figure><img src="../assets/img/printers/ender3-16.jpg" alt="Setarea filamentului, felia și trimiterea prin LAN" loading="lazy"><figcaption>Setarea filamentului, felia și trimiterea prin LAN</figcaption></figure>
+<p>5. Setează tipul de <code class="tight">filament</code>. 6. Ajustează parametrii și apasă <code class="tight">Slice</code>. 7. După feliat, apasă <code class="tight">LAN printing</code>. 8. Adaugă echipamentul prin scanare sau manual.</p>
+<figure><img src="../assets/img/printers/ender3-17.jpg" alt="Adăugarea imprimantei după adresa IP" loading="lazy"><figcaption>Adăugarea imprimantei după adresa IP</figcaption></figure>
+<p>Pentru adăugarea manuală ai nevoie de adresa IP a imprimantei: o găsești pe ecran, în Settings → Network. După conectare, lista de dispozitive arată starea imprimantei, iar panoul de detaliu afișează informațiile despre print. Imprimanta și calculatorul trebuie să fie în aceeași rețea.</p>
+<h3 id="printare-de-pe-stick-usb">Printare de pe stick USB</h3>
+<figure><img src="../assets/img/printers/ender3-18.jpg" alt="Printarea unui model de pe stick USB" loading="lazy"><figcaption>Printarea unui model de pe stick USB</figcaption></figure>
+<p>1. Introdu stick-ul USB în oricare dintre cele două porturi. 2. Selectează modelul din lista de fișiere. 3. Apasă <code class="tight">Print</code>. 4. Urmărește progresul pe ecran.</p>
+<p>Reguli pentru stick: fișierele trebuie salvate în directorul rădăcină, nu într-un subdirector; folosește nume cu litere latine, cifre și caractere obișnuite; nu scoate stick-ul în timpul printului.</p>
+<p>La primul print, urmărește primele layere. Cu <code class="tight">build plate</code>-ul curat și <code class="tight">Z-offset</code>-ul corect, <code class="tight">filament</code>-ul se întinde uniform, fără să se ridice la margini. Dacă vezi goluri între linii, redu <code class="tight">Z-offset</code>-ul; dacă materialul este turtit excesiv, mărește-l.</p>
+<h2 id="intretinere">Întreținere</h2>
+<p>O imprimantă curată printează previzibil:</p>
+<ul><li>șterge praful de pe corp și de pe șine cu o cârpă uscată, cu imprimanta oprită;</li><li>îndepărtează resturile de <code>filament</code> de pe <code>build plate</code> după ce placa s-a răcit; placa PEI se îndoaie și materialul se desprinde ușor;</li><li>curăță <code class="tight">nozzle</code>-ul cu peria sau cu acul din kit doar cât timp este cald și folosește o unealtă, nu degetele;</li><li>verifică periodic tensiunea curelelor, cu întinzătoarele axelor X și Y;</li><li>nu forța axele cu mâna cât timp imprimanta este pornită;</li><li>înainte de orice intervenție la electronică, oprește imprimanta și scoate cablul din priză.</li></ul>
+<figure><img src="../assets/img/printers/ender3-19.jpg" alt="Tabelul de parametri ai echipamentului" loading="lazy"><figcaption>Tabelul de parametri ai echipamentului</figcaption></figure>
+<p>Tabelul din manual completează specificațiile de sus: grosime de layer 0,1–0,35 mm, precizie ±0,1 mm, accelerație maximă 8000 mm/s², temperatură ambientală 5–35 °C, materiale acceptate PLA, PETG, ABS, TPU(95A) și ASA, putere 350 W, recuperarea printului după căderea de tensiune și detectarea <code class="tight">filament</code>-ului. Formatele de intrare sunt STL, OBJ și 3MF.</p>
+<figure><img src="../assets/img/printers/ender3-20.jpg" alt="Schema plăcii de bază și a porturilor" loading="lazy"><figcaption>Schema plăcii de bază și a porturilor</figcaption></figure>
+<p>Schema plăcii de bază este destinată service-ului: arată porturile pentru motoarele Z, detectorul de <code class="tight">filament</code>, siguranța, alimentarea 24 V, <code class="tight">heatbed</code>-ul, termistorii, modulul de nivelare, ecranul tactil, cablurile flexibile și slotul pentru card. Nu interveni la placa de bază în garanție și nu conecta mufe cu imprimanta sub tensiune.</p>
+<h3 id="note-legale-si-conformitate">Note legale și conformitate</h3>
+<p>Echipamentul respectă partea 15 din regulile FCC. Funcționarea este permisă cu două condiții: dispozitivul nu produce interferențe dăunătoare și acceptă interferențele primite, inclusiv pe cele care pot afecta funcționarea. Modificările neaprobate explicit de producător pot anula dreptul de utilizare. Conform declarației FCC privind expunerea la radiații, echipamentul se instalează și se folosește la o distanță minimă de 20 cm față de corp. Diferențele dintre loturi pot face ca obiectele reale să difere de imagini.</p>
+<figure><img src="../assets/img/printers/ender3-21.png" alt="Datele de contact Creality și mărcile de conformitate" loading="lazy"><figcaption>Datele de contact Creality și mărcile de conformitate</figcaption></figure>
+<p>Producător: Shenzhen Creality 3D Technology Co., Ltd., Shenzhen, China. Site oficial: creality.com. Telefon: +86 755-8523 4565. E-mail: cs@creality.com.</p>
+        <p><a class="source-link" href="https://wiki.creality.com/en/ender-series/ender-3-v3-ke/quick-start-guide/user-manual" target="_blank" rel="noopener">Deschide manualul original ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="bambu-p2s.html"><div class="dir">← Imprimanta anterioară</div><div class="name">Bambu Lab P2S</div></a>
+      <a class="next" href="ender-5-max.html"><div class="dir">Imprimanta următoare →</div><div class="name">Creality Ender-5 Max</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Celelalte imprimante</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="bambu-p1.html"><img src="../assets/img/printers/bambu-p1-hero.jpg" alt="Bambu Lab P1S / P1P" loading="lazy"></a>
+          <div><h3><a href="bambu-p1.html">Bambu Lab P1S / P1P</a></h3><p>Ghid de instalare, primul print și întreținere pentru Bambu Lab P1S și P1P.</p></div>
+        </article><article class="related-card">
+          <a href="bambu-p2s.html"><img src="../assets/img/printers/bambu-p2s-hero.jpg" alt="Bambu Lab P2S" loading="lazy"></a>
+          <div><h3><a href="bambu-p2s.html">Bambu Lab P2S</a></h3><p>Ghid practic pentru Bambu Lab P2S: instalare, primul print, Bambu Handy și Studio, calibrare și întreținere.</p></div>
+        </article><article class="related-card">
+          <a href="ender-5-max.html"><img src="../assets/img/printers/ender5-hero.jpg" alt="Creality Ender-5 Max" loading="lazy"></a>
+          <div><h3><a href="ender-5-max.html">Creality Ender-5 Max</a></h3><p>Ghid de asamblare, configurare și primul print pentru Creality Ender-5 Max, printer CoreXY cu volum de 400 mm.</p></div>
+        </article><article class="related-card">
+          <a href="mingda-ad-f4.html"><img src="../assets/img/printers/mingda-p05-1.jpg" alt="Mingda AD-F4" loading="lazy"></a>
+          <div><h3><a href="mingda-ad-f4.html">Mingda AD-F4</a></h3><p>Printer FDM de format mare, cu pat de 1200 × 800 mm și alimentare pe patru canale, pentru litere 3D și piese multicolor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

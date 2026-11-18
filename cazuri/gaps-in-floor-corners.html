@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goluri în colțurile de jos — Ghid calitate la printare 3D</title>
+<meta name="description" content="În colțurile piesei rămân goluri, iar layerul de sus nu se unește cu conturul.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-in-floor-corners/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Goluri în colțurile de jos</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Goluri în colțurile de jos</h1>
+        <p class="lede">În colțurile piesei rămân goluri, iar layerul de sus nu se unește cu conturul.</p>
+        <p class="en-title">În engleză: <strong>Gaps in Floor Corners</strong></p>
+      </div>
+      <figure><img src="../assets/img/gaps-in-floor-corners-1024x1024-1.jpg" alt="Goluri în colțurile de jos"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#prea-putine-perimeters">Prea puține perimeters</a></li><li class="lvl-3"><a href="#prea-putine-top-solid-layers">Prea puține top solid layers</a></li><li class="lvl-3"><a href="#infill-percentage-prea-mic">Infill percentage prea mic</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Perimeters (Layer)</li><li>Top solid layers (Layer)</li><li>Infill percentage (Infill)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Fiecare layer se sprijină pe fundația layerului de dedesubt. Dar materialul costă, așa că trebuie găsit echilibrul între rezistența fundației și cantitatea de plastic folosită.</p>
+<p>Dacă fundația este prea slabă, apar găuri și goluri între layere. Se văd cel mai clar în colțuri, unde dimensiunea piesei se schimbă. De exemplu, un cub de 20 mm printat deasupra unui cub de 40 mm: la trecerea la dimensiunea mică, pereții cubului de 20 mm trebuie să aibă suport.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="prea-putine-perimeters">Prea puține perimeters</h3>
+<p>Mai mulți <code>perimeters</code> întăresc fundația. Cum interiorul este parțial gol, grosimea pereților contează mult.</p>
+<p>Mergi la <code>Edit Process Settings</code> &gt; tabul <code class="tight">Layer</code>. Dacă foloseai 2 <code class="tight">perimeters</code>, încearcă 4 și vezi dacă golurile dispar.</p>
+<h3 id="prea-putine-top-solid-layers">Prea puține top solid layers</h3>
+<p>Un „tavan” subțire nu poate susține structurile printate deasupra. În tabul <code class="tight">Layer</code>, crește numărul de <code class="tight">top solid layers</code>.</p>
+<p>Dacă foloseai 2, încearcă 4. La fel ca la <a href="gaps-in-top-layers.html" target="_blank" rel="noopener">golurile din layerele de sus</a>, grosimea secțiunii solide contează mai mult decât numărul în sine.</p>
+<h3 id="infill-percentage-prea-mic">Infill percentage prea mic</h3>
+<p>Layerele solide se construiesc peste <code class="tight">infill</code>, deci umplutura trebuie să fie suficient de densă. Verifică procentul în tabul <code>Infill</code> sau cu slider-ul din <code class="tight">Process Settings</code>.</p>
+<p>Dacă foloseai <code class="tight">20%</code>, încearcă <code>40%</code> și compară rezultatul.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu confunda golurile din colțuri cu <code class="tight">under-extrusion</code>. Dacă lipsește material pe toată piesa, nu doar în colțuri, verifică mai întâi <code class="tight">Extrusion Multiplier</code>.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-in-floor-corners/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="scars-on-top-surface.html"><div class="dir">← Problema anterioară</div><div class="name">Zgârieturi pe suprafața de sus</div></a>
+      <a class="next" href="lines-on-the-side-of-print.html"><div class="dir">Problema următoare →</div><div class="name">Linii pe laterala piesei</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

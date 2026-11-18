@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infill slab — Ghid calitate la printare 3D</title>
+<meta name="description" content="Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/weak-infill/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Infill slab</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Infill slab</h1>
+        <p class="lede">Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p>
+        <p class="en-title">În engleză: <strong>Weak Infill</strong></p>
+      </div>
+      <figure><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#alege-alt-infill-pattern">Alege alt infill pattern</a></li><li class="lvl-3"><a href="#reduce-viteza-de-printare">Reduce viteza de printare</a></li><li class="lvl-3"><a href="#creste-infill-extrusion-width">Crește Infill Extrusion Width</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Internal Fill Pattern (Infill)</li><li>Infill Extrusion Width (Infill)</li><li>Default Printing Speed (Speeds)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p><code class="tight">Infill</code>-ul are un rol important în rezistența piesei. El leagă pereții exteriori între ei și susține layerele solide de deasupra.</p>
+<p>Dacă <code class="tight">infill</code>-ul iese slab, subțire sau ca niște fire, piesa pare OK la exterior, dar se strivește ușor. Câteva setări din slicer pot rezolva problema.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="alege-alt-infill-pattern">Alege alt infill pattern</h3>
+<p>Prima setare de verificat este tiparul de umplutură. Îl găsești în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Infill</code>.</p>
+<p><code>Internal Fill Pattern</code> stabilește modelul din interior:</p>
+<ul><li><code class="tight">Grid</code>, <code>Triangular</code> și <code>Solid Honeycomb</code> sunt tipare puternice;</li><li><code>Rectilinear</code> și <code>Fast Honeycomb</code> sunt mai rapide, dar mai slabe.</li></ul>
+<p>Dacă piesa trebuie să reziste la efort, alege un tipar solid. Dacă viteza contează mai mult, un tipar rapid poate fi suficient.</p>
+<h3 id="reduce-viteza-de-printare">Reduce viteza de printare</h3>
+<p><code class="tight">Infill</code>-ul este de obicei printat mai repede decât restul piesei. Dacă merge prea repede, extruderul nu ține pasul și apare <code>under-extrusion</code> în interior.</p>
+<p>Rezultatul este exact <code class="tight">infill</code>-ul slab și sfărâmicios. Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> și ajustează <code class="tight">Default Printing Speed</code>, care controlează direct viteza <code class="tight">infill</code>-ului.</p>
+<p>Exemplu: dacă printai la <code>3600 mm/min</code> (60 mm/s), încearcă o reducere de 50% și verifică dacă umplutura devine mai solidă.</p>
+<h3 id="creste-infill-extrusion-width">Crește Infill Extrusion Width</h3>
+<p>Simplify3D permite să modifici lățimea de extrudare doar pentru <code class="tight">infill</code>. De exemplu, pereții exteriori pot fi printați cu <code class="tight">0.4mm</code>, iar <code class="tight">infill</code>-ul cu <code class="tight">0.8mm</code>.</p>
+<p>Așa obții pereți de umplutură mai groși și mai puternici. Setarea este în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Infill</code>: <code class="tight">Infill Extrusion Width</code>, exprimată ca procent din lățimea normală.</p>
+<p>La <code class="tight">200%</code>, liniile de <code>infill</code> sunt de două ori mai groase. Atenție: slicerul păstrează procentul de <code>infill</code> cerut, deci liniile trebuie distanțate mai mult. De aceea, după creșterea lățimii, mulți utilizatori cresc și procentul de <code class="tight">infill</code>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Un <code>infill</code> care arată bine în preview, dar iese slab la print, este aproape întotdeauna o problemă de viteză sau de debit, nu de pattern.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/weak-infill/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="stops-extruding-mid-print.html"><div class="dir">← Problema anterioară</div><div class="name">Se oprește din extrudat la mijlocul printului</div></a>
+      <a class="next" href="blobs-and-zits.html"><div class="dir">Problema următoare →</div><div class="name">Pete și umflături (blobs and zits)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-separation-and-splitting.html"><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă" loading="lazy"></a>
+          <div><h3><a href="layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h3><p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article><article class="related-card">
+          <a href="small-features-not-printed.html"><img src="../assets/img/small-features-not-printed2-1024x1024-1.jpg" alt="Detalii mici care nu se printează" loading="lazy"></a>
+          <div><h3><a href="small-features-not-printed.html">Detalii mici care nu se printează</a></h3><p>Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

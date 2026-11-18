@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detalii mici care nu se printează — Ghid calitate la printare 3D</title>
+<meta name="description" content="Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/small-features-not-printed/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Detalii mici care nu se printează</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Detalii mici care nu se printează</h1>
+        <p class="lede">Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă.</p>
+        <p class="en-title">În engleză: <strong>Small Features Not Printed</strong></p>
+      </div>
+      <figure><img src="../assets/img/small-features-not-printed2-1024x1024-1.jpg" alt="Detalii mici care nu se printează"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#activeaza-single-extrusion-walls">Activează single extrusion walls</a></li><li class="lvl-3"><a href="#reproiecteaza-piesa-cu-detalii-mai-groase">Reproiectează piesa cu detalii mai groase</a></li><li class="lvl-3"><a href="#monteaza-un-nozzle-cu-varf-mai-mic">Montează un nozzle cu vârf mai mic</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>External Thin Wall Type (Advanced)</li><li>Allow single extrusion walls</li><li>Nozzle diameter</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Majoritatea printerelor au un nozzle fix, care stabilește rezoluția în planul XY. Dimensiunile uzuale sunt <code>0.4mm</code> sau <code class="tight">0.5mm</code>.</p>
+<p>Pentru majoritatea pieselor este suficient, dar apar probleme la detalii mai subțiri decât nozzle-ul. De exemplu, un perete de <code>0.2mm</code> cu nozzle de <code>0.4mm</code> poate să nu apară deloc în preview-ul Simplify3D.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="activeaza-single-extrusion-walls">Activează single extrusion walls</h3>
+<p>Simplify3D are un mod special pentru pereți foarte subțiri și detalii exterioare.</p>
+<p>Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Advanced</code> și schimbă <code>External Thin Wall Type</code> în <code class="tight">Allow single extrusion walls</code>.</p>
+<p>Salvează setările și revino în preview. Vei vedea că multe dintre detaliile subțiri sunt acum printate cu extrudări simple, dedicate.</p>
+<h3 id="reproiecteaza-piesa-cu-detalii-mai-groase">Reproiectează piesa cu detalii mai groase</h3>
+<p>Dacă problema persistă, cea mai sigură soluție este să modifici modelul 3D astfel încât toate detaliile să fie mai mari decât diametrul nozzle-ului.</p>
+<p>Modificarea se face în programul CAD original. După ce îngroși detaliile, reimportă modelul în Simplify3D și verifică în preview dacă printerul poate reproduce forma.</p>
+<h3 id="monteaza-un-nozzle-cu-varf-mai-mic">Montează un nozzle cu vârf mai mic</h3>
+<p>Uneori nu poți modifica modelul: piesa a fost proiectată de altcineva sau descărcată de pe internet. În acest caz, poți achiziționa un al doilea nozzle, mai mic.</p>
+<p>Multe printere au nozzle detașabil, ceea ce face schimbarea simplă. Este obișnuit să ai un nozzle de <code>0.3mm</code> pentru detalii și unul de <code>0.5mm</code> pentru piese rapide.</p>
+<p>Cere producătorului instrucțiuni exacte pentru montarea unui nozzle mai mic.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Un nozzle mai mic permite detalii fine, dar crește timpul de print și sensibilitatea la <code class="tight">clog</code>-uri. Folosește-l doar la piesele care chiar au nevoie.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/small-features-not-printed/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="gaps-in-thin-walls.html"><div class="dir">← Problema anterioară</div><div class="name">Goluri în pereți subțiri</div></a>
+      <a class="next" href="inconsistent-extrusion.html"><div class="dir">Problema următoare →</div><div class="name">Extrudare inconsistentă</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-separation-and-splitting.html"><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă" loading="lazy"></a>
+          <div><h3><a href="layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h3><p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p></div>
+        </article><article class="related-card">
+          <a href="weak-infill.html"><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab" loading="lazy"></a>
+          <div><h3><a href="weak-infill.html">Infill slab</a></h3><p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

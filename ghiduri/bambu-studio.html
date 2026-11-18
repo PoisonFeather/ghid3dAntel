@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bambu Studio — ghid de început — Ghid printare 3D</title>
+<meta name="description" content="Instalare, configurare inițială și primul print în Bambu Studio, pas cu pas.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html" aria-current="page">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://wiki.bambulab.com/en/software/bambu-studio/studio-quick-start" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../slicere.html">Slicere</a><span>/</span>Bambu Studio — ghid de început</nav>
+    <div class="case-hero guide-hero">
+      <div>
+        <span class="badge">Slicer</span>
+        <h1>Bambu Studio — ghid de început</h1>
+        <p class="lede">Instalare, configurare inițială și primul print în Bambu Studio, pas cu pas.</p>
+        <p class="en-title">În engleză: <strong>Bambu Studio Quick Start Guide</strong></p>
+      </div>
+      <figure><img src="../assets/img/ghiduri/bambu-01.png" alt="Bambu Studio — ghid de început"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#ce-este-bambu-studio">Ce este Bambu Studio?</a></li><li class="lvl-2"><a href="#cerinte-de-sistem">Cerințe de sistem</a></li><li class="lvl-2"><a href="#descarcare-si-instalare">Descărcare și instalare</a></li><li class="lvl-2"><a href="#asistentul-de-configurare">Asistentul de configurare</a></li><li class="lvl-3"><a href="#alegerea-regiunii-de-conectare">Alegerea regiunii de conectare</a></li><li class="lvl-3"><a href="#selectarea-printerului">Selectarea printerului</a></li><li class="lvl-3"><a href="#selectarea-filamentului">Selectarea filamentului</a></li><li class="lvl-3"><a href="#instalarea-pluginului-bambu-network">Instalarea pluginului Bambu Network</a></li><li class="lvl-2"><a href="#primul-print">Primul print</a></li><li class="lvl-3"><a href="#conectarea-la-cont-optional-dar-recomandat">Conectarea la cont (opțional, dar recomandat)</a></li><li class="lvl-3"><a href="#conectarea-printerului-la-bambu-studio">Conectarea printerului la Bambu Studio</a></li><li class="lvl-3"><a href="#crearea-unui-proiect-nou">Crearea unui proiect nou</a></li><li class="lvl-3"><a href="#adaugarea-unui-model">Adăugarea unui model</a></li><li class="lvl-3"><a href="#selectarea-presetarilor-de-printer-filament-si-proces">Selectarea presetărilor de printer, filament și proces</a></li><li class="lvl-3"><a href="#slice-pe-placa">Slice pe placă</a></li><li class="lvl-3"><a href="#trimiterea-lucrarii-de-print">Trimiterea lucrării de print</a></li><li class="lvl-3"><a href="#printare-placa">Printare placă</a></li><li class="lvl-3"><a href="#printare-toate-placile">Printare toate plăcile</a></li><li class="lvl-3"><a href="#trimitere-pe-card-sd">Trimitere pe card SD</a></li><li class="lvl-3"><a href="#export-fisier-pregatit-pentru-print">Export fișier pregătit pentru print</a></li><li class="lvl-3"><a href="#trimitere-catre-mai-multe-dispozitive">Trimitere către mai multe dispozitive</a></li><li class="lvl-2"><a href="#control-de-la-distanta">Control de la distanță</a></li><li class="lvl-2"><a href="#observatii-finale">Observații finale</a></li></ol></aside>
+      <article class="prose" data-article>
+        <h2 id="ce-este-bambu-studio">Ce este Bambu Studio?</h2>
+<p>Bambu Studio pornește de la PrusaSlicer, dezvoltat de Prusa Research, care la rândul lui provine din Slic3r, creat de Alessandro Ranellucci împreună cu comunitatea RepRap.</p>
+<p>Bambu Studio este programul de slicing dezvoltat de Bambu Lab, folosit pentru pregătirea fișierelor pentru printare 3D. Include fluxuri de lucru bazate pe proiecte, algoritmi de slicing optimizați și o interfață grafică simplă de folosit.</p>
+<h2 id="cerinte-de-sistem">Cerințe de sistem</h2>
+<ul><li>Windows 10 sau mai nou</li><li>Mac OS X 10.15 sau mai nou</li><li>Linux Ubuntu 20.02 sau mai nou / Fedora 36 sau mai nou (versiunea pentru Linux se descarcă de la <a href="https://github.com/bambulab/BambuStudio/releases" target="_blank" rel="noopener">github</a>)</li><li>procesor Intel® Core 2 sau AMD Athlon® 64, la 2 GHz sau mai rapid</li><li>sistem compatibil OpenGL 2.0</li><li>8 GB RAM recomandați, minimum 4 GB</li><li>2,0 GB spațiu liber pe disc sau mai mult</li></ul>
+<h2 id="descarcare-si-instalare">Descărcare și instalare</h2>
+<ul><li>Descarcă <a href="https://bambulab.com/download" target="_blank" rel="noopener">Bambu Studio</a>.</li><li>Instalează programul urmărind ghidul pas cu pas.</li></ul>
+<h2 id="asistentul-de-configurare">Asistentul de configurare</h2>
+<h3 id="alegerea-regiunii-de-conectare">Alegerea regiunii de conectare</h3>
+<p>Primul pas este să alegi regiunea în care te afli. Un cont înregistrat, de exemplu, în America de Nord nu se poate conecta dacă regiunea este setată pe Chinese Mainland.</p>
+<figure><img src="../assets/img/ghiduri/bambu-02.png" alt="Alegerea regiunii de conectare" loading="lazy"><figcaption>Alegerea regiunii de conectare</figcaption></figure>
+<div class="nota"><span class="nota-title">De reținut</span><p>Utilizatorii din Hong Kong SAR, China; Macao SAR, China și Taiwan, China trebuie să aleagă „Asia-Pacific” ca regiune de conectare.</p></div>
+<h3 id="selectarea-printerului">Selectarea printerului</h3>
+<p>Alege printerele și nozzle-urile care să apară în meniul de operare al slicerului. Poți bifa oricare dintre opțiuni sau pe toate. Opțiunile pot fi modificate mai târziu din meniul slicerului, dacă alegi acum un singur printer și vrei să schimbi dimensiunea nozzle-ului mai târziu.</p>
+<figure><img src="../assets/img/ghiduri/bambu-03.png" alt="Selectarea printerelor și a nozzle-urilor" loading="lazy"><figcaption>Selectarea printerelor și a nozzle-urilor</figcaption></figure>
+<h3 id="selectarea-filamentului">Selectarea filamentului</h3>
+<p>Alege filamentele care să apară în lista de presetări de filament. Poți selecta oricâte sunt disponibile.</p>
+<figure><img src="../assets/img/ghiduri/bambu-04.png" alt="Selectarea filamentelor" loading="lazy"><figcaption>Selectarea filamentelor</figcaption></figure>
+<h3 id="instalarea-pluginului-bambu-network">Instalarea pluginului Bambu Network</h3>
+<figure><img src="../assets/img/ghiduri/bambu-05.png" alt="Instalarea pluginului Bambu Network" loading="lazy"><figcaption>Instalarea pluginului Bambu Network</figcaption></figure>
+<p>Pluginul Bambu Network oferă funcțiile de rețea: printare prin WAN/LAN, control de la distanță și sincronizarea datelor de utilizator. Instalarea necesită conexiune la internet și se face automat, dacă opțiunea este activată, după terminarea asistentului de configurare.</p>
+<h2 id="primul-print">Primul print</h2>
+<h3 id="conectarea-la-cont-optional-dar-recomandat">Conectarea la cont (opțional, dar recomandat)</h3>
+<figure><img src="../assets/img/ghiduri/bambu-06.png" alt="Conectarea la contul Bambu" loading="lazy"><figcaption>Conectarea la contul Bambu</figcaption></figure>
+<p>Ai nevoie de pluginul Bambu Network pentru a te conecta. Acesta este necesar pentru istoricul de printuri, din care poți retrimite la print modelele anterioare, din aplicația Bambu Handy. De asemenea, setările de utilizator se pot sincroniza în Bambu Cloud, ca să fie aceleași pe toate calculatoarele tale.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Printerul și Bambu Studio nu pot reîmprospăta automat interfața la intervale regulate. După ce schimbi numele afișat (nickname), trebuie să dezlegi și să legi din nou printerul. În Bambu Studio, deloghează-te și conectează-te din nou pentru a vedea noul nume.</p></div>
+<h3 id="conectarea-printerului-la-bambu-studio">Conectarea printerului la Bambu Studio</h3>
+<p>Înainte de a porni o lucrare de print, trebuie să legi printerul de Bambu Studio. Dacă ai făcut deja acest pas la configurarea inițială, poți sări peste această secțiune: este doar o reamintire. Legarea permite monitorizarea stării dispozitivului, pornirea și controlul lucrărilor de la distanță. Poți lega printerul din aplicația mobilă Bambu Handy sau din clientul desktop Bambu Studio.</p>
+<figure><img src="../assets/img/ghiduri/bambu-07.png" alt="Legarea printerului din aplicația Bambu Handy" loading="lazy"><figcaption>Legarea printerului din aplicația Bambu Handy</figcaption></figure>
+<p><strong>1.</strong> Bambu Handy — deschide aplicația, mergi la tabul <code>Devices</code> din partea de jos și apasă <code class="tight">+ Bind Printer</code>. După ce printerul este legat, conectează-te cu același cont în Bambu Studio pentru a sincroniza lista de dispozitive.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Recomandăm Bambu Handy pentru legarea printerului, pentru că suportă toate printerele din seria Bambu. Pentru mai multe detalii, vezi în wiki ghidul <code class="tight">Bambu Handy Quick Start Guide</code>.</p></div>
+<p><strong>2.</strong> Bambu Studio — poți lega printerul direct din aplicația desktop. Sunt două metode disponibile:</p>
+<ul><li><code>Bind via PIN code</code> — disponibil doar pentru seria P și seria A.</li><li><code>Bind via IP address and access code</code> — necesită ca printerul să fie în <code class="tight">LAN mode</code>; potrivit pentru rețele izolate sau medii fără acces la internet.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-08.png" alt="Legarea printerului din Bambu Studio" loading="lazy"><figcaption>Legarea printerului din Bambu Studio</figcaption></figure>
+<div class="nota"><span class="nota-title">De reținut</span><p>Pașii detaliați sunt descriși în wiki, în <code>Binding a Printer in Bambu Studio Using a PIN Code</code> și <code class="tight">Using LAN Mode on a Bambu Lab Printer</code>.</p></div>
+<p>După legarea printerului, mergi la secțiunea <code>Device</code> pentru a verifica starea și a te asigura că totul este pregătit pentru print.</p>
+<h3 id="crearea-unui-proiect-nou">Crearea unui proiect nou</h3>
+<figure><img src="../assets/img/ghiduri/bambu-09.png" alt="Butonul New Project" loading="lazy"><figcaption>Butonul New Project</figcaption></figure>
+<p>Pentru a începe, apasă <code class="tight">New Project</code>.</p>
+<h3 id="adaugarea-unui-model">Adăugarea unui model</h3>
+<figure><img src="../assets/img/ghiduri/bambu-10.png" alt="Adăugarea unui model din bara de sus" loading="lazy"><figcaption>Adăugarea unui model din bara de sus</figcaption></figure>
+<p>În bara de sus a panoului de previzualizare, apasă prima pictogramă, <code class="tight">Add</code>, pentru a importa un model. Poți trage fișierele direct din folder în Bambu Studio. Formatele acceptate: <code class="tight">.3mf</code>, <code class="tight">.stl</code>, <code class="tight">.stp</code>, <code class="tight">.step</code>, <code class="tight">.amf</code>, <code class="tight">.obj</code>.</p>
+<h3 id="selectarea-presetarilor-de-printer-filament-si-proces">Selectarea presetărilor de printer, filament și proces</h3>
+<p>Pentru a pregăti modelul, trebuie să alegi presetările pentru printerul pe care îl folosești, pentru filamentul cu care vei printa și pentru setările de print.</p>
+<ul><li>Din lista derulantă <code class="tight">Printer</code>, alege printerul folosit. Aici este inclusă și dimensiunea nozzle-ului cu care vei printa.</li><li>În secțiunea <code class="tight">Filament</code>, alege tipul de filament din lista derulantă.</li><li>Din meniul derulant <code class="tight">Process</code>, alege înălțimea layerului. Reține că un layer mai mic înseamnă un print mai lung. Pentru majoritatea printurilor, <code>0.20mm</code> este valoarea standard.</li></ul>
+<h3 id="slice-pe-placa">Slice pe placă</h3>
+<ul><li>După ce ai terminat setările, apasă butonul <code class="tight">Slice</code>, în dreapta sus în Bambu Studio.</li><li>Dacă fișierul conține mai multe plăci, apasă <code class="tight">Slice All</code>, în colțul din dreapta sus al ecranului.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-11.png" alt="Butonul Slice și rezultatul în panoul Preview" loading="lazy"><figcaption>Butonul Slice și rezultatul în panoul Preview</figcaption></figure>
+<p>După slice, programul te duce în panoul <code class="tight">Preview</code>, unde vezi cum arată modelul după procesarea fișierului <code class="tight">.3mf</code>. Histograma din partea dreaptă arată timpii de print pentru fiecare parametru al printului.</p>
+<h3 id="trimiterea-lucrarii-de-print">Trimiterea lucrării de print</h3>
+<p>Sunt cinci variante: print direct, print pe toate plăcile, trimitere pe cardul SD, export pe cardul SD și trimitere către mai multe dispozitive.</p>
+<h3 id="printare-placa">Printare placă</h3>
+<p>Apasă <code class="tight">Print</code>, în colțul din dreapta sus. Se deschide o fereastră cu o previzualizare rapidă a modelului. Alege printerul din lista derulantă și bifează dacă vrei ca printerul să execute anumite operații înainte de print, cum ar fi <code>Bed Leveling</code> sau <code class="tight">flow calibration</code>. La final, apasă <code>Send</code> pentru a trimite fișierul la printer și a porni printul.</p>
+<figure><img src="../assets/img/ghiduri/bambu-12.png" alt="Fereastra de trimitere la print" loading="lazy"><figcaption>Fereastra de trimitere la print</figcaption></figure>
+<h3 id="printare-toate-placile">Printare toate plăcile</h3>
+<p>Pentru mai multe informații, vezi <a href="https://wiki.bambulab.com/en/studio-handy/multi-plate-printing" target="_blank" rel="noopener">Bambu Studio Multi Plate Printing Guide</a>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Pentru a trimite fișiere prin WLAN, pluginul Bambu Network trebuie să fie instalat, iar Bambu Studio și printerul trebuie să fie în aceeași rețea LAN.</p></div>
+<h3 id="trimitere-pe-card-sd">Trimitere pe card SD</h3>
+<ul><li>Apasă săgeata din stânga butonului <code class="tight">Print plate</code>, în colțul din dreapta sus, și alege <code class="tight">Send</code>.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-13.png" alt="Opțiunea Send din meniul Print plate" loading="lazy"><figcaption>Opțiunea Send din meniul Print plate</figcaption></figure>
+<ul><li>Dacă fișierul conține mai multe plăci, apasă aceeași săgeată și alege <code class="tight">Send all</code>. Se deschide fereastra <code class="tight">Send to Printer MicroSD card</code>. Alege printerul, iar fișierul este trimis pe cardul SD al printerului.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-14.png" alt="Fereastra Send to Printer MicroSD card" loading="lazy"><figcaption>Fereastra Send to Printer MicroSD card</figcaption></figure>
+<div class="nota"><span class="nota-title">De reținut</span><p>Bambu Studio și printerul trebuie să fie în aceeași rețea LAN.</p></div>
+<h3 id="export-fisier-pregatit-pentru-print">Export fișier pregătit pentru print</h3>
+<ul><li>Scoate cardul SD din printer și introdu-l în calculator. Apasă săgeata din stânga butonului <code class="tight">Print plate</code>, în colțul din dreapta sus, și alege <code class="tight">Export plate sliced file</code>. Confirmă apoi selecția.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-15.png" alt="Opțiunea Export plate sliced file" loading="lazy"><figcaption>Opțiunea Export plate sliced file</figcaption></figure>
+<ul><li>Dacă fișierul conține mai multe plăci, apasă aceeași săgeată și alege <code class="tight">Export all sliced file</code>.</li></ul>
+<figure><img src="../assets/img/ghiduri/bambu-16.png" alt="Opțiunea Export all sliced file" loading="lazy"><figcaption>Opțiunea Export all sliced file</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/bambu-17.jpg" alt="Cardul SD folosit pentru transferul fișierelor" loading="lazy"><figcaption>Cardul SD folosit pentru transferul fișierelor</figcaption></figure>
+<p>Se deschide o fereastră de explorare a fișierelor, unde alegi locația cardului SD. Apasă <code class="tight">Save</code>, iar fișierul este exportat pe card.</p>
+<p>După salvare, scoate cardul și introdu-l în slotul din partea dreaptă a ecranului printerului. Apasă pictograma <code>Home</code> din meniul din stânga, apoi <code>Print Files</code> și alege opțiunea <code>SD Card</code> din meniul de sus. Apasă pe fișierul pe care tocmai l-ai exportat pentru a începe printul.</p>
+<figure><img src="../assets/img/ghiduri/bambu-18.png" alt="Meniul SD Card de pe ecranul printerului" loading="lazy"><figcaption>Meniul SD Card de pe ecranul printerului</figcaption></figure>
+<div class="nota"><span class="nota-title">De reținut</span><p>Ghiduri detaliate pentru printarea de pe cardul SD, pe modele: <code class="tight">How to print from Micro SD Card on Bambu Lab X1</code>, <code>How to print from SD card using Bambu Lab P1 Series 3D printer</code> și <code class="tight">How to print from SD card using Bambu Lab A1 Series 3D printer</code>.</p></div>
+<h3 id="trimitere-catre-mai-multe-dispozitive">Trimitere către mai multe dispozitive</h3>
+<p>Pentru mai multe informații, vezi <a href="https://wiki.bambulab.com/en/software/bambu-studio/multi-device-management#Sending-a-Job-to-Multiple-Devices" target="_blank" rel="noopener">Multi-device management</a>.</p>
+<h2 id="control-de-la-distanta">Control de la distanță</h2>
+<p>Secțiunea <code>Device</code> din Bambu Studio permite controlul și monitorizarea printului în timp real (vezi în wiki <a href="https://wiki.bambulab.com/en/software/bambu-studio/remote-control" target="_blank" rel="noopener">remote-control</a>). Dacă printerul are cameră (standard pe X1C), poți urmări printul în direct, de la distanță.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Pentru a accesa printerul astfel, pluginul Bambu Network trebuie să fie instalat.</p></div>
+<h2 id="observatii-finale">Observații finale</h2>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă ai nelămuriri sau întrebări despre pașii descriși aici, trimite un tichet tehnic. Atașează o poză sau un video care arată problema, împreună cu orice altă informație relevantă pentru sesizarea ta.</p></div>
+        <p><a class="source-link" href="https://wiki.bambulab.com/en/software/bambu-studio/studio-quick-start" target="_blank" rel="noopener">Vezi ghidul original în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="../slicere.html"><div class="dir">← Toate ghidurile</div><div class="name">Slicere</div></a>
+      <a class="next" href="orca-slicer.html"><div class="dir">Ghidul următor →</div><div class="name">Orca Slicer — ghid de utilizare</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Continuă cu</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="orca-slicer.html"><img src="../assets/img/ghiduri/orca-01.jpg" alt="Orca Slicer — ghid de utilizare" loading="lazy"></a>
+          <div><h3><a href="orca-slicer.html">Orca Slicer — ghid de utilizare</a></h3><p>Ghid practic pentru cele mai utile funcții din Orca Slicer, de la actualizare și suporturi până la editarea G-code-ului.</p></div>
+        </article>
+        <article class="related-card">
+          <a href="../index.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Probleme de calitate" loading="lazy"></a>
+          <div><h3><a href="../index.html">Probleme de calitate</a></h3><p>27 de probleme de printare, explicate pas cu pas.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

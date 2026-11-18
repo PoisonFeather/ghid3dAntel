@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filament ros (grinding) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Roata de antrenare roadă filamentul până când acesta nu mai avansează.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/grinding-filament/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Filament ros (grinding)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Extrudare</span>
+        <h1>Filament ros (grinding)</h1>
+        <p class="lede">Roata de antrenare roadă filamentul până când acesta nu mai avansează.</p>
+        <p class="en-title">În engleză: <strong>Grinding Filament</strong></p>
+      </div>
+      <figure><img src="../assets/img/grinding-or-stripped-filament-1024x1024-1.jpg" alt="Filament ros (grinding)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#setari-de-retractie-prea-agresive">Setări de retracție prea agresive</a></li><li class="lvl-3"><a href="#creste-temperatura-extruderului">Crește temperatura extruderului</a></li><li class="lvl-3"><a href="#printare-prea-rapida">Printare prea rapidă</a></li><li class="lvl-3"><a href="#verifica-daca-nozzle-ul-este-infundat">Verifică dacă nozzle-ul este înfundat</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Retraction Speed (Extruder)</li><li>Retraction Distance (Extruder)</li><li>Extruder temperature (Temperature)</li><li>Default Printing Speed (Speeds)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Majoritatea printerelor folosesc o roată dințată mică (<code class="tight">drive gear</code>) care apucă filamentul și îl presează pe un rulment. Dinții ascuțiți mușcă din filament și îl împing înainte sau înapoi.</p>
+<p>Dacă filamentul nu poate înainta, dar roata continuă să se învârtă, ea rode din plastic până când nu mai are ce apuca. Starea se numește filament <code class="tight">stripped</code>.</p>
+<p>Semnele sunt clare:</p>
+<ul><li>apar mulți fulgi mici de plastic în jurul extruderului;</li><li>motorul extruderului se învârte, dar filamentul nu mai intră în corpul extruderului;</li><li>printul se oprește brusc, deși printerul continuă să se miște.</li></ul>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="setari-de-retractie-prea-agresive">Setări de retracție prea agresive</h3>
+<p>Verifică mai întâi <code class="tight">retraction</code>. Dacă viteza de retracție este prea mare sau retragi prea mult filament, extruderul este suprasolicitat și filamentul nu ține pasul.</p>
+<p>Test simplu: redu <code>Retraction Speed</code> cu 50% și vezi dacă problema dispare. Dacă da, setările de retracție sunt o parte a cauzei.</p>
+<h3 id="creste-temperatura-extruderului">Crește temperatura extruderului</h3>
+<p>Dacă <code class="tight">grinding</code>-ul continuă, crește temperatura extruderului cu <code class="tight">5–10 °C</code>, ca plasticul să curgă mai ușor. Mergi la <code>Edit Process Settings</code> &gt; tabul <code class="tight">Temperature</code>, selectează extruderul și modifică valoarea.</p>
+<p>La temperatură mai mare, plasticul curge mai ușor, iar roata de antrenare are nevoie de mai puțină forță.</p>
+<h3 id="printare-prea-rapida">Printare prea rapidă</h3>
+<p>Dacă ai crescut temperatura și problema persistă, reduce viteza de printare. La viteză mai mică, motorul extruderului se rotește mai încet, pentru că filamentul este extrudat pe o perioadă mai lungă.</p>
+<p>Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> și ajustează <code class="tight">Default Printing Speed</code>. De exemplu, dacă printai la <code>3600 mm/min</code> (60 mm/s), încearcă o reducere de 50%.</p>
+<h3 id="verifica-daca-nozzle-ul-este-infundat">Verifică dacă nozzle-ul este înfundat</h3>
+<p>Dacă ai mărit temperatura și ai redus viteza, dar filamentul tot se roade, nozzle-ul este probabil parțial înfundat. Urmează pașii din secțiunea <a href="clogged-extruder.html" target="_blank" rel="noopener">Clogged Extruder</a>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>După un episod de <code class="tight">grinding</code>, taie capătul ros al filamentului înainte de a reîncerca. Altfel, roata se învârte în gol pe aceeași porțiune distrusă.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/grinding-filament/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="layer-separation-and-splitting.html"><div class="dir">← Problema anterioară</div><div class="name">Layere care se desprind și crapă</div></a>
+      <a class="next" href="clogged-extruder.html"><div class="dir">Problema următoare →</div><div class="name">Extruder înfundat</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="under-extrusion.html"><img src="../assets/img/under-extruding.jpg" alt="Sub-extrudare (under-extrusion)" loading="lazy"></a>
+          <div><h3><a href="under-extrusion.html">Sub-extrudare (under-extrusion)</a></h3><p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p></div>
+        </article><article class="related-card">
+          <a href="over-extrusion.html"><img src="../assets/img/over-extruding-1024x1024-1.jpg" alt="Supra-extrudare (over-extrusion)" loading="lazy"></a>
+          <div><h3><a href="over-extrusion.html">Supra-extrudare (over-extrusion)</a></h3><p>Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

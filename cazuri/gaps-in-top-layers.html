@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goluri în layerele de sus — Ghid calitate la printare 3D</title>
+<meta name="description" content="Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-in-top-layers/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Goluri în layerele de sus</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Goluri în layerele de sus</h1>
+        <p class="lede">Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p>
+        <p class="en-title">În engleză: <strong>Gaps in Top Layers</strong></p>
+      </div>
+      <figure><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#prea-putine-top-solid-layers">Prea puține top solid layers</a></li><li class="lvl-3"><a href="#infill-percentage-prea-mic">Infill percentage prea mic</a></li><li class="lvl-3"><a href="#under-extrusion">Under-extrusion</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Top solid layers (Layer)</li><li>Infill percentage (Infill)</li><li>Extrusion Multiplier (Extruder)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Pentru economie de material, majoritatea pieselor au o coajă solidă în jurul unui interior poros. De exemplu, la <code class="tight">30% infill</code>, doar 30% din interior este plastic, restul este aer. Interiorul poate fi parțial gol, dar exteriorul trebuie să rămână solid.</p>
+<p>Simplify3D îți permite să stabilești câte <code>solid layers</code> sunt sus și jos. La un cub cu 5 <code class="tight">top solid layers</code>, programul printează 5 layere complet solide la partea de sus și la partea de jos, iar la mijloc lasă <code class="tight">infill</code>.</p>
+<p>Problema apare când layerele solide de sus nu se închid complet și rămân goluri între extrudări.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="prea-putine-top-solid-layers">Prea puține top solid layers</h3>
+<p>Prima setare de ajustat este numărul de <code class="tight">top solid layers</code>. Când un layer solid se printează peste <code>infill</code> parțial gol, extrudările au tendința să cadă în golurile de dedesubt.</p>
+<p>De aceea se printează mai multe layere solide la partea de sus. Regula practică: secțiunea solidă de sus trebuie să aibă cel puțin <strong>0,5 mm</strong>.</p>
+<ul><li>la <code>0.25mm layer height</code> ai nevoie de cel puțin 2 <code class="tight">top solid layers</code>;</li><li>la <code>0.1mm layer height</code> ai nevoie de aproximativ 5 <code class="tight">top solid layers</code>.</li></ul>
+<p>Dacă vezi goluri în suprafața de sus, crește numărul de <code class="tight">top solid layers</code>. De exemplu, de la 3 la 5. Layerele suplimentare se adaugă în interiorul dimensiunii piesei, deci piesa nu devine mai înaltă.</p>
+<p>Setarea se află în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Layer</code>.</p>
+<h3 id="infill-percentage-prea-mic">Infill percentage prea mic</h3>
+<p><code class="tight">Infill</code>-ul din interior este fundația pentru layerele de deasupra. Dacă procentul este foarte mic, rămân goluri mari de aer pe care layerul solid trebuie să le acopere.</p>
+<p>La <code class="tight">10% infill</code>, 90% din interior este gol, iar șansele de goluri sus cresc mult. Dacă ai mărit deja numărul de <code>top solid layers</code> și problema persistă, încearcă să crești <code class="tight">infill</code>-ul. De exemplu, de la <code>30%</code> la <code class="tight">50%</code>.</p>
+<h3 id="under-extrusion">Under-extrusion</h3>
+<p>Dacă ai crescut și numărul de <code class="tight">top solid layers</code>, și <code class="tight">infill</code>-ul, dar golurile rămân, cel mai probabil ai <code class="tight">under-extrusion</code>. Nozzle-ul nu scoate atât material cât se așteaptă slicerul.</p>
+<p>Verifică <code>Extrusion Multiplier</code> și <code class="tight">Filament Diameter</code>, conform secțiunii <a href="under-extrusion.html" target="_blank" rel="noopener">Under-Extrusion</a>.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Crește <code class="tight">infill</code>-ul doar dacă chiar ai nevoie de o fundație mai bună. Pentru piese de prezentare, mai multe <code>top solid layers</code> rezolvă de obicei problema cu mai puțin material.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/gaps-in-top-layers/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="over-extrusion.html"><div class="dir">← Problema anterioară</div><div class="name">Supra-extrudare (over-extrusion)</div></a>
+      <a class="next" href="stringing-or-oozing.html"><div class="dir">Problema următoare →</div><div class="name">Fire și picurare (stringing)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article><article class="related-card">
+          <a href="blobs-and-zits.html"><img src="../assets/img/blobs-and-zits-1024x1024-1.jpg" alt="Pete și umflături (blobs and zits)" loading="lazy"></a>
+          <div><h3><a href="blobs-and-zits.html">Pete și umflături (blobs and zits)</a></h3><p>Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

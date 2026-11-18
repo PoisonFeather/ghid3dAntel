@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pete și umflături (blobs and zits) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/blobs-and-zits/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Pete și umflături (blobs and zits)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Suprafață</span>
+        <h1>Pete și umflături (blobs and zits)</h1>
+        <p class="lede">Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.</p>
+        <p class="en-title">În engleză: <strong>Blobs and Zits</strong></p>
+      </div>
+      <figure><img src="../assets/img/blobs-and-zits-1024x1024-1.jpg" alt="Pete și umflături (blobs and zits)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#setari-de-retractie-si-coasting">Setări de retracție și coasting</a></li><li class="lvl-3"><a href="#evita-retractiile-inutile">Evită retracțiile inutile</a></li><li class="lvl-3"><a href="#retractii-non-stationary">Retracții non-stationary</a></li><li class="lvl-3"><a href="#alege-locatia-start-points">Alege locația start points</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Extra Restart Distance (Extruder)</li><li>Coasting (Extruder)</li><li>Only retract when crossing open spaces (Advanced)</li><li>Wipe Nozzle / Wipe Distance (Extruder)</li><li>Perform retraction during wipe movement (Advanced)</li><li>Choose start point (Layer)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>În timpul printului, extruderul pornește și se oprește de multe ori, pe măsură ce se mută între zonele piesei. Cât timp extruzează continuu, rezultatul este uniform. La fiecare oprire și repornire apare însă o variație.</p>
+<p>Pe coaja exterioară, aceste variații se văd ca mici urme: locul unde extruderul a început conturul și unde s-a întors la finalul buclei. Sunt cunoscute ca <code>blobs</code> sau <code class="tight">zits</code>.</p>
+<p>Este greu să unești două capete de plastic fără nicio urmă, dar Simplify3D are câteva opțiuni care le fac aproape invizibile.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="setari-de-retractie-si-coasting">Setări de retracție și coasting</h3>
+<p>Cel mai bun mod de a diagnostica este să urmărești cu atenție conturul piesei. Unde apare defectul?</p>
+<ul><li>la <strong>începutul</strong> conturului, imediat după ce extruderul pornește;</li><li>la <strong>finalul</strong> conturului, când extruderul se oprește.</li></ul>
+<p>Dacă apare la început, reglează <code class="tight">Extra Restart Distance</code>: <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>, imediat sub <code class="tight">Retraction Distance</code>.</p>
+<p>Setarea stabilește diferența dintre cât filament este retras la oprire și cât este împins înapoi la repornire. Dacă apare un <code>blob</code> la început, extruderul amorsează prea mult. Folosește o valoare negativă.</p>
+<p>Exemplu: la <code>Retraction Distance</code> de <code>1.0mm</code> și <code>Extra Restart Distance</code> de <code class="tight">-0.2mm</code>, la oprire se retrag 1,0 mm, iar la repornire se împing înapoi doar 0,8 mm.</p>
+<p>Dacă defectul apare la <strong>finalul</strong> conturului, activează <code class="tight">Coasting</code>, tot în tabul <code class="tight">Extruder</code>, sub setările de retracție. <code>Coasting</code> oprește extruderul cu o mică distanță înainte de finalul conturului, pentru a elibera presiunea din nozzle.</p>
+<p>Crește valoarea până când defectul dispare. De obicei <code>0.2–0.5mm</code> este suficient.</p>
+<h3 id="evita-retractiile-inutile">Evită retracțiile inutile</h3>
+<p>Uneori este mai bine să eviți complet retracția: extruderul nu mai schimbă direcția și rămâne uniform. Contează mai ales la extruderele <code class="tight">Bowden</code>, unde distanța mare dintre motor și nozzle face retracțiile problematice.</p>
+<p>Mergi la tabul <code class="tight">Advanced</code>, secțiunea <code class="tight">Ooze Control Behavior</code>. Activează <code class="tight">Only retract when crossing open spaces</code>, astfel încât retracția să se facă doar când nozzle-ul traversează o zonă goală. În interiorul piesei, eventualele picături nu se văd oricum.</p>
+<p>În secțiunea <code>Movement Behavior</code> găsești <code class="tight">Avoid crossing outline for travel movement</code>. Opțiunea redirecționează deplasarea astfel încât nozzle-ul să nu traverseze conturul. Dacă nu traversează conturul, nu este nevoie de retracție.</p>
+<h3 id="retractii-non-stationary">Retracții non-stationary</h3>
+<p>La extruderele <code>Bowden</code> se acumulează multă presiune în nozzle. Dacă extruderul stă pe loc când se oprește, presiunea poate produce un <code class="tight">blob</code>.</p>
+<p>Simplify3D permite ca nozzle-ul să se miște în timpul retracției, astfel încât urma să fie întinsă, nu concentrată într-un punct.</p>
+<p>Setări necesare:</p>
+<p>1. <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>; 2. activează <code class="tight">Wipe Nozzle</code>; 3. setează <code>Wipe Distance</code> la <code>5mm</code> ca punct de plecare; 4. mergi la tabul <code>Advanced</code> și activează <code class="tight">Perform retraction during wipe movement</code>.</p>
+<p>Astfel printerul șterge nozzle-ul în timp ce retrage filamentul, iar <code class="tight">blob</code>-ul staționar dispare.</p>
+<h3 id="alege-locatia-start-points">Alege locația start points</h3>
+<p>Dacă mai apar mici defecte, poți controla unde sunt plasate punctele de pornire. Mergi la <code>Edit Process Settings</code> &gt; tabul <code class="tight">Layer</code>.</p>
+<p>Implicit, slicerul alege locațiile care optimizează viteza. Poți însă randomiza punctele sau le poți alinia într-o zonă ascunsă.</p>
+<p>Exemplu: la o statuie, aliniază toate <code>start points</code> pe spatele modelului, ca să nu se vadă din față. Activează <code>Choose start point that is closest to specific location</code> și introdu coordonatele XY dorite.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă <code class="tight">blob</code>-urile apar pe toate fețele piesei, nu doar într-un punct, problema este mai degrabă de debit sau de retracție, nu de plasare a <code class="tight">start point</code>-ului.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/blobs-and-zits/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="weak-infill.html"><div class="dir">← Problema anterioară</div><div class="name">Infill slab</div></a>
+      <a class="next" href="gaps-between-infill-and-outline.html"><div class="dir">Problema următoare →</div><div class="name">Goluri între infill și contur</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="gaps-in-top-layers.html"><img src="../assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="Goluri în layerele de sus" loading="lazy"></a>
+          <div><h3><a href="gaps-in-top-layers.html">Goluri în layerele de sus</a></h3><p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p></div>
+        </article><article class="related-card">
+          <a href="stringing-or-oozing.html"><img src="../assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="Fire și picurare (stringing)" loading="lazy"></a>
+          <div><h3><a href="stringing-or-oozing.html">Fire și picurare (stringing)</a></h3><p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p></div>
+        </article><article class="related-card">
+          <a href="overheating.html"><img src="../assets/img/over-heating-1024x1024-1.jpg" alt="Supraîncălzire (overheating)" loading="lazy"></a>
+          <div><h3><a href="overheating.html">Supraîncălzire (overheating)</a></h3><p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

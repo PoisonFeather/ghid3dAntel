@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supra-extrudare (over-extrusion) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/over-extrusion/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Supra-extrudare (over-extrusion)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Extrudare</span>
+        <h1>Supra-extrudare (over-extrusion)</h1>
+        <p class="lede">Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p>
+        <p class="en-title">În engleză: <strong>Over-Extrusion</strong></p>
+      </div>
+      <figure><img src="../assets/img/over-extruding-1024x1024-1.jpg" alt="Supra-extrudare (over-extrusion)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#ce-trebuie-verificat">Ce trebuie verificat</a></li><li class="lvl-2"><a href="#cum-ajustezi">Cum ajustezi</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Extrusion Multiplier (Extruder)</li><li>Filament Diameter (Other)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Slicerul și printerul lucrează împreună ca să iasă cantitatea corectă de material. Extrudarea precisă este un factor important pentru calitate. Problema este că majoritatea printerelor nu pot măsura cât material iese efectiv.</p>
+<p>Dacă setările de extrudare sunt prea mari, printerul scoate mai mult decât ar trebui. Excesul de plastic umflă pereții, strică dimensiunile exterioare și lasă o suprafață neîngrijită.</p>
+<h2 id="ce-trebuie-verificat">Ce trebuie verificat</h2>
+<p>Sunt doar câteva setări de verificat în Simplify3D. Principiul este identic cu cel de la <a href="under-extrusion.html" target="_blank" rel="noopener">under-extrusion</a>, doar că ajustarea se face în sens invers:</p>
+<ul><li>dacă la <code>under-extrusion</code> creșteai <code class="tight">Extrusion Multiplier</code>, la <code>over-extrusion</code> îl scazi;</li><li>verifică din nou <code>Filament Diameter</code> în tabul <code>Other</code> — dacă ai declarat un diametru mai mic decât cel real, slicerul va cere prea mult material;</li><li>folosește același cub de test de 20 mm cu 3 <code>perimeters</code> și caută excesul de plastic, nu golurile.</li></ul>
+<h2 id="cum-ajustezi">Cum ajustezi</h2>
+<p>Mergi la <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>, selectează extruderul corect și redu <code>Extrusion Multiplier</code> cu pași mici, de exemplu 5%. Reprintă testul și compară.</p>
+<p>Un semn bun că ai nimerit valoarea este că pereții sunt netezi, iar muchiile rămân ascuțite, fără bavuri.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu reduce <code>Extrusion Multiplier</code> ca să compensezi un <code>nozzle</code> parțial înfundat sau un filament cu diametru neregulat. Rezolvă întâi cauza mecanică.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/over-extrusion/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="under-extrusion.html"><div class="dir">← Problema anterioară</div><div class="name">Sub-extrudare (under-extrusion)</div></a>
+      <a class="next" href="gaps-in-top-layers.html"><div class="dir">Problema următoare →</div><div class="name">Goluri în layerele de sus</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="under-extrusion.html"><img src="../assets/img/under-extruding.jpg" alt="Sub-extrudare (under-extrusion)" loading="lazy"></a>
+          <div><h3><a href="under-extrusion.html">Sub-extrudare (under-extrusion)</a></h3><p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p></div>
+        </article><article class="related-card">
+          <a href="grinding-filament.html"><img src="../assets/img/grinding-or-stripped-filament-1024x1024-1.jpg" alt="Filament ros (grinding)" loading="lazy"></a>
+          <div><h3><a href="grinding-filament.html">Filament ros (grinding)</a></h3><p>Roata de antrenare roadă filamentul până când acesta nu mai avansează.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

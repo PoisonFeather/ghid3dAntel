@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghid de calitate la printarea 3D — probleme și soluții</title>
+<meta name="description" content="Ghid în română cu cele mai frecvente probleme de calitate la printarea 3D și setările din slicer care le rezolvă.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="logo-badge"><img src="assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html" aria-current="page">Probleme</a>
+      <a href="imprimante.html">Imprimante</a>
+      <a href="slicere.html">Slicere</a>
+      <a href="glosar.html">Glosar</a>
+      
+      
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Ghid intern de troubleshooting</span>
+      <h1>Ghid de calitate la printarea 3D</h1>
+      <p class="lede">Aici găsești cele mai frecvente probleme de calitate la printarea 3D, explicate pe înțeles în română, împreună cu setările din slicer care le rezolvă. Am adăugat și ghiduri pas cu pas pentru Bambu Studio și Orca Slicer. Termenii tehnici și numele setărilor sunt păstrate în engleză, exact cum apar în programe.</p>
+      <div class="hero-meta">
+        <span><i class="dot"></i>27 de probleme explicate</span>
+        <span><i class="dot"></i>5 imprimante</span>
+        <span><i class="dot"></i>2 ghiduri de slicer</span>
+        <span><i class="dot"></i>Setări cheie pentru fiecare caz</span>
+      </div>
+    </section>
+    <section class="guide-strip">
+      <div class="guide-strip-head">
+        <h2>Ghiduri de slicer</h2>
+        <a href="slicere.html">Toate ghidurile →</a>
+      </div>
+      <div class="guide-strip-cards">
+        <a class="guide-mini" href="ghiduri/bambu-studio.html">
+          <img src="assets/img/ghiduri/bambu-01.png" alt="" loading="lazy">
+          <div><strong>Bambu Studio</strong><span>Bambu Studio Quick Start Guide</span></div>
+          <span class="guide-mini-arrow">→</span>
+        </a><a class="guide-mini" href="ghiduri/orca-slicer.html">
+          <img src="assets/img/ghiduri/orca-01.jpg" alt="" loading="lazy">
+          <div><strong>Orca Slicer</strong><span>Orca Slicer Guide</span></div>
+          <span class="guide-mini-arrow">→</span>
+        </a>
+      </div>
+    </section>
+    <div class="toolbar">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Caută o problemă (ex. warping, stringing…)" data-search aria-label="Caută o problemă">
+      </label>
+      <div class="chips"><button class="chip is-active" data-filter="toate">Toate <span data-count>27 probleme</span></button><button class="chip" data-filter="Extrudare">Extrudare</button><button class="chip" data-filter="Primul layer">Primul layer</button><button class="chip" data-filter="Suprafață">Suprafață</button><button class="chip" data-filter="Mecanică">Mecanică</button><button class="chip" data-filter="Deformare">Deformare</button><button class="chip" data-filter="Precizie">Precizie și rezistență</button></div>
+    </div>
+    <div class="grid"><article class="card" data-card data-cat="Extrudare" data-search="Nu extrudază la începutul printului Not Extruding at Start of Print Printerul nu scoate material la începutul printului, deși restul printului pare în regulă. Extrudare nu iese filament primul layer amorsare nozzle infundat">
+      <a class="card-img" href="cazuri/not-extruding-at-start-of-print.html" tabindex="-1" aria-hidden="true"><img src="assets/img/not-extruding-at-start.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h2>
+        <p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Primul layer" data-search="Nu se lipește de pat Not Sticking to the Bed Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid. Primul layer aderență first layer bed leveling warping pat">
+      <a class="card-img" href="cazuri/not-sticking-to-the-bed.html" tabindex="-1" aria-hidden="true"><img src="assets/img/print-not-sticking-to-bed.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Primul layer</span>
+        <h2><a href="cazuri/not-sticking-to-the-bed.html">Nu se lipește de pat</a></h2>
+        <p>Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Sub-extrudare (under-extrusion) Under-Extrusion Printerul nu scoate suficient material, apar goluri între perimeters și infill. Extrudare goluri pereti subtiri debit flow filament">
+      <a class="card-img" href="cazuri/under-extrusion.html" tabindex="-1" aria-hidden="true"><img src="assets/img/under-extruding.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/under-extrusion.html">Sub-extrudare (under-extrusion)</a></h2>
+        <p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Supra-extrudare (over-extrusion) Over-Extrusion Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare. Extrudare prea mult material bavuri umflat flow mare">
+      <a class="card-img" href="cazuri/over-extrusion.html" tabindex="-1" aria-hidden="true"><img src="assets/img/over-extruding-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/over-extrusion.html">Supra-extrudare (over-extrusion)</a></h2>
+        <p>Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Goluri în layerele de sus Gaps in Top Layers Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări. Suprafață gauri suprafata top layers infill">
+      <a class="card-img" href="cazuri/gaps-in-top-layers.html" tabindex="-1" aria-hidden="true"><img src="assets/img/holes-or-gaps-in-top-layers-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/gaps-in-top-layers.html">Goluri în layerele de sus</a></h2>
+        <p>Suprafața de sus a piesei nu se închide complet, apar găuri între extrudări.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Fire și picurare (stringing) Stringing or Oozing Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol. Suprafață fire oozing retractie hairs whiskers">
+      <a class="card-img" href="cazuri/stringing-or-oozing.html" tabindex="-1" aria-hidden="true"><img src="assets/img/hairs-and-stringing-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/stringing-or-oozing.html">Fire și picurare (stringing)</a></h2>
+        <p>Rămân fire subțiri de plastic între zonele piesei, după deplasările în gol.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Supraîncălzire (overheating) Overheating Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede. Suprafață racire deformare detalii mici ventilator">
+      <a class="card-img" href="cazuri/overheating.html" tabindex="-1" aria-hidden="true"><img src="assets/img/over-heating-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/overheating.html">Supraîncălzire (overheating)</a></h2>
+        <p>Detaliile mici se deformează pentru că materialul nu se răcește suficient de repede.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Mecanică" data-search="Layere deplasate (layer shifting) Layer Shifting Layerele nu mai sunt aliniate și se deplasează lateral una față de alta. Mecanică shift deplasare curea motor pierdere pasi">
+      <a class="card-img" href="cazuri/layer-shifting.html" tabindex="-1" aria-hidden="true"><img src="assets/img/layer-shifting-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Mecanică</span>
+        <h2><a href="cazuri/layer-shifting.html">Layere deplasate (layer shifting)</a></h2>
+        <p>Layerele nu mai sunt aliniate și se deplasează lateral una față de alta.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Layere care se desprind și crapă Layer Separation and Splitting Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului. Precizie delaminare crapaturi aderenta intre layere rezistenta">
+      <a class="card-img" href="cazuri/layer-separation-and-splitting.html" tabindex="-1" aria-hidden="true"><img src="assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h2>
+        <p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Filament ros (grinding) Grinding Filament Roata de antrenare roadă filamentul până când acesta nu mai avansează. Extrudare stripped filament pilitura aluneca filamentul roata dințata">
+      <a class="card-img" href="cazuri/grinding-filament.html" tabindex="-1" aria-hidden="true"><img src="assets/img/grinding-or-stripped-filament-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/grinding-filament.html">Filament ros (grinding)</a></h2>
+        <p>Roata de antrenare roadă filamentul până când acesta nu mai avansează.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Extruder înfundat Clogged Extruder Nozzle-ul este înfundat sau blocat și nu mai iese material deloc. Extrudare infundat jam blocat nozzle desfundare">
+      <a class="card-img" href="cazuri/clogged-extruder.html" tabindex="-1" aria-hidden="true"><img src="assets/img/clogged-extruder-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/clogged-extruder.html">Extruder înfundat</a></h2>
+        <p>Nozzle-ul este înfundat sau blocat și nu mai iese material deloc.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Se oprește din extrudat la mijlocul printului Stops Extruding Mid Print Printul începe bine, dar la un moment dat printerul nu mai scoate material. Extrudare se opreste mid print filament terminat driver motor">
+      <a class="card-img" href="cazuri/stops-extruding-mid-print.html" tabindex="-1" aria-hidden="true"><img src="assets/img/stops-extruding-mid-print-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/stops-extruding-mid-print.html">Se oprește din extrudat la mijlocul printului</a></h2>
+        <p>Printul începe bine, dar la un moment dat printerul nu mai scoate material.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Infill slab Weak Infill Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență. Precizie infill umplutura rezistenta pattern">
+      <a class="card-img" href="cazuri/weak-infill.html" tabindex="-1" aria-hidden="true"><img src="assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/weak-infill.html">Infill slab</a></h2>
+        <p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Pete și umflături (blobs and zits) Blobs and Zits Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește. Suprafață blobs zits pete umflaturi start point wipe">
+      <a class="card-img" href="cazuri/blobs-and-zits.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blobs-and-zits-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/blobs-and-zits.html">Pete și umflături (blobs and zits)</a></h2>
+        <p>Apar mici umflături pe suprafața piesei, acolo unde extruderul pornește sau se oprește.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Goluri între infill și contur Gaps Between Infill and Outline Rămân goluri între conturul piesei și umplutura din interior. Suprafață goluri infill perimetru outline suprapunere">
+      <a class="card-img" href="cazuri/gaps-between-infill-and-outline.html" tabindex="-1" aria-hidden="true"><img src="assets/img/gap-between-infill-and-outline-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/gaps-between-infill-and-outline.html">Goluri între infill și contur</a></h2>
+        <p>Rămân goluri între conturul piesei și umplutura din interior.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Deformare" data-search="Colțuri ridicate sau neuniforme (curling) Curling or Rough Corners Colțurile piesei se ridică sau se deformează, mai ales la detaliile mici. Deformare curling colturi ridicate deformare racire">
+      <a class="card-img" href="cazuri/curling-or-rough-corners.html" tabindex="-1" aria-hidden="true"><img src="assets/img/curling-and-warping-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Deformare</span>
+        <h2><a href="cazuri/curling-or-rough-corners.html">Colțuri ridicate sau neuniforme (curling)</a></h2>
+        <p>Colțurile piesei se ridică sau se deformează, mai ales la detaliile mici.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Zgârieturi pe suprafața de sus Scars on Top Surface Nozzle-ul lasă urme pe partea superioară a piesei, în timpul deplasărilor. Suprafață zgarieturi scars z-hop nozzle freaca">
+      <a class="card-img" href="cazuri/scars-on-top-surface.html" tabindex="-1" aria-hidden="true"><img src="assets/img/scars-on-top-surface-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/scars-on-top-surface.html">Zgârieturi pe suprafața de sus</a></h2>
+        <p>Nozzle-ul lasă urme pe partea superioară a piesei, în timpul deplasărilor.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Goluri în colțurile de jos Gaps in Floor Corners În colțurile piesei rămân goluri, iar layerul de sus nu se unește cu conturul. Suprafață colturi floor goluri perimeters infill">
+      <a class="card-img" href="cazuri/gaps-in-floor-corners.html" tabindex="-1" aria-hidden="true"><img src="assets/img/gaps-in-floor-corners-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/gaps-in-floor-corners.html">Goluri în colțurile de jos</a></h2>
+        <p>În colțurile piesei rămân goluri, iar layerul de sus nu se unește cu conturul.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Suprafață" data-search="Linii pe laterala piesei Lines on the Side of Print Pereții verticali nu sunt netezi, apar linii sau muchii vizibile pe laterală. Suprafață linii laterala pereti riduri PID filament">
+      <a class="card-img" href="cazuri/lines-on-the-side-of-print.html" tabindex="-1" aria-hidden="true"><img src="assets/img/lines-on-side-of-print-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Suprafață</span>
+        <h2><a href="cazuri/lines-on-the-side-of-print.html">Linii pe laterala piesei</a></h2>
+        <p>Pereții verticali nu sunt netezi, apar linii sau muchii vizibile pe laterală.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Mecanică" data-search="Vibrații și ringing Vibrations and Ringing Pe suprafață apar unde fine, mai ales lângă colțuri și schimbări brusce de direcție. Mecanică vibratii ringing unde colțuri inertia">
+      <a class="card-img" href="cazuri/vibrations-and-ringing.html" tabindex="-1" aria-hidden="true"><img src="assets/img/vibrations-and-ringing-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Mecanică</span>
+        <h2><a href="cazuri/vibrations-and-ringing.html">Vibrații și ringing</a></h2>
+        <p>Pe suprafață apar unde fine, mai ales lângă colțuri și schimbări brusce de direcție.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Goluri în pereți subțiri Gaps in Thin Walls Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor. Precizie pereti subtiri thin walls gap fill single extrusion">
+      <a class="card-img" href="cazuri/gaps-in-thin-walls.html" tabindex="-1" aria-hidden="true"><img src="assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h2>
+        <p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Detalii mici care nu se printează Small Features Not Printed Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă. Precizie detalii mici thin features single extrusion nozzle mic">
+      <a class="card-img" href="cazuri/small-features-not-printed.html" tabindex="-1" aria-hidden="true"><img src="assets/img/small-features-not-printed2-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/small-features-not-printed.html">Detalii mici care nu se printează</a></h2>
+        <p>Detaliile mai subțiri decât nozzle-ul lipsesc din preview sau de pe piesă.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Extrudare" data-search="Extrudare inconsistentă Inconsistent Extrusion Cantitatea de material variază, iar pereții ies neuniformi și impreciși. Extrudare inconsistent debit variabil filament incurcat latime extrudare">
+      <a class="card-img" href="cazuri/inconsistent-extrusion.html" tabindex="-1" aria-hidden="true"><img src="assets/img/inconsistent-extrusion-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Extrudare</span>
+        <h2><a href="cazuri/inconsistent-extrusion.html">Extrudare inconsistentă</a></h2>
+        <p>Cantitatea de material variază, iar pereții ies neuniformi și impreciși.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Deformare" data-search="Deformare la răcire (warping) Warping Colțurile sau marginile mari se ridică de pe pat pe măsură ce piesa se răcește. Deformare warping deformare colturi ridicate ABS contractie">
+      <a class="card-img" href="cazuri/warping.html" tabindex="-1" aria-hidden="true"><img src="assets/img/warping-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Deformare</span>
+        <h2><a href="cazuri/warping.html">Deformare la răcire (warping)</a></h2>
+        <p>Colțurile sau marginile mari se ridică de pe pat pe măsură ce piesa se răcește.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Suprafață slabă deasupra suporturilor Poor Surface Above Supports Partea de sub piesă, acolo unde a fost suportul, iese aspră și neuniformă. Precizie suport support suprafata overhang separare">
+      <a class="card-img" href="cazuri/poor-surface-above-supports.html" tabindex="-1" aria-hidden="true"><img src="assets/img/poor-surface-above-supports-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/poor-surface-above-supports.html">Suprafață slabă deasupra suporturilor</a></h2>
+        <p>Partea de sub piesă, acolo unde a fost suportul, iese aspră și neuniformă.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Precizie dimensională Dimensional Accuracy Dimensiunile măsurate nu corespund cu modelul proiectat, iar piesele nu se potrivesc. Precizie dimensiuni tolerante precizie contractie fitting">
+      <a class="card-img" href="cazuri/dimensional-accuracy.html" tabindex="-1" aria-hidden="true"><img src="assets/img/dimensional-accuracy-calipers-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/dimensional-accuracy.html">Precizie dimensională</a></h2>
+        <p>Dimensiunile măsurate nu corespund cu modelul proiectat, iar piesele nu se potrivesc.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article>
+<article class="card" data-card data-cat="Precizie" data-search="Punte slabă (poor bridging) Poor Bridging Zonele printate în aer atârnă, se lasă sau rămân cu goluri între segmente. Precizie bridging punte atarna sagging suport">
+      <a class="card-img" href="cazuri/poor-bridging.html" tabindex="-1" aria-hidden="true"><img src="assets/img/poor-bridging-1024x1024-1.jpg" alt="" loading="lazy"></a>
+      <div class="card-body">
+        <span class="card-cat">Precizie</span>
+        <h2><a href="cazuri/poor-bridging.html">Punte slabă (poor bridging)</a></h2>
+        <p>Zonele printate în aer atârnă, se lasă sau rămân cu goluri între segmente.</p>
+        <div class="card-foot">Vezi cauzele și soluțiile →</div>
+      </div>
+    </article></div>
+    <div class="empty" data-empty>Nu am găsit nicio problemă pentru căutarea ta. Încearcă alt cuvânt sau apasă „Toate”.</div>
+    <section class="printer-strip">
+      <div class="guide-strip-head">
+        <h2>Imprimantele firmei</h2>
+        <a href="imprimante.html">Toate imprimantele →</a>
+      </div>
+      <div class="printer-strip-cards">
+        <a class="printer-mini" href="imprimante/bambu-p1.html">
+          <img src="assets/img/printers/bambu-p1-hero.jpg" alt="" loading="lazy">
+          <div><strong>Bambu Lab P1S / P1P</strong><span>Bambu Lab</span></div>
+        </a><a class="printer-mini" href="imprimante/bambu-p2s.html">
+          <img src="assets/img/printers/bambu-p2s-hero.jpg" alt="" loading="lazy">
+          <div><strong>Bambu Lab P2S</strong><span>Bambu Lab</span></div>
+        </a><a class="printer-mini" href="imprimante/ender-3-v3-ke.html">
+          <img src="assets/img/printers/ender3-hero.jpg" alt="" loading="lazy">
+          <div><strong>Creality Ender-3 V3 KE</strong><span>Creality</span></div>
+        </a><a class="printer-mini" href="imprimante/ender-5-max.html">
+          <img src="assets/img/printers/ender5-hero.jpg" alt="" loading="lazy">
+          <div><strong>Creality Ender-5 Max</strong><span>Creality</span></div>
+        </a><a class="printer-mini" href="imprimante/mingda-ad-f4.html">
+          <img src="assets/img/printers/mingda-p05-1.jpg" alt="" loading="lazy">
+          <div><strong>Mingda AD-F4</strong><span>Mingda</span></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

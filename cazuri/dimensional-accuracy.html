@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precizie dimensională — Ghid calitate la printare 3D</title>
+<meta name="description" content="Dimensiunile măsurate nu corespund cu modelul proiectat, iar piesele nu se potrivesc.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/dimensional-accuracy/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Precizie dimensională</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Precizie</span>
+        <h1>Precizie dimensională</h1>
+        <p class="lede">Dimensiunile măsurate nu corespund cu modelul proiectat, iar piesele nu se potrivesc.</p>
+        <p class="en-title">În engleză: <strong>Dimensional Accuracy</strong></p>
+      </div>
+      <figure><img src="../assets/img/dimensional-accuracy-calipers-1024x1024-1.jpg" alt="Precizie dimensională"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#impactul-primului-layer">Impactul primului layer</a></li><li class="lvl-3"><a href="#under-extrusion-sau-over-extrusion">Under-extrusion sau over-extrusion</a></li><li class="lvl-3"><a href="#eroare-dimensionala-constanta">Eroare dimensională constantă</a></li><li class="lvl-3"><a href="#eroare-care-creste-la-piese-mari">Eroare care crește la piese mari</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Horizontal size compensation (Other)</li><li>Extrusion Multiplier (Extruder)</li><li>First layer / Z-offset</li><li>Model scale / Import Action</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Precizia dimensională contează mult la ansambluri mari sau la piese care trebuie să se potrivească exact.</p>
+<p>Factori frecvenți care afectează precizia:</p>
+<ul><li><code>under-extrusion</code> sau <code class="tight">over-extrusion</code>;</li><li>contracția termică;</li><li>calitatea filamentului;</li><li>alinierea nozzle-ului pe primul layer.</li></ul>
+<p>Simplify3D are câteva instrumente pentru fiecare dintre acestea.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="impactul-primului-layer">Impactul primului layer</h3>
+<p>Setările primului layer influențează precizia. Dacă nozzle-ul este prea sus sau prea jos, efectul se poate simți în următoarele 10–20 de layere.</p>
+<p>Exemplu: la un layer de <code class="tight">0.2mm</code>, dacă nozzle-ul este la doar <code>0.1mm</code> de pat, primul layer iese prea gros. Excesul de plastic afectează și layerele următoare, iar partea de jos a piesei iese supradimensionată.</p>
+<p>Înainte să tragi concluzii despre precizie, măsoară corect:</p>
+<ul><li>printează un model cu 50–100 de layere;</li><li>măsoară doar ultimele ~20 de layere, departe de primul layer.</li></ul>
+<p>Așa elimini influența poziționării nozzle-ului.</p>
+<h3 id="under-extrusion-sau-over-extrusion">Under-extrusion sau over-extrusion</h3>
+<p>Dacă măsurătorile sunt corecte, verifică <code class="tight">Extrusion Multiplier</code>. El afectează debitul pentru tot printul.</p>
+<ul><li>prea mic → goluri între <code class="tight">perimeters</code>, găuri în suprafața de sus, piese mai mici decât ar trebui;</li><li>prea mare → layere de sus bombate, piese mai mari decât ar trebui.</li></ul>
+<p>Calibrează <code>Extrusion Multiplier</code> înainte de a ajusta precizia dimensională. Vezi secțiunile <a href="under-extrusion.html" target="_blank" rel="noopener">Under-Extrusion</a> și <a href="over-extrusion.html" target="_blank" rel="noopener">Over-Extrusion</a>.</p>
+<h3 id="eroare-dimensionala-constanta">Eroare dimensională constantă</h3>
+<p>Dacă eroarea este aceeași indiferent de dimensiunea piesei, poți compensa din slicer.</p>
+<p>Setarea se numește <code>Horizontal size compensation</code> și se află în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Other</code>.</p>
+<p>De exemplu, <code>-0.1mm</code> micșorează modelul cu 0,1 mm pe X și Y. Funcționează cel mai bine când piesa este mereu cu aceeași valoare prea mare, fie că are 20 mm sau 100 mm lățime.</p>
+<h3 id="eroare-care-creste-la-piese-mari">Eroare care crește la piese mari</h3>
+<p>Dacă eroarea crește odată cu dimensiunea, cauza este probabil contracția termică. De exemplu, piesa este cu 0,1 mm prea mică la 20 mm, dar cu 0,5 mm prea mică la 100 mm.</p>
+<p>Calculul contracției:</p>
+<p><code>0.1mm / 20mm = 0.5%</code></p>
+<p>Soluția simplă este să dublezi modelul în Simplify3D și să setezi scala la <code class="tight">100.5%</code>.</p>
+<p>Dacă faci des această ajustare, poți crea un <code>Import Action</code> care aplică scalarea automat la fiecare model importat.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Compensează doar după ce ai calibrat <code>Extrusion Multiplier</code> și ai măsurat corect, departe de primul layer. Altfel corectezi simptomul, nu cauza.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/dimensional-accuracy/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="poor-surface-above-supports.html"><div class="dir">← Problema anterioară</div><div class="name">Suprafață slabă deasupra suporturilor</div></a>
+      <a class="next" href="poor-bridging.html"><div class="dir">Problema următoare →</div><div class="name">Punte slabă (poor bridging)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="layer-separation-and-splitting.html"><img src="../assets/img/layers-splitting-or-cracking-1024x1024-1.jpg" alt="Layere care se desprind și crapă" loading="lazy"></a>
+          <div><h3><a href="layer-separation-and-splitting.html">Layere care se desprind și crapă</a></h3><p>Layerele nu se mai lipesc între ele, iar piesa crapă sau se delaminează în timpul printului.</p></div>
+        </article><article class="related-card">
+          <a href="weak-infill.html"><img src="../assets/img/weak-or-stringy-infill-1024x1024-1.jpg" alt="Infill slab" loading="lazy"></a>
+          <div><h3><a href="weak-infill.html">Infill slab</a></h3><p>Umplutura interioară este subțire și sfărâmicioasă, iar piesa nu are rezistență.</p></div>
+        </article><article class="related-card">
+          <a href="gaps-in-thin-walls.html"><img src="../assets/img/gaps-in-thin-walls-1024x1024-1.jpg" alt="Goluri în pereți subțiri" loading="lazy"></a>
+          <div><h3><a href="gaps-in-thin-walls.html">Goluri în pereți subțiri</a></h3><p>Pereții subțiri nu se umplu complet și rămâne un gol pe mijlocul lor.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extrudare inconsistentă — Ghid calitate la printare 3D</title>
+<meta name="description" content="Cantitatea de material variază, iar pereții ies neuniformi și impreciși.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/inconsistent-extrusion/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Extrudare inconsistentă</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Extrudare</span>
+        <h1>Extrudare inconsistentă</h1>
+        <p class="lede">Cantitatea de material variază, iar pereții ies neuniformi și impreciși.</p>
+        <p class="en-title">În engleză: <strong>Inconsistent Extrusion</strong></p>
+      </div>
+      <figure><img src="../assets/img/inconsistent-extrusion-1024x1024-1.jpg" alt="Extrudare inconsistentă"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#filamentul-se-blocheaza-sau-se-incurca">Filamentul se blochează sau se încurcă</a></li><li class="lvl-3"><a href="#extruder-infundat">Extruder înfundat</a></li><li class="lvl-3"><a href="#layer-height-foarte-mic">Layer height foarte mic</a></li><li class="lvl-3"><a href="#extrusion-width-gresit">Extrusion width greșit</a></li><li class="lvl-3"><a href="#filament-de-calitate-slaba">Filament de calitate slabă</a></li><li class="lvl-3"><a href="#probleme-mecanice-la-extruder">Probleme mecanice la extruder</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Extrusion Width (Extruder)</li><li>Layer height (Layer)</li><li>Filament quality / spool</li><li>Bowden tube check</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Pentru piese precise, printerul trebuie să extruzeze o cantitate constantă de plastic. Dacă debitul variază de-a lungul printului, calitatea are de suferit.</p>
+<p>Cum îți dai seama: urmărește printerul în timp ce printează o linie dreaptă de 20 mm. Dacă linia pare „bumpy” sau se îngroașă și se subțiază, ai extrudare inconsistentă.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="filamentul-se-blocheaza-sau-se-incurca">Filamentul se blochează sau se încurcă</h3>
+<p>Verifică mai întâi rola de filament. Trebuie să se rotească liber și filamentul să se desfășoare ușor.</p>
+<p>Dacă filamentul se încurcă sau rola opune rezistență, extrudarea devine neuniformă. La printerele cu tub <code class="tight">Bowden</code>, verifică și că filamentul alunecă ușor prin tub. Dacă simți rezistență, curăță tubul sau aplică puțin lubrifiant în interior.</p>
+<h3 id="extruder-infundat">Extruder înfundat</h3>
+<p>Dacă filamentul nu este încurcat și intră ușor în extruder, verifică nozzle-ul. Pot exista impurități sau plastic străin care împiedică fluxul.</p>
+<p>Test rapid: folosește <code>Machine Control Panel</code> din Simplify3D pentru a extruda manual material. Urmărește dacă iese uniform. Dacă nu, nozzle-ul trebuie curățat. Cere producătorului instrucțiuni pentru curățarea interioară.</p>
+<h3 id="layer-height-foarte-mic">Layer height foarte mic</h3>
+<p>Dacă filamentul se desfășoară liber și extruderul nu este înfundat, verifică setările din slicer.</p>
+<p>La un <code>layer height</code> extrem de mic, de exemplu <code class="tight">0.01mm</code>, spațiul dintre nozzle și layerul anterior este minuscul. Plasticul are dificultăți la ieșire.</p>
+<p>Verifică în <code>Edit Process Settings</code> &gt; tabul <code>Layer</code> dacă folosești o înălțime rezonabilă pentru printerul tău. Dacă este foarte mică, crește-o și retestează.</p>
+<h3 id="extrusion-width-gresit">Extrusion width greșit</h3>
+<p>Verifică lățimea de extrudare în <code>Edit Process Settings</code> &gt; tabul <code class="tight">Extruder</code>. Fiecare extruder poate avea propria valoare, așa că selectează-l pe cel corect din listă.</p>
+<p>Regula practică: <code>extrusion width</code> trebuie să fie între <strong>100% și 150%</strong> din diametrul nozzle-ului.</p>
+<p>Dacă lățimea este mult sub diametrul nozzle-ului — de exemplu <code>0.2mm</code> la un nozzle de <code>0.4mm</code> — extruderul nu poate menține un flux constant.</p>
+<h3 id="filament-de-calitate-slaba">Filament de calitate slabă</h3>
+<p>Calitatea filamentului este una dintre cele mai frecvente cauze. Filamentul ieftin poate conține aditivi care afectează consistența sau poate avea diametru variabil.</p>
+<p>Plasticul se degradează și în timp. PLA absoarbe umezeala din aer, iar după o perioadă calitatea printului scade. De aceea multe role includ un desicant în ambalaj.</p>
+<p>Dacă suspectezi filamentul, încearcă o rolă nouă, închisă, de calitate bună.</p>
+<h3 id="probleme-mecanice-la-extruder">Probleme mecanice la extruder</h3>
+<p>Dacă totul de mai sus este în regulă, verifică mecanica extruderului.</p>
+<p>Multe extrudere au o roată dințată care mușcă filamentul și o reglare pentru cât de tare este presată. Dacă presiunea este prea mică, dinții nu intră suficient în filament, iar controlul poziției devine imprecis.</p>
+<p>Întreabă producătorul dacă printerul are o astfel de reglare și cum se face corect.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă problema apare doar pe anumite zone ale rolei de filament, măsoară diametrul în mai multe puncte. O rolă cu diametru variabil nu se rezolvă din setări.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/inconsistent-extrusion/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="small-features-not-printed.html"><div class="dir">← Problema anterioară</div><div class="name">Detalii mici care nu se printează</div></a>
+      <a class="next" href="warping.html"><div class="dir">Problema următoare →</div><div class="name">Deformare la răcire (warping)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="under-extrusion.html"><img src="../assets/img/under-extruding.jpg" alt="Sub-extrudare (under-extrusion)" loading="lazy"></a>
+          <div><h3><a href="under-extrusion.html">Sub-extrudare (under-extrusion)</a></h3><p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p></div>
+        </article><article class="related-card">
+          <a href="over-extrusion.html"><img src="../assets/img/over-extruding-1024x1024-1.jpg" alt="Supra-extrudare (over-extrusion)" loading="lazy"></a>
+          <div><h3><a href="over-extrusion.html">Supra-extrudare (over-extrusion)</a></h3><p>Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

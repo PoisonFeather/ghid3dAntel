@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nu se lipește de pat — Ghid calitate la printare 3D</title>
+<meta name="description" content="Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/not-sticking-to-the-bed/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Nu se lipește de pat</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Primul layer</span>
+        <h1>Nu se lipește de pat</h1>
+        <p class="lede">Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p>
+        <p class="en-title">În engleză: <strong>Not Sticking to the Bed</strong></p>
+      </div>
+      <figure><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Nu se lipește de pat"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#patul-nu-este-reglat-bed-leveling">Patul nu este reglat (bed leveling)</a></li><li class="lvl-3"><a href="#nozzle-ul-porneste-prea-departe-de-pat">Nozzle-ul pornește prea departe de pat</a></li><li class="lvl-3"><a href="#primul-layer-se-printeaza-prea-repede">Primul layer se printează prea repede</a></li><li class="lvl-3"><a href="#temperatura-si-racirea">Temperatura și răcirea</a></li><li class="lvl-3"><a href="#suprafata-patului-benzi-adezivi-materiale">Suprafața patului: benzi, adezivi, materiale</a></li><li class="lvl-3"><a href="#cand-nimic-nu-functioneaza-brim-si-raft">Când nimic nu funcționează: brim și raft</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Bed Leveling Wizard (Tools)</li><li>Z-Axis G-Code Offset (G-Code)</li><li>First Layer Speed (Layer)</li><li>Temperature (pat și extruder)</li><li>Cooling fan setpoints</li><li>Use Skirt/Brim (Additions)</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Este esențial ca primul layer să fie bine lipit de pat, pentru că restul piesei se construiește pe această fundație. Dacă primul layer nu aderă, problemele apar mai târziu: colțuri ridicate, deformări sau desprinderea completă a piesei.</p>
+<p>Există multe metode de a rezolva aderența. Mai jos sunt cauzele tipice și modul în care le abordăm pe fiecare.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="patul-nu-este-reglat-bed-leveling">Patul nu este reglat (bed leveling)</h3>
+<p>Multe printere au un pat reglabil, cu șuruburi sau butoni care controlează poziția. Dacă printerul tău are așa ceva și primul layer nu aderă, primul lucru de verificat este că patul este plat și paralel cu nozzle-ul în toate punctele.</p>
+<p>Dacă patul nu este reglat, o parte poate fi prea aproape de nozzle, iar cealaltă prea departe. Un first layer perfect cere un pat reglat corect. Simplify3D are un asistent dedicat: mergi la <code>Tools</code> &gt; <code>Bed Leveling Wizard</code> și urmează instrucțiunile de pe ecran.</p>
+<h3 id="nozzle-ul-porneste-prea-departe-de-pat">Nozzle-ul pornește prea departe de pat</h3>
+<p>După ce patul este reglat, trebuie să te asiguri că nozzle-ul pornește la înălțimea corectă. Scopul este distanța perfectă față de pat: nici prea mare, nici prea mică. Pentru aderență bună, filamentul trebuie să fie ușor turtit pe pat.</p>
+<p>Poți regla din hardware, dar este mult mai simplu și mai precis din Simplify3D. Apasă <code class="tight">Edit Process Settings</code>, mergi la tabul <code>G-Code</code> și folosește <code class="tight">Z-Axis G-Code Offset</code>. De exemplu, <code>-0.05mm</code> mută nozzle-ul cu 0,05 mm <strong>mai aproape</strong> de pat. Fă doar ajustări mici: un layer are de obicei în jur de 0,2 mm, așa că o mică schimbare contează mult.</p>
+<h3 id="primul-layer-se-printeaza-prea-repede">Primul layer se printează prea repede</h3>
+<p>Când extrudezi primul layer, materialul trebuie să aibă timp să se lege de suprafață înainte să înceapă layerul următor. Dacă printezi prea repede, plasticul nu apucă să adere.</p>
+<p>De aceea este util să printezi primul layer mai încet. În Simplify3D există setarea dedicată: <code>Edit Process Settings</code> &gt; tabul <code>Layer</code> &gt; <code class="tight">First Layer Speed</code>. Dacă setezi <code class="tight">50%</code>, primul layer se printează cu 50% mai încet decât restul piesei. Dacă printerul merge prea repede pe primul layer, redu această valoare.</p>
+<h3 id="temperatura-si-racirea">Temperatura și răcirea</h3>
+<p>Plasticul se contractă când se răcește. De exemplu, o piesă lată de 100 mm printată din ABS la 230 °C, depusă pe un pat rece, se răcește rapid după ce iese din nozzle. Dacă ajunge la 30 °C, piesa se poate contracta cu <strong>aproape 1,5 mm</strong>.</p>
+<p>Patul nu se contractă la fel de mult, pentru că își păstrează temperatura. Prin urmare, plasticul tinde să se desprindă de pat pe măsură ce se răcește. Dacă observi că layerul aderă la început și apoi se desprinde, temperatura și răcirea sunt primele suspecte.</p>
+<p>Multe printere pentru materiale la temperatură mare, cum este ABS, au pat încălzit. Dacă patul stă la 110 °C pe toată durata printului, primul layer rămâne cald și nu se contractă. Ca punct de plecare: PLA aderă bine la 60–70 °C, iar ABS la 100–120 °C.</p>
+<p>Reglajul se face din <code>Edit Process Settings</code> &gt; tabul <code class="tight">Temperature</code>. Selectează patul din lista din stânga și modifică temperatura pentru primul layer (dublu-click pe valoare).</p>
+<p>Dacă printerul are ventilator de răcire, oprește-l pentru primele layere, ca să nu răcească prematur materialul. Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Cooling</code> și ajustează <code class="tight">setpoints</code>-urile de viteză ale ventilatorului. De exemplu: layerul 1 la <code class="tight">0%</code>, layerul 5 la <code class="tight">100%</code>. La ABS este obișnuit să ții ventilatorul oprit tot printul, deci este suficient un singur <code>setpoint</code> (layerul 1 la <code class="tight">0%</code>). Dacă printerul stă într-o zonă cu curent de aer, izolează-l cât poți de bine.</p>
+<h3 id="suprafata-patului-benzi-adezivi-materiale">Suprafața patului: benzi, adezivi, materiale</h3>
+<p>Diferitele materiale aderă mai bine pe suprafețe diferite. De aceea multe printere vin cu o suprafață specială, optimizată pentru materialele lor. Unele folosesc o folie BuildTak, care ține foarte bine PLA. Altele folosesc sticlă tratată termic, de tip Borosilicate, care funcționează bine pentru ABS când este încălzită.</p>
+<p>Înainte de print, curăță patul de praf, grăsime sau ulei. Apă și alcool izopropilic fac o diferență mare.</p>
+<p>Dacă patul nu are o suprafață specială, mai ai variante:</p>
+<ul><li>bandă de hârtie de pictor (blue painter's tape) — bună pentru PLA;</li><li>bandă Kapton (Polyimide) — mai bună pentru ABS;</li><li>adeziv temporar, spray sau lipici solid — utile când restul nu funcționează;</li><li>fixativ de păr — o soluție clasică, dar murdărește patul.</li></ul>
+<p>Experimentează și vezi ce merge cel mai bine la printerul tău.</p>
+<h3 id="cand-nimic-nu-functioneaza-brim-si-raft">Când nimic nu funcționează: brim și raft</h3>
+<p>Uneori piesa este foarte mică și pur și simplu nu are suficientă suprafață de contact cu patul. Simplify3D poate mări artificial această suprafață.</p>
+<p><code>Brim</code> adaugă inele suplimentare în jurul piesei, ca borul unei pălării. Se activează din tabul <code class="tight">Additions</code>, cu opțiunea <code class="tight">Use Skirt/Brim</code>.</p>
+<p><code>Raft</code> adaugă o platformă sub piesă, care oferă o suprafață mai mare de aderență. Detalii găsești în tutorialul Simplify3D despre Rafts, Skirts and Brims.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Nu compensa o problemă de <code>bed leveling</code> cu lipici sau <code class="tight">brim</code>. Reglează mai întâi patul, apoi adaugă soluțiile suplimentare doar dacă este nevoie.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/not-sticking-to-the-bed/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="not-extruding-at-start-of-print.html"><div class="dir">← Problema anterioară</div><div class="name">Nu extrudază la începutul printului</div></a>
+      <a class="next" href="under-extrusion.html"><div class="dir">Problema următoare →</div><div class="name">Sub-extrudare (under-extrusion)</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="under-extrusion.html"><img src="../assets/img/under-extruding.jpg" alt="Sub-extrudare (under-extrusion)" loading="lazy"></a>
+          <div><h3><a href="under-extrusion.html">Sub-extrudare (under-extrusion)</a></h3><p>Printerul nu scoate suficient material, apar goluri între perimeters și infill.</p></div>
+        </article><article class="related-card">
+          <a href="over-extrusion.html"><img src="../assets/img/over-extruding-1024x1024-1.jpg" alt="Supra-extrudare (over-extrusion)" loading="lazy"></a>
+          <div><h3><a href="over-extrusion.html">Supra-extrudare (over-extrusion)</a></h3><p>Printerul scoate prea mult material, iar piesa iese umflată și cu suprafețe murdare.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

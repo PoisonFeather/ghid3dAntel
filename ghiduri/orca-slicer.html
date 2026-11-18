@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orca Slicer — ghid de utilizare — Ghid printare 3D</title>
+<meta name="description" content="Ghid practic pentru cele mai utile funcții din Orca Slicer, de la actualizare și suporturi până la editarea G-code-ului.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html" aria-current="page">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://orca-slicer.com/guide/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../slicere.html">Slicere</a><span>/</span>Orca Slicer — ghid de utilizare</nav>
+    <div class="case-hero guide-hero">
+      <div>
+        <span class="badge">Slicer</span>
+        <h1>Orca Slicer — ghid de utilizare</h1>
+        <p class="lede">Ghid practic pentru cele mai utile funcții din Orca Slicer, de la actualizare și suporturi până la editarea G-code-ului.</p>
+        <p class="en-title">În engleză: <strong>Orca Slicer Guide</strong></p>
+      </div>
+      <figure><img src="../assets/img/ghiduri/orca-01.jpg" alt="Orca Slicer — ghid de utilizare"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#cum-functioneaza-orca-slicer">Cum funcționează Orca Slicer</a></li><li class="lvl-2"><a href="#cum-actualizezi-orca-slicer">Cum actualizezi Orca Slicer</a></li><li class="lvl-3"><a href="#verifica-versiunea-curenta">Verifică versiunea curentă</a></li><li class="lvl-3"><a href="#fa-o-copie-de-siguranta-a-setarilor">Fă o copie de siguranță a setărilor</a></li><li class="lvl-3"><a href="#descarca-ultima-versiune">Descarcă ultima versiune</a></li><li class="lvl-3"><a href="#instaleaza-actualizarea">Instalează actualizarea</a></li><li class="lvl-3"><a href="#verifica-actualizarea">Verifică actualizarea</a></li><li class="lvl-3"><a href="#restaureaza-backupul">Restaurează backupul</a></li><li class="lvl-2"><a href="#cum-editezi-g-code-in-orca-slicer">Cum editezi G-code în Orca Slicer</a></li><li class="lvl-3"><a href="#metoda-1-editeaza-g-code-ul-de-start-sau-de-final-in-orca-slicer">Metoda 1 — Editează G-code-ul de start sau de final în Orca Slicer</a></li><li class="lvl-3"><a href="#metoda-2-editeaza-fisierul-g-code-salvat">Metoda 2 — Editează fișierul G-code salvat</a></li><li class="lvl-3"><a href="#metoda-3-adauga-comenzi-la-un-layer-anume">Metoda 3 — Adaugă comenzi la un layer anume</a></li><li class="lvl-2"><a href="#cum-micsorezi-sau-scalezi-in-orca-slicer">Cum micșorezi sau scalezi în Orca Slicer</a></li><li class="lvl-2"><a href="#cum-schimbi-viteza-de-printare">Cum schimbi viteza de printare</a></li><li class="lvl-2"><a href="#cum-schimbi-dimensiunea-duzei">Cum schimbi dimensiunea duzei</a></li><li class="lvl-2"><a href="#cum-tai-un-model-in-orca-slicer">Cum tai un model în Orca Slicer</a></li><li class="lvl-3"><a href="#deschide-orca-slicer">Deschide Orca Slicer</a></li><li class="lvl-3"><a href="#adu-modelul">Adu modelul</a></li><li class="lvl-3"><a href="#deschide-functia-de-taiere">Deschide funcția de tăiere</a></li><li class="lvl-3"><a href="#adauga-conectori">Adaugă conectori</a></li><li class="lvl-3"><a href="#executa-taierea">Execută tăierea</a></li><li class="lvl-2"><a href="#cum-uniresti-obiecte-in-orca-slicer">Cum unirești obiecte în Orca Slicer</a></li><li class="lvl-2"><a href="#cum-adaugi-o-pauza-in-orca-slicer">Cum adaugi o pauză în Orca Slicer</a></li><li class="lvl-2"><a href="#cum-adaugi-suporturi-in-orca-slicer">Cum adaugi suporturi în Orca Slicer</a></li><li class="lvl-2"><a href="#cum-exporti-setarile-orca-slicer">Cum exporți setările Orca Slicer</a></li><li class="lvl-2"><a href="#in-concluzie">În concluzie</a></li></ol></aside>
+      <article class="prose" data-article>
+        <p>Orca Slicer este un program de slicing ușor de folosit. Funcționează ca un intermediar între modelul 3D și printer: transformă orice model digital în obiecte reale, layer cu layer, cu precizie.</p>
+<p>Ghidul trece în revistă cele mai utile funcții din Orca Slicer: actualizarea programului, adăugarea de suporturi, editarea <code class="tight">G-code</code>-ului, scalarea modelelor, schimbarea vitezei de printare, schimbarea dimensiunii duzei, tăierea și unirea obiectelor, adăugarea unei pauze în timpul printării și exportul setărilor.</p>
+<h2 id="cum-functioneaza-orca-slicer">Cum funcționează Orca Slicer</h2>
+<p>Orca Slicer analizează modelul 3D și îl taie în multe layere orizontale subțiri. Layerele sunt apoi convertite într-un limbaj pe care printerul îl înțelege, numit <code class="tight">G-code</code>. Programul generează un <code>G-code</code> optimizat, cu instrucțiuni detaliate despre cum se mișcă <code class="tight">nozzle</code>-ul, cât filament se consumă, ce temperaturi se folosesc și așa mai departe.</p>
+<p>Pentru a evita erorile de printare, programul afișează previzualizarea <code class="tight">G-code</code>-ului pentru fiecare layer după slicing. Poți ajusta <code class="tight">Layer height</code>, <code class="tight">Speed</code>, <code>Supports</code> și alte setări pentru printuri de calitate. Când setările sunt bune, exporți fișierul <code>G-code</code> și îl trimiți la orice model de printer, prin card SD, USB sau Wi-Fi.</p>
+<h2 id="cum-actualizezi-orca-slicer">Cum actualizezi Orca Slicer</h2>
+<p>Pentru a menține calitatea printării, folosește întotdeauna cea mai recentă versiune a programului. Iată cum îl actualizezi.</p>
+<h3 id="verifica-versiunea-curenta">Verifică versiunea curentă</h3>
+<ul><li>Înainte de actualizare, află ce versiune ai acum.</li><li>Deschide secțiunea <code>Help</code> sau <code class="tight">About</code>, unde este afișată versiunea. Compar-o cu ultima versiune disponibilă pe site sau în repository-ul GitHub.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-02.jpg" alt="Verifică versiunea curentă — pasul 1" loading="lazy"><figcaption>Verifică versiunea curentă — pasul 1</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-03.jpg" alt="Verifică versiunea curentă — pasul 2" loading="lazy"><figcaption>Verifică versiunea curentă — pasul 2</figcaption></figure>
+<h3 id="fa-o-copie-de-siguranta-a-setarilor">Fă o copie de siguranță a setărilor</h3>
+<ul><li>Înainte de a actualiza orice program, o copie de siguranță este cea mai bună metodă de a-ți păstra datele.</li><li>În bara de instrumente, apasă <code class="tight">File</code>, apoi opțiunea <code class="tight">Export</code>, pentru a genera un fișier de backup.</li><li>Salvează întotdeauna fișierul de backup într-un loc sigur, din care să poți restaura ușor.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-04.jpg" alt="Copie de siguranță a setărilor" loading="lazy"><figcaption>Copie de siguranță a setărilor</figcaption></figure>
+<h3 id="descarca-ultima-versiune">Descarcă ultima versiune</h3>
+<ul><li>Intră pe site pentru a <a href="https://orca-slicer.com/" target="_blank" rel="noopener">descărca ultima versiune de Orca Slicer</a> pentru sistemul tău (Windows, Mac sau Linux).</li><li>Poți verifica versiunea și pe pagina oficială <a href="https://github.com/SoftFever/OrcaSlicer/releases" target="_blank" rel="noopener">Orca Slicer GitHub Releases</a>.</li></ul>
+<h3 id="instaleaza-actualizarea">Instalează actualizarea</h3>
+<ul><li>Închide Orca Slicer înainte de instalare.</li><li>Găsește fișierul descărcat și fă dublu-click pe el. Instalarea pornește automat.</li><li>Urmează instrucțiunile de pe ecran până la instalarea și pornirea programului.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-05.png" alt="Descarcă ultima versiune" loading="lazy"><figcaption>Descarcă ultima versiune</figcaption></figure>
+<h3 id="verifica-actualizarea">Verifică actualizarea</h3>
+<ul><li>Dacă vrei să confirmi că ai instalat ultima versiune, verifică din nou în secțiunea <code>About</code> sau <code class="tight">Help</code>.</li><li>Verifică faptul că funcțiile noi anunțate merg și că bug-urile au fost eliminate.</li></ul>
+<h3 id="restaureaza-backupul">Restaurează backupul</h3>
+<ul><li>Dacă ai nevoie de datele salvate, le poți restaura din <code class="tight">File</code>, apoi din <code class="tight">Import</code>.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-06.jpg" alt="Restaurează backupul" loading="lazy"><figcaption>Restaurează backupul</figcaption></figure>
+<h2 id="cum-editezi-g-code-in-orca-slicer">Cum editezi G-code în Orca Slicer</h2>
+<p>Poți edita <code class="tight">G-code</code>-ul pentru a personaliza printerul și a obține printuri de calitate mai bună. Înainte de editare, fă un backup al datelor și testează <code class="tight">G-code</code>-ul modificat pe un print mic.</p>
+<p>Iată cum se editează:</p>
+<h3 id="metoda-1-editeaza-g-code-ul-de-start-sau-de-final-in-orca-slicer">Metoda 1 — Editează G-code-ul de start sau de final în Orca Slicer</h3>
+<ul><li>Deschide Orca Slicer și mergi la <code class="tight">Printer Settings</code>, apoi la <code class="tight">Customize G-code</code>.</li><li>Aici poți modifica scripturile de start ale <code class="tight">G-code</code>-ului: încălzirea <code class="tight">nozzle</code>-ului sau ducerea capului la origine (<code class="tight">homing</code>) înainte de începerea printului. Poți seta și comenzi după terminarea printului, de exemplu retragerea <code class="tight">nozzle</code>-ului sau oprirea încălzirii.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-07.jpg" alt="Deschide Printer Settings" loading="lazy"><figcaption>Deschide Printer Settings</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-08.jpg" alt="Editează G-code-ul mașinii" loading="lazy"><figcaption>Editează G-code-ul mașinii</figcaption></figure>
+<h3 id="metoda-2-editeaza-fisierul-g-code-salvat">Metoda 2 — Editează fișierul G-code salvat</h3>
+<ul><li>Fă slicing modelului ca de obicei.</li><li>Mergi la tabul <code class="tight">Preview</code>, apoi alege <code class="tight">Export G-code</code>.</li><li>Deschide fișierul <code>G-code</code> salvat cu un editor de text, cum ar fi Notepad++ sau VS Code.</li><li>Acum poți edita sau adăuga comenzi: <code>M25</code> → pauză la print; <code>M104 S210</code> → temperatura <code class="tight">nozzle</code>-ului la 210 °C; <code>M106 S255</code> → ventilatorul la viteză maximă.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-09.jpg" alt="Export G-code" loading="lazy"><figcaption>Export G-code</figcaption></figure>
+<h3 id="metoda-3-adauga-comenzi-la-un-layer-anume">Metoda 3 — Adaugă comenzi la un layer anume</h3>
+<ul><li>În <code class="tight">G-code</code>-ul exportat, caută o linie de forma: <code class="tight">LAYER:10</code>.</li><li>Adaugă comanda imediat după ea, ca să ruleze la acel layer.</li></ul>
+<h2 id="cum-micsorezi-sau-scalezi-in-orca-slicer">Cum micșorezi sau scalezi în Orca Slicer</h2>
+<p>Micșorarea sau scalarea este necesară când modelul este prea mare ori prea mic pentru printer. Îl poți redimensiona ușor în Orca Slicer, astfel:</p>
+<ul><li>Deschide Orca Slicer și încarcă modelul pe care vrei să îl redimensionezi. Apasă pe model ca să îl selectezi. Dimensiunea se modifică cu instrumentul <code>Scale</code> din bara laterală.</li><li>Scrie un procent pentru a seta dimensiunea. Pentru micșorare, folosește un număr sub 100%; pentru mărire, un număr peste 100%. Poți trage și de mânerele de scalare pentru ajustare vizuală.</li><li>Dacă vrei să modifici toate laturile împreună, activează <code class="tight">Uniform Scaling</code>. Dezactivează-l ca să modifici separat lățimea, înălțimea sau adâncimea. Verifică în <code>Preview</code> că modelul încape pe pat și arată corect. Când ești mulțumit, fă slicing și exportă <code class="tight">G-code</code>-ul.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-10.jpg" alt="Micșorează sau scalează în Orca Slicer" loading="lazy"><figcaption>Micșorează sau scalează în Orca Slicer</figcaption></figure>
+<h2 id="cum-schimbi-viteza-de-printare">Cum schimbi viteza de printare</h2>
+<p>Deschide modelul în Orca Slicer și treci la tabul <code class="tight">Print Settings</code>. Derulează până la secțiunea <code>Speed</code> sau caut-o. Aici poți ajusta vitezele pentru fiecare parte a printului:</p>
+<ul><li><code class="tight">Perimeters</code>: pereții exteriori și interiori. Unii utilizatori le setează mai încet pentru calitate mai bună, de exemplu 25 mm/s dacă <code class="tight">infill</code>-ul este 50 mm/s.</li><li><code class="tight">Infill</code>: structura internă. De obicei este mai rapid decât pereții, de exemplu 50 mm/s în exemplul de mai sus.</li><li><code class="tight">Supports</code>: materialul de suport. Poți folosi viteza de <code>infill</code> sau o valoare ceva mai mică, dacă detaliile contează.</li><li><code class="tight">Travel</code>: mișcările fără extrudare. De obicei pot rămâne rapide.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-11.jpg" alt="Deschide tabul Speed" loading="lazy"><figcaption>Deschide tabul Speed</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-12.jpg" alt="Deschide tabul Cooling" loading="lazy"><figcaption>Deschide tabul Cooling</figcaption></figure>
+<p>Reține că <code>Orca</code> poate reduce automat viteza la layerele foarte mici, ca să le dea timp să se răcească. Ajustarea se face din <code>Cooling</code> → <code class="tight">Minimum Layer Time</code>. Dacă <code class="tight">hot end</code>-ul nu topește filamentul suficient de repede, <code>Orca</code> limitează viteza după <code>maximum volumetric flow</code> din profilul printerului. Verifică această valoare dacă vitezele nu par să corespundă setărilor.</p>
+<p>În final, viteza reală a printerului este limitată de accelerație. Dacă accelerația este mică, printerul nu atinge viteza setată, mai ales la mișcările mici sau scurte.</p>
+<h2 id="cum-schimbi-dimensiunea-duzei">Cum schimbi dimensiunea duzei</h2>
+<p>În <code>Orca</code> trebuie să schimbi destul de des dimensiunea duzei. Pentru un model fin, cu multe detalii, reduci dimensiunea; pentru printare rapidă, o mărești. Dimensiunile uzuale merg de la 0,2 mm — printare lentă, dar calitate fină — până la 0,8 mm, pentru printuri rapide, cu pierdere de detalii.</p>
+<p>Acum că știi de ce contează dimensiunea duzei, iată cum o schimbi:</p>
+<ul><li>Pornește Orca Slicer și deschide <code class="tight">Printer Profile</code>.</li><li>Mergi la <code>Printer Settings</code> și, la opțiunea <code class="tight">Nozzle Diameter</code>, alege dimensiunea dorită din listă. Apasă <code>Save</code> pentru a păstra modificările.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-13.jpg" alt="Accesează profilul de printer" loading="lazy"><figcaption>Accesează profilul de printer</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-14.jpg" alt="Alege dimensiunea dorită a duzei" loading="lazy"><figcaption>Alege dimensiunea dorită a duzei</figcaption></figure>
+<p>După ce schimbi duza, reglează <code class="tight">Layer height</code>, <code>Speed</code> și <code>extrusion</code> ca să corespundă. Dacă sari peste acest pas, poți pierde și calitate, și viteză.</p>
+<h2 id="cum-tai-un-model-in-orca-slicer">Cum tai un model în Orca Slicer</h2>
+<p>Iată cum tai modelul cu precizie în acest program de slicing. Afli și cum să adaugi conectori, ca piesele să se îmbine prin click sau prin lipire.</p>
+<h3 id="deschide-orca-slicer">Deschide Orca Slicer</h3>
+<ul><li>Primul pas este să deschizi Orca Slicer.</li></ul>
+<h3 id="adu-modelul">Adu modelul</h3>
+<ul><li>Importă modelul în slicer. Orca Slicer se actualizează des, așa că interfața poate arăta diferit în funcție de versiune.</li><li>În versiunile mai vechi exista un buton dedicat pentru tăiere. În versiunile noi a fost înlocuit cu scurtături.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-15.jpg" alt="Importă modelul" loading="lazy"><figcaption>Importă modelul</figcaption></figure>
+<h3 id="deschide-functia-de-taiere">Deschide funcția de tăiere</h3>
+<ul><li>Selectează modelul apăsând pe el. Apoi ține <code>Shift + C</code> pentru a deschide funcția de tăiere. Programul taie automat modelul în două.</li><li>Uită-te la linia de tăiere. Dacă nu pare ideală, apasă pe controalele de axă și mută planul de tăiere. Poate fi nevoie să încerci câteva axe. După ce ai găsit axa potrivită, ridică tăietura deasupra brațelor.</li><li>Dacă linia ajunge într-un loc incomod, ajustează poziția și unghiul cu celelalte controale de axă, până ești mulțumit.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-16.jpg" alt="Deschide funcția de tăiere" loading="lazy"><figcaption>Deschide funcția de tăiere</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-17.jpg" alt="Ajustează axa corectă" loading="lazy"><figcaption>Ajustează axa corectă</figcaption></figure>
+<h3 id="adauga-conectori">Adaugă conectori</h3>
+<ul><li>Apasă opțiunea <code>Connectors</code> dacă vrei să adaugi conectori. Apasă acolo unde vrei să fie plasați. Poți modifica dimensiunea din valori sau trăgând sliderul. O adâncime mai mare înseamnă o îmbinare mai rezistentă. Poți schimba și forma conectorului, de exemplu în hexagon, pentru rezistență suplimentară.</li><li>Când setările sunt bune, apasă <code class="tight">Confirm Connectors</code>. Modelul apare din nou întreg, dar conectorii rămân aplicați în interior.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-18.jpg" alt="Adaugă conectori" loading="lazy"><figcaption>Adaugă conectori</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-19.jpg" alt="Confirmă conectorii" loading="lazy"><figcaption>Confirmă conectorii</figcaption></figure>
+<h3 id="executa-taierea">Execută tăierea</h3>
+<ul><li>Apasă <code class="tight">Perform Cut</code>. Vei vedea două modele separate, tăiate exact acolo unde ai poziționat planul. Este util pentru printarea modelelor mari în bucăți mai mici sau pentru proiecte multicolor.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-20.jpg" alt="Execută tăierea" loading="lazy"><figcaption>Execută tăierea</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-21.jpg" alt="Două modele separate, după tăierea poziționată" loading="lazy"><figcaption>Două modele separate, după tăierea poziționată</figcaption></figure>
+<p>Așa tai un model în mai multe părți în Orca Slicer și adaugi conectori pentru a le îmbina.</p>
+<h2 id="cum-uniresti-obiecte-in-orca-slicer">Cum unirești obiecte în Orca Slicer</h2>
+<p>Orca Slicer preia funcția de unire a obiectelor de la Bambu Studio. Îți permite să tratezi mai multe modele ca o singură piesă la printare.</p>
+<p>Importă toate părțile pe care vrei să le unești și poziționează-le prin mutare, rotire sau aliniere. Selectează toate modelele poziționate. Ține <code>Ctrl</code> și apasă pe fiecare, sau alege-le din lista de obiecte.</p>
+<figure><img src="../assets/img/ghiduri/orca-22.jpg" alt="Importă părțile de unit" loading="lazy"><figcaption>Importă părțile de unit</figcaption></figure>
+<p>Apoi apasă click dreapta și alege <code class="tight">Assemble</code>. După aceea, Orca Slicer le tratează ca pe un singur model la slicing, dar poți muta sau ajusta fiecare piesă dacă este nevoie.</p>
+<figure><img src="../assets/img/ghiduri/orca-23.jpg" alt="Asamblează toate părțile" loading="lazy"><figcaption>Asamblează toate părțile</figcaption></figure>
+<p>Următorul pas este combinarea modelelor într-o singură rețea solidă (<code class="tight">mesh</code>) pentru printare. Alege <code>Assembly</code> (în stânga sus), mergi la <code>Mesh Boolean</code> → <code class="tight">Union</code>, selectează fiecare parte și apasă <code class="tight">Union</code>. Poate dura câteva secunde, dar la final obiectele sunt complet combinate și gata de slicing ca de obicei.</p>
+<figure><img src="../assets/img/ghiduri/orca-24.jpg" alt="Selectează Mesh Boolean" loading="lazy"><figcaption>Selectează Mesh Boolean</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-25.jpg" alt="Unește toate părțile" loading="lazy"><figcaption>Unește toate părțile</figcaption></figure>
+<p>Acest procedeu este util dacă printezi modele mari din bucăți sau vrei să combini piese mici într-un singur print. Asigură-te că modelele se suprapun puțin sau se ating, ca să se unească. Atât: ai obiectele unite, gata de slicing și printare ca un singur model solid.</p>
+<h2 id="cum-adaugi-o-pauza-in-orca-slicer">Cum adaugi o pauză în Orca Slicer</h2>
+<p>Adaugi o pauză în <code>Orca</code> când vrei să faci modificări în timpul printului. Deschide Orca Slicer și încarcă fișierul. După ce fișierul este complet și gata de print, mergi la tabul <code>Preview</code> și examinează layerele de jos în sus.</p>
+<figure><img src="../assets/img/ghiduri/orca-26.jpg" alt="Adaugă fișierul" loading="lazy"><figcaption>Adaugă fișierul</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-27.jpg" alt="Apasă pe Preview" loading="lazy"><figcaption>Apasă pe Preview</figcaption></figure>
+<p>Stabilește din <code>Preview</code> la ce layer trebuie adăugată pauza, de exemplu la schimbarea culorii filamentului sau la inserarea unui obiect. După ce identifici layerele, apasă click dreapta pe layer și alege <code class="tight">Add Pause</code>.</p>
+<p>Următorul pas este să apeși <code>Slice Plate</code> în colțul din dreapta, pentru a face din nou slicing și a adăuga <code class="tight">G-code</code>-ul pentru pauză. După slicing, revino în <code>Preview</code> ca să verifici că pauza este pusă. <code class="tight">G-code</code>-ul va arăta comanda de pauză la layerul specificat.</p>
+<figure><img src="../assets/img/ghiduri/orca-28.jpg" alt="Apasă pentru a adăuga o pauză" loading="lazy"><figcaption>Apasă pentru a adăuga o pauză</figcaption></figure>
+<figure><img src="../assets/img/ghiduri/orca-29.jpg" alt="Apasă pe Slice Plate" loading="lazy"><figcaption>Apasă pe Slice Plate</figcaption></figure>
+<p>Modelul este acum gata de print, cu pauza inclusă, ca să poți face modificări în timpul printării.</p>
+<h2 id="cum-adaugi-suporturi-in-orca-slicer">Cum adaugi suporturi în Orca Slicer</h2>
+<p>Ghidul original include aici un tutorial video pentru adăugarea suporturilor personalizate în Orca Slicer. Îl poți urmări direct în <a href="https://orca-slicer.com/guide/" target="_blank" rel="noopener">pagina originală</a>.</p>
+<h2 id="cum-exporti-setarile-orca-slicer">Cum exporți setările Orca Slicer</h2>
+<p>Dacă ai ajustat profiluri de printer sau de print, exportul setărilor din Orca Slicer îți permite să păstrezi un backup, să le dai mai departe sau să le muți pe alt calculator.</p>
+<p><strong>1. Deschide Orca Slicer</strong></p>
+<ul><li>Pornește Orca Slicer pe calculator.</li></ul>
+<p><strong>2. Deschide meniul de export</strong></p>
+<ul><li>În colțul din stânga sus, apasă <code class="tight">File</code>, apoi alege <code>Export</code> și selectează <code>Export Preset Bundle</code> din meniu.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-30.jpg" alt="Deschide meniul de export" loading="lazy"><figcaption>Deschide meniul de export</figcaption></figure>
+<p><strong>3. Alege ce exporți</strong></p>
+<p>Apare o fereastră cu mai multe opțiuni:</p>
+<ul><li><code class="tight">Printer config bundle (.orca_printer)</code>: exportă toată configurația printerului, inclusiv configurări personalizate de printer, filamente conectate și profiluri de print.</li><li><code class="tight">Filament bundle (.orca_filament)</code>: exportă profilurile de filament personalizate, împreună cu legăturile către printere.</li><li><code class="tight">Printer presets (.zip)</code>: exportă configurările personalizate de printer.</li><li><code class="tight">Filament presets (.zip)</code>: exportă configurările personalizate de filament.</li><li><code class="tight">Process presets (.zip)</code>: exportă profilurile de print personalizate (<code class="tight">process presets</code>).</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-31.png" alt="Alege opțiunea de export potrivită" loading="lazy"><figcaption>Alege opțiunea de export potrivită</figcaption></figure>
+<p>Alege opțiunea care corespunde cu ce vrei să exporți.</p>
+<p><strong>4. Selectează presetările de exportat</strong></p>
+<ul><li>După ce ai ales tipul de export, parcurge lista de configurări și bifează presetările pe care vrei să le salvezi.</li></ul>
+<figure><img src="../assets/img/ghiduri/orca-32.jpg" alt="Selectează presetarea de exportat" loading="lazy"><figcaption>Selectează presetarea de exportat</figcaption></figure>
+<p><strong>5. Salvează fișierul exportat</strong></p>
+<ul><li>Apasă <code>OK</code> și alege un folder în care vei găsi ușor fișierul mai târziu. Dă-i un nume și salvează.</li></ul>
+<h2 id="in-concluzie">În concluzie</h2>
+<p>Orca Slicer acoperă ajustarea, unirea, pauzarea și reglajul fin al fiecărui print. Cu explicațiile din acest ghid, ai o direcție clară pentru printuri de calitate.</p>
+        <p><a class="source-link" href="https://orca-slicer.com/guide/" target="_blank" rel="noopener">Vezi ghidul original în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="bambu-studio.html"><div class="dir">← Ghidul anterior</div><div class="name">Bambu Studio — ghid de început</div></a>
+      <a class="next" href="../index.html"><div class="dir">Mai departe →</div><div class="name">Probleme de calitate</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Continuă cu</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="bambu-studio.html"><img src="../assets/img/ghiduri/bambu-01.png" alt="Bambu Studio — ghid de început" loading="lazy"></a>
+          <div><h3><a href="bambu-studio.html">Bambu Studio — ghid de început</a></h3><p>Instalare, configurare inițială și primul print în Bambu Studio, pas cu pas.</p></div>
+        </article>
+        <article class="related-card">
+          <a href="../index.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Probleme de calitate" loading="lazy"></a>
+          <div><h3><a href="../index.html">Probleme de calitate</a></h3><p>27 de probleme de printare, explicate pas cu pas.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

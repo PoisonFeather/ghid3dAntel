@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layere deplasate (layer shifting) — Ghid calitate la printare 3D</title>
+<meta name="description" content="Layerele nu mai sunt aliniate și se deplasează lateral una față de alta.">
+<meta name="theme-color" content="#c4452b">
+<link rel="icon" type="image/webp" href="../assets/img/antel-print-logo.webp">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <span class="logo-badge"><img src="../assets/img/antel-print-logo.webp" alt="Antel Print" width="838" height="350"></span>
+      <span class="brand-text">Ghid printare 3D</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html">Probleme</a>
+      <a href="../imprimante.html">Imprimante</a>
+      <a href="../slicere.html">Slicere</a>
+      <a href="../glosar.html">Glosar</a>
+      <a href="#" data-print class="hide-sm">Printează</a>
+      <a class="hide-sm" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/layer-shifting/" target="_blank" rel="noopener">Sursa originală ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="breadcrumbs"><a href="../index.html">Ghid</a><span>/</span><a href="../index.html">Probleme</a><span>/</span>Layere deplasate (layer shifting)</nav>
+    <div class="case-hero">
+      <div>
+        <span class="badge">Mecanică</span>
+        <h1>Layere deplasate (layer shifting)</h1>
+        <p class="lede">Layerele nu mai sunt aliniate și se deplasează lateral una față de alta.</p>
+        <p class="en-title">În engleză: <strong>Layer Shifting</strong></p>
+      </div>
+      <figure><img src="../assets/img/layer-shifting-1024x1024-1.jpg" alt="Layere deplasate (layer shifting)"></figure>
+    </div>
+    <div class="layout">
+      <aside class="toc"><div class="toc-title">Cuprins</div><ol><li class="lvl-2"><a href="#pe-scurt">Pe scurt</a></li><li class="lvl-2"><a href="#cauze-frecvente">Cauze frecvente</a></li><li class="lvl-3"><a href="#capul-de-printare-se-misca-prea-repede">Capul de printare se mișcă prea repede</a></li><li class="lvl-3"><a href="#probleme-mecanice-curele">Probleme mecanice: curele</a></li><li class="lvl-3"><a href="#probleme-mecanice-suruburile-de-fixare-ale-pulley-ului">Probleme mecanice: șuruburile de fixare ale pulley-ului</a></li><li class="lvl-3"><a href="#probleme-electrice">Probleme electrice</a></li></ol></aside>
+      <article class="prose" data-article>
+        <div class="key-settings"><h2>Setări cheie</h2><ul><li>Default Printing Speed (Speeds)</li><li>X/Y Axis Movement Speed (Speeds)</li><li>Accelerație în firmware</li></ul></div>
+        <h2 id="pe-scurt">Pe scurt</h2>
+<p>Majoritatea printerelor 3D folosesc un sistem de control <code class="tight">open-loop</code>: nu au feedback despre poziția reală a capului de printare. Printerul încearcă să mute capul într-o poziție și presupune că a ajuns acolo.</p>
+<p>De obicei funcționează, pentru că motoarele pas cu pas sunt puternice. Dar dacă ceva interferează — o lovitură, o curea slăbită, un motor care pierde pași — printerul nu detectează eroarea și continuă să printeze ca și cum nimic nu s-ar fi întâmplat.</p>
+<p>Rezultatul: layerele de deasupra sunt deplasate față de cele de dedesubt. Odată apărută, eroarea nu se mai poate corecta singură; trebuie eliminată cauza.</p>
+<h2 id="cauze-frecvente">Cauze frecvente</h2>
+<h3 id="capul-de-printare-se-misca-prea-repede">Capul de printare se mișcă prea repede</h3>
+<p>La viteze mari, motoarele pot pierde pași. De obicei auzi un sunet de „click” când motorul nu reușește să ajungă la poziția cerută. Din acel moment, restul printului este deplasat.</p>
+<p>Încearcă să reduci viteza cu 50%. Mergi la <code>Edit Process Settings</code> &gt; tabul <code>Speeds</code> și ajustează:</p>
+<ul><li><code>Default Printing Speed</code> — viteza mișcărilor în care se extruzează;</li><li><code>X/Y Axis Movement Speed</code> — viteza deplasărilor rapide, fără extrudare.</li></ul>
+<p>Dacă ai experiență cu setări avansate, poți reduce și accelerația din firmware-ul printerului, pentru porniri și opriri mai line.</p>
+<h3 id="probleme-mecanice-curele">Probleme mecanice: curele</h3>
+<p>Curelele transmit mișcarea de la motoare la capul de printare. Sunt din cauciuc întărit cu fibre și, în timp, se pot întinde.</p>
+<ul><li>dacă tensiunea este prea mică, cureaua alunecă pe pulley: motorul se rotește, dar cureaua nu se mișcă;</li><li>dacă tensiunea este prea mare, apar frecări în rulmenți și motoarele nu mai pot roti cursiv.</li></ul>
+<p>O curea corectă este suficient de întinsă ca să nu alunece, dar nu atât de tare încât să blocheze sistemul. Verifică toate curelele și, dacă observi o problemă, urmează instrucțiunile producătorului.</p>
+<h3 id="probleme-mecanice-suruburile-de-fixare-ale-pulley-ului">Probleme mecanice: șuruburile de fixare ale pulley-ului</h3>
+<p>Pulley-urile sunt fixate pe axul motorului cu un șurub mic, numit <code>set-screw</code> sau <code class="tight">grub screw</code>. Dacă acesta se slăbește, pulley-ul nu se mai rotește împreună cu axul.</p>
+<p>Motorul se învârte, dar cureaua și capul de printare rămân pe loc. Verifică periodic că toate șuruburile motoarelor sunt strânse.</p>
+<h3 id="probleme-electrice">Probleme electrice</h3>
+<p>Motoarele pot pierde poziția și din cauza electricii:</p>
+<ul><li>curent prea mic către motoare — nu au putere să se rotească;</li><li>driver-ul de motor se supraîncălzește și oprește temporar motoarele până se răcește.</li></ul>
+<p>Dacă <code>layer shifting</code> apare repetat, verifică și partea electrică, nu doar mecanica.</p>
+<div class="nota"><span class="nota-title">De reținut</span><p>Dacă deplasarea apare întotdeauna în același loc al printului, suspectează un cablu care se agață sau un obstacol mecanic, nu setările de viteză.</p></div>
+        <p><a class="source-link" href="https://www.simplify3d.com/resources/print-quality-troubleshooting/layer-shifting/" target="_blank" rel="noopener">Vezi pagina originală în engleză ↗</a></p>
+      </article>
+    </div>
+    <nav class="pager">
+      <a href="overheating.html"><div class="dir">← Problema anterioară</div><div class="name">Supraîncălzire (overheating)</div></a>
+      <a class="next" href="layer-separation-and-splitting.html"><div class="dir">Problema următoare →</div><div class="name">Layere care se desprind și crapă</div></a>
+    </nav>
+  </div>
+  <section class="related">
+    <div class="wrap">
+      <h2>Vezi și</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <a href="vibrations-and-ringing.html"><img src="../assets/img/vibrations-and-ringing-1024x1024-1.jpg" alt="Vibrații și ringing" loading="lazy"></a>
+          <div><h3><a href="vibrations-and-ringing.html">Vibrații și ringing</a></h3><p>Pe suprafață apar unde fine, mai ales lângă colțuri și schimbări brusce de direcție.</p></div>
+        </article><article class="related-card">
+          <a href="not-extruding-at-start-of-print.html"><img src="../assets/img/not-extruding-at-start.jpg" alt="Nu extrudază la începutul printului" loading="lazy"></a>
+          <div><h3><a href="not-extruding-at-start-of-print.html">Nu extrudază la începutul printului</a></h3><p>Printerul nu scoate material la începutul printului, deși restul printului pare în regulă.</p></div>
+        </article><article class="related-card">
+          <a href="not-sticking-to-the-bed.html"><img src="../assets/img/print-not-sticking-to-bed.jpg" alt="Nu se lipește de pat" loading="lazy"></a>
+          <div><h3><a href="not-sticking-to-the-bed.html">Nu se lipește de pat</a></h3><p>Primul layer nu aderă la suprafața patului, iar printul se desprinde și eșuează rapid.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>Antel Print</strong> · Ghid intern pentru printare 3D. Traducere și adaptare în română după ghidurile și manualele oficiale ale producătorilor (Simplify3D, Bambu Lab, Creality, Orca Slicer, Mingda).</div>
+    <div>Termenii tehnici și numele setărilor rămân în engleză. <a href="../glosar.html">Glosar de termeni</a></div>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
